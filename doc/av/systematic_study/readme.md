@@ -42,5 +42,5 @@
 
 ### 音视频工业实战
 
-- [音视频生产](#音视频生产)
-- [音视频消费](#音视频消费)
+- [音视频生产](./av_industry/produce/readme.md)
+- [音视频消费](./av_industry/consume/readme.md)
