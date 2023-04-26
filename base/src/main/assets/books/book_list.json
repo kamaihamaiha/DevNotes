@@ -11853,6 +11853,20 @@
         "bookType": 219,
         "sections": [
           {
+            "title": "CodeCrafts",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/jkYP1DF2Q7sCHKye_A1XZw"
+          }
+        ],
+        "title": "Android 开发工具"
+      },
+      {
+        "bookType": 219,
+        "sections": [
+          {
             "title": "Gradle 插件",
             "chapter_action": 1,
             "finishTag": true,
