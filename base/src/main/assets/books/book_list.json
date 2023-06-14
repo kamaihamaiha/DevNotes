@@ -104,36 +104,12 @@
             "webUrl": "https://juejin.cn/post/7203563038301061181"
           },
           {
-            "title": "高性能图片优化方案",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://juejin.cn/post/7154949546882105374"
-          },
-          {
             "title": "Android 数据存储",
             "chapter_action": 1,
             "finishTag": true,
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://developer.android.com/training/data-storage?hl=zh-cn"
-          },
-          {
-            "title": "高效处理列表数据变化，你需要了解的 DiffUtil",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/zjp62kMP816GNcVklqHJ5w"
-          },
-          {
-            "title": "日活超3.6亿的快手告诉我们什么叫真正的性能优化天花板",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/uuRxDSH6DbJoUkCJssQOxQ"
           },
           {
             "title": "为了讲清楚Android触摸事件，我“拆了部手机”",
@@ -168,28 +144,12 @@
             "webUrl": "https://mp.weixin.qq.com/s/9gk4kUcDiImNeIUuHYiElg"
           },
           {
-            "title": "Android黑科技助力线程优化",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/ECYJmqMi7uMqvBb3gZD2Ng"
-          },
-          {
             "title": "分享 4 个案例，一起玩一下 ASM",
             "chapter_action": 1,
             "finishTag": true,
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/XLS_eK5eHJRRwPTy2HQz8g"
-          },
-          {
-            "title": "封神之作：极致包体优化，解决 17 个业务痛点",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/NiV51jOeCnTRgo-TLFsw7g"
           },
           {
             "title": "祖传代码，业务代码参数透传满天飞？",
@@ -222,23 +182,13 @@
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/lR09lszCULIvnsH30NzIjQ"
-          },
-          {
-            "title": "Android ANR？谁控制了触发时间？",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/8w05AGpuKvpqPGpg0G08sA"
-          },
-          {
-            "title": "升级 Android 目标版本到 31(S) 这么多坑",
-            "chapter_action": 1,
-            "finishTag": true,
-            "item_action": 0,
-            "section_action": 0,
-            "webUrl": "https://mp.weixin.qq.com/s/HhtGV1AWTy2lJo2jwXPcGw"
-          },
+          }
+        ],
+        "title": "Android 相关"
+      },
+      {
+        "bookType": 229,
+        "sections": [
           {
             "title": "一文搞懂 Gradle 配置，7.0之后有哪些变化？",
             "chapter_action": 1,
@@ -248,7 +198,7 @@
             "webUrl": "https://mp.weixin.qq.com/s/M48s9_i8WHO91LFQm-Gtkg"
           }
         ],
-        "title": "Android 相关"
+        "title": "Android 构建"
       },
       {
         "bookType": 229,
@@ -330,9 +280,79 @@
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/oYepzt3Fl3eHpRJ3ZWgfpA"
+          },
+          {
+            "title": "Android 性能分析神兵利器：Perfetto",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/8eY6B4E-9tIfaRVlHK-6sw"
+          },
+          {
+            "title": "高性能图片优化方案",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://juejin.cn/post/7154949546882105374"
+          },
+          {
+            "title": "高效处理列表数据变化，你需要了解的 DiffUtil",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/zjp62kMP816GNcVklqHJ5w"
+          },
+          {
+            "title": "日活超3.6亿的快手告诉我们什么叫真正的性能优化天花板",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/uuRxDSH6DbJoUkCJssQOxQ"
+          },
+          {
+            "title": "Android黑科技助力线程优化",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/ECYJmqMi7uMqvBb3gZD2Ng"
+          },
+          {
+            "title": "封神之作：极致包体优化，解决 17 个业务痛点",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/NiV51jOeCnTRgo-TLFsw7g"
           }
         ],
         "title": "Android 崩溃/异常/卡顿/优化等处理"
+      },
+      {
+        "bookType": 229,
+        "sections": [
+          {
+            "title": "Android 14 适配要点",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/5cWSNum_GS-r5CuEv1Agug"
+          },
+          {
+            "title": "升级 Android 目标版本到 31(S) 这么多坑",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/HhtGV1AWTy2lJo2jwXPcGw"
+          }
+        ],
+        "title": "Android 版本适配"
       },
       {
         "bookType": 229,
@@ -405,6 +425,20 @@
           }
         ],
         "title": "Java 相关"
+      },
+      {
+        "bookType": 229,
+        "sections": [
+          {
+            "title": "fbjni",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://github.com/facebookincubator/fbjni"
+          }
+        ],
+        "title": "开源项目"
       },
       {
         "bookType": 229,
