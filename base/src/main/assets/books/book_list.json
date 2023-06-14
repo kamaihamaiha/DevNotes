@@ -196,6 +196,14 @@
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/M48s9_i8WHO91LFQm-Gtkg"
+          },
+          {
+            "title": "视角拉高，系统性地梳理下Gradle",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/3sLznTLdPzsWKi9O8CCR4w"
           }
         ],
         "title": "Android 构建"
@@ -416,6 +424,20 @@
         "bookType": 229,
         "sections": [
           {
+            "title": "新功能之 TextView 搜索结果高亮和焦点移动～",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/x3-k7ZXKWPklN7A3ur09RQ"
+          }
+        ],
+        "title": "Android 14"
+      },
+      {
+        "bookType": 229,
+        "sections": [
+          {
             "title": "Java 序列化和反序列化，为什么要实现 Serializable 接口？",
             "chapter_action": 2,
             "finishTag": true,
@@ -425,6 +447,20 @@
           }
         ],
         "title": "Java 相关"
+      },
+      {
+        "bookType": 229,
+        "sections": [
+          {
+            "title": "这一次，让Kotlin Flow 操作符真正好用起来",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/SA2_DsSzXmWtLHf_6so7VA"
+          }
+        ],
+        "title": "Kotlin 相关"
       },
       {
         "bookType": 229,
@@ -1508,6 +1544,20 @@
           }
         ],
         "title": "基础 Demo 之 Mooc 网学习 NDK"
+      },
+      {
+        "bookType": 221,
+        "sections": [
+          {
+            "title": "一篇文章教你掌握jni技术",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://mp.weixin.qq.com/s/UIkHnLatzoW_vmk_bSwXFA"
+          }
+        ],
+        "title": "相关文章"
       }
     ],
     "expandChapterIndex": 0,
