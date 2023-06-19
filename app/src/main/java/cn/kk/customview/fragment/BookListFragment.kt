@@ -1,8 +1,13 @@
 package cn.kk.customview.fragment
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,12 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.UIHelper
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.base.utils.AssetsHelper
-import cn.kk.base.utils.JsonHelper
 import cn.kk.customview.R
 import cn.kk.customview.activity.book.BookDetailActivity
-import cn.kk.customview.bean.BaseItem
 import cn.kk.customview.bean.BookModel
-import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.gson.Gson
@@ -28,6 +30,12 @@ class BookListFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
+
+       val toolbar = rootView.findViewById<Toolbar>(R.id.toolbar)
+        toolbar.inflateMenu(R.menu.menu_search)
+        toolbar.setTitle("")
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
 
         val rvBookList = rootView.findViewById<RecyclerView>(R.id.rv_book)
         // init book data
@@ -35,8 +43,6 @@ class BookListFragment: BaseFragment() {
         val bookLisJson = AssetsHelper.getBooksValue(context!!)
 
         val bookListV2 = getBooks(bookLisJson)
-
-        //
 
         rvBookList.apply {
             layoutManager = GridLayoutManager(context, 3)
@@ -71,5 +77,28 @@ class BookListFragment: BaseFragment() {
 
         val bookListV2 = Gson().fromJson<List<BookModel>>(bookLisJson, typeToken).toMutableList()
         return bookListV2
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_search, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_book_search -> {
+                // start search activity
+                try {
+                    UIHelper.toast("search", requireContext())
+                    return true
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+            else -> {
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

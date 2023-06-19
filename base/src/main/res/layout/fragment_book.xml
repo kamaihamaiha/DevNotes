@@ -4,17 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title"
-        android:text="书架"
-        android:gravity="center"
-        android:textSize="21sp"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimary"
-        android:paddingTop="40dp"
-        android:paddingBottom="4dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingTop="40dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:text="书架"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
 
 
     <cn.kk.base.widget.KkVerticalRecyclerView
