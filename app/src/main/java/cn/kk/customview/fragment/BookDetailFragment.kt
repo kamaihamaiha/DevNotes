@@ -25,7 +25,7 @@ import cn.kk.customview.activity.book.BookDetailActivity
 import cn.kk.customview.activity.more.audio.AudioActivity
 import cn.kk.customview.activity.more.video.VideoActivity
 import cn.kk.customview.adapter.BaseChapterAdapter
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.bean.ItemSectionModel
 import cn.kk.customview.factory.BookModelFactory

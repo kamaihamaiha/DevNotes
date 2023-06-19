@@ -1,7 +1,7 @@
 package cn.kk.customview.ui.cool300
 
 import cn.kk.customview.R
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.ItemSectionModel
 import cn.kk.customview.ui.cool300.chapter1.Simple_005
 import cn.kk.customview.ui.cool300.chapter1.Simple_009

@@ -3,7 +3,7 @@ package cn.kk.customview.activity.book
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import cn.kk.customview.activity.BaseFragmentActivity
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.dialog.MoreInfoListBottomDialog
 import cn.kk.customview.fragment.BookDetailFragment

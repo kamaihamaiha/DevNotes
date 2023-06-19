@@ -2,10 +2,8 @@ package cn.kk.customview.fragment
 
 import android.os.Bundle
 import android.view.View
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import cn.kk.base.UIHelper
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
 import cn.kk.customview.activity.BaseTabActivity
@@ -16,7 +14,7 @@ import cn.kk.customview.activity.more.*
 import cn.kk.customview.activity.more.audio.AudioActivity
 import cn.kk.customview.activity.more.video.VideoActivity
 import cn.kk.customview.activity.ndk.NdkHomeActivity
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -58,7 +56,8 @@ class MoreFragment: BaseFragment() {
                         val bookModel = BookModelFactory.createBook(BaseItem.action_book_data_arch)
                         startNextUI(BookDetailActivity::class.java, bookModel.title, bookModel)
                     }
-                    BaseItem.ACTION_MORE_ACTIVITY_LIFECYCLE_LAUNCH_MODE -> startNextUI(BookDetailActivity::class.java, title, BookModelFactory.createBook(BaseItem.action_book_android_dev_art))
+                    BaseItem.ACTION_MORE_ACTIVITY_LIFECYCLE_LAUNCH_MODE -> startNextUI(BookDetailActivity::class.java, title, BookModelFactory.createBook(
+                        BaseItem.action_book_android_dev_art))
                     BaseItem.ACTION_MORE_ANDROID_HANDLER_MESSAGE -> {
                         val bookModel = BookModelFactory.createBook(BaseItem.action_book_android_dev_art).apply { expandChapterIndex = 9 }
                         startNextUI(BookDetailActivity::class.java, bookModel.title, bookModel)

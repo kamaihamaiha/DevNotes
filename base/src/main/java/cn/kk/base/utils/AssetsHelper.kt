@@ -2,7 +2,7 @@ package cn.kk.base.utils
 
 import android.content.Context
 import android.text.TextUtils
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 
 object AssetsHelper {
 

@@ -2,7 +2,6 @@ package cn.kk.base.fragment
 
 import android.app.Activity
 import android.app.ProgressDialog
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import cn.kk.base.R
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.ListItemAction
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import java.io.Serializable
 
 abstract class BaseFragment: Fragment() {

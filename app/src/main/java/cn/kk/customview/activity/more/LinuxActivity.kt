@@ -1,9 +1,8 @@
 package cn.kk.customview.activity.more
 
 import cn.kk.customview.activity.BaseMixListActivity
-import cn.kk.customview.activity.BaseTabActivity
 import cn.kk.customview.activity.NormalWebViewActivity
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.ItemSimpleCard
 
 /**

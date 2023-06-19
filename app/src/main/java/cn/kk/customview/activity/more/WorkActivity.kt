@@ -5,7 +5,7 @@ import cn.kk.customview.activity.BaseTabActivity
 import cn.kk.customview.activity.NormalCardListActivity
 import cn.kk.customview.activity.NormalViewActivity
 import cn.kk.customview.activity.NormalWebViewActivity
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.bean.SimpleWikiModel
 import cn.kk.customview.ui.system.HtmlText

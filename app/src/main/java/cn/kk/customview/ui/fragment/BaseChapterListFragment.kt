@@ -6,17 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
 import cn.kk.customview.adapter.BaseChapterAdapter
-import cn.kk.customview.bean.BaseItem
 import cn.kk.customview.bean.ItemChapterModel
 import cn.kk.customview.bean.ItemSectionModel
-import cn.kk.customview.ui.cool300.chapter1.Simple_005
-import cn.kk.customview.ui.cool300.chapter1.Simple_009
-import cn.kk.customview.ui.cool300.chapter1.Simple_010
-import cn.kk.customview.ui.cool300.chapter1.Simple_022
-import cn.kk.customview.ui.cool300.chapter3.Simple_063
-import cn.kk.customview.ui.cool300.chapter3.Simple_071
-import cn.kk.customview.ui.cool300.chapter3.Simple_072
-import cn.kk.customview.ui.cool300.chapter5.Simple_143
 import kotlinx.android.synthetic.main.chapter_list_layout.*
 
 /**

@@ -4,7 +4,7 @@ import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.R
 import cn.kk.customview.activity.NormalMarkDownViewActivity
 import cn.kk.customview.activity.NormalWebViewActivity
-import cn.kk.customview.bean.BaseItem
+import cn.kk.base.bean.BaseItem
 import cn.kk.customview.bean.ItemSectionModel
 import cn.kk.customview.ui.fragment.BaseChapterListFragment
 
