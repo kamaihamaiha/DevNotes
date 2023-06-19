@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="list_empty">没有查询到结果</string>
     <string name="knowledge_article_comment_empty">当前文章没有评论</string>
 
 
