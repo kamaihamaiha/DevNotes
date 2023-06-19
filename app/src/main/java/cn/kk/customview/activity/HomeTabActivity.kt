@@ -2,14 +2,12 @@ package cn.kk.customview.activity
 
 import android.util.Log
 import android.view.View
-import android.view.WindowInsets
 import androidx.core.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.IOUtils
-import cn.kk.base.utils.JsonHelper
 import cn.kk.customview.R
 import cn.kk.customview.fragment.*
 import kotlinx.android.synthetic.main.activity_home_tab.*
@@ -67,7 +65,7 @@ class HomeTabActivity: BaseActivity() {
         }
 
         // 默认选中第一个 tab 页面
-        bottom_navi.selectedItemId = R.id.navigation_tab_views
+        bottom_navi.selectedItemId = R.id.navigation_tab_book
 
         IOUtils.write2SDCard("hello android!")
 

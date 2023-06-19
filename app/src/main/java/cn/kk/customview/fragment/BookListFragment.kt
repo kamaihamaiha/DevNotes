@@ -12,16 +12,15 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import cn.kk.base.UIHelper
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.R
+import cn.kk.customview.activity.SearchBookActivity
 import cn.kk.customview.activity.book.BookDetailActivity
 import cn.kk.customview.bean.BookModel
+import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class BookListFragment: BaseFragment() {
     override fun getLayoutId(): Int {
@@ -42,7 +41,7 @@ class BookListFragment: BaseFragment() {
 
         val bookLisJson = AssetsHelper.getBooksValue(context!!)
 
-        val bookListV2 = getBooks(bookLisJson)
+        val bookListV2 = BookModelFactory.getBooks(bookLisJson)
 
         rvBookList.apply {
             layoutManager = GridLayoutManager(context, 3)
@@ -72,13 +71,6 @@ class BookListFragment: BaseFragment() {
 
     }
 
-    private fun getBooks(bookLisJson: String): MutableList<BookModel> {
-        val typeToken = object : TypeToken<List<BookModel>>() {}.type
-
-        val bookListV2 = Gson().fromJson<List<BookModel>>(bookLisJson, typeToken).toMutableList()
-        return bookListV2
-    }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_search, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -89,7 +81,7 @@ class BookListFragment: BaseFragment() {
             R.id.menu_book_search -> {
                 // start search activity
                 try {
-                    UIHelper.toast("search", requireContext())
+                    startNextUI(SearchBookActivity::class.java, "")
                     return true
                 } catch (e: Exception) {
                     e.printStackTrace()

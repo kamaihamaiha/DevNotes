@@ -82,6 +82,7 @@
         <activity android:name=".activity.NormalTabActivity"/>
         <activity android:name=".activity.NormalWebViewActivity"/>
         <activity android:name=".activity.NormalMarkDownViewActivity"/>
+        <activity android:name=".activity.SearchBookActivity"/>
 
         <activity
             android:name=".ui.system.CoordinatorLayoutActivity"

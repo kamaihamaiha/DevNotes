@@ -1,9 +1,10 @@
 package cn.kk.customview.bean
 
+import cn.kk.base.bean.BaseItem
 import cn.kk.base.utils.AssetsHelper
 import java.io.Serializable
 
-class BookSectionItem(val title: String): BaseItem(), Serializable {
+class BookSectionItem(title: String): BaseItem(title), Serializable {
 
     constructor(title: String, finishTag: Boolean): this(title) {
         super.finishTag = finishTag

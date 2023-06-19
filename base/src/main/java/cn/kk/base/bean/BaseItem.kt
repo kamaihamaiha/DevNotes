@@ -1,8 +1,8 @@
-package cn.kk.customview.bean
+package cn.kk.base.bean
 
 import java.io.Serializable
 
-abstract  class BaseItem: Serializable {
+abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN): Serializable {
     var item_action = 0
     var chapter_action = 0
     var section_action = 0
@@ -11,7 +11,9 @@ abstract  class BaseItem: Serializable {
     var htmlTag = false
     var appPkgName = ""
 
-
+    enum class Type {
+        TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, UNKNOWN
+    }
 
     companion object {
 

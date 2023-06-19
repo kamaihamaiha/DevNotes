@@ -18,7 +18,7 @@ class BookModelFactory {
             getBooks(AssetsHelper.getBooksValue(MyApp.application))
         }
 
-        private fun getBooks(bookLisJson: String): MutableList<BookModel> {
+        fun getBooks(bookLisJson: String): MutableList<BookModel> {
             val typeToken = object : TypeToken<List<BookModel>>() {}.type
             return Gson().fromJson<List<BookModel>>(bookLisJson, typeToken).toMutableList()
         }
