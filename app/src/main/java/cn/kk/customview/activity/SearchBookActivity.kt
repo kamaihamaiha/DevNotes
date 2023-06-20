@@ -34,6 +34,7 @@ class SearchBookActivity: BaseActivity() {
         BookModelFactory.getBooks(AssetsHelper.getBooksValue(this@SearchBookActivity))
     }
 
+    // 可以进行关键字搜索的所有 model 集合
     private val mBookDataKeywords by lazy {
         getBookKeywords()
     }
@@ -48,22 +49,12 @@ class SearchBookActivity: BaseActivity() {
         rv_result?.adapter = object : BaseQuickAdapter<BaseItem, BaseViewHolder>(R.layout.item_book_search_result, mSearchKeywordResultList) {
             override fun convert(holder: BaseViewHolder, item: BaseItem) {
                 holder.setText(R.id.tv_title, item.title)
-                holder.setText(
-                    R.id.tv_type, when (item.type) {
-                        BaseItem.Type.TYPE_BOOK -> {
-                            "书"
-                        }
-                        BaseItem.Type.TYPE_CHAPTER -> {
-                            "章节"
-                        }
-                        BaseItem.Type.TYPE_SECTION -> {
-                            "小节"
-                        }
-                        else -> {
-                            "unknown"
-                        }
-                    }
-                )
+                holder.setImageResource(R.id.iv_type, when(item.type) {
+                    BaseItem.Type.TYPE_BOOK -> R.drawable.icon_list_book
+                    BaseItem.Type.TYPE_CHAPTER -> R.drawable.icon_chapter
+                    BaseItem.Type.TYPE_SECTION -> R.drawable.icon_section
+                    else -> R.drawable.icon_unknown
+                })
             }
         }.apply {
             setEmptyView(mEmptyView)
@@ -100,9 +91,10 @@ class SearchBookActivity: BaseActivity() {
                 if (s == null) return
 
                 // search
+                val input = s.toString()
                 mSearchKeywordResultList.clear()
                 mBookDataKeywords.forEach {
-                    if (!s.toString().isEmpty() && it.title.contains(s)) {
+                    if (input.isNotEmpty() && it.title.lowercase().contains(input.lowercase())) {
                         // 加入搜索结果
                         mSearchKeywordResultList.add(it)
 
@@ -132,6 +124,17 @@ class SearchBookActivity: BaseActivity() {
                 }
             }
         }
+
+       // 按照 type 排序
+       bookKeywords.sortBy { item ->
+           when(item.type) {
+               BaseItem.Type.TYPE_BOOK -> 0
+               BaseItem.Type.TYPE_CHAPTER -> 1
+               BaseItem.Type.TYPE_SECTION -> 2
+               else -> 3
+
+           }
+       }
         return bookKeywords
     }
 }
