@@ -47,7 +47,7 @@ class ItemFolderView(context: Context, attributeSet: AttributeSet) :
         rvList = containerView.findViewById(R.id.rv_section)
     }
 
-    fun setData(itemFolderModel: ItemChapterModel, expand: Boolean = false) {
+    fun setData(itemFolderModel: ItemChapterModel, expand: Boolean = false, highlightPos: Int = -1) {
         tvTitle.text = itemFolderModel.title
         tvSectionCount.text = String.format(context.getString(R.string.section_count), itemFolderModel.sections.size)
 
@@ -63,6 +63,7 @@ class ItemFolderView(context: Context, attributeSet: AttributeSet) :
                     isSelected = true
                     setTextColor(ContextCompat.getColor(context, R.color.ForestGreen))
                 }
+                holder.itemView.foreground = if (expand && highlightPos == holder.layoutPosition) ContextCompat.getDrawable(context ,R.drawable.bg_shape_frame_location) else null
             }
 
         }.apply {

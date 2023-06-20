@@ -15,4 +15,6 @@ class BookModel(title: String, val itemAction: Int, val chapterModelList: Mutabl
     var expandChapterIndex = 0
     // 更多信息：在页面标题栏上调出
     var moreItemList: MutableList<BaseMoreItem>? = null
+
+    var locationSection = false
 }

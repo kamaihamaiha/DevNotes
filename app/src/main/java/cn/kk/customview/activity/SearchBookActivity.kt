@@ -90,11 +90,12 @@ class SearchBookActivity: BaseActivity() {
                             // 计算 chapter index
                             targetBookModel = bookModel
                             targetBookModel.expandChapterIndex = curModel.chapterPos
+                            targetBookModel.sectionPos = curModel.sectionPos
                             break
                         }
                     }
                     if (targetBookModel != null) {
-                        openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel)
+                        openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel.apply { locationSection = true })
                     }
                 }
             }
@@ -161,12 +162,15 @@ class SearchBookActivity: BaseActivity() {
                     this.chapterPos = chapterPos
                 })
 
+                var sectionPos = 0;
                 chapter.sections.forEach {
                     bookKeywords.add(it.apply {
                         type = BaseItem.Type.TYPE_SECTION
                         this.bookType = bookType
                         this.chapterPos = chapterPos
+                        this.sectionPos = sectionPos
                     })
+                    sectionPos++
                 }
                 chapterPos++
             }

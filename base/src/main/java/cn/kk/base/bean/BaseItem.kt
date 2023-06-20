@@ -14,6 +14,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
     // 定位chapter和book 使用
     var bookType = 0
     var chapterPos = 0
+    var sectionPos = 0
 
     enum class Type {
         TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, UNKNOWN

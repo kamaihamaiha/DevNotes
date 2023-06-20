@@ -86,6 +86,9 @@ class BookDetailFragment: BaseFragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = BaseChapterAdapter(bookModel.chapterModelList).apply {
                 expandIndex = bookModel.expandChapterIndex
+                if (bookModel.locationSection) {
+                    highLightSectionPos = bookModel.sectionPos
+                }
                 mItemSectionClickListener = object : BaseChapterAdapter.OnItemSectionClickListener {
                     override fun onSectionClick(bookType: Int, item: ItemSectionModel) {
                         when(bookType) {

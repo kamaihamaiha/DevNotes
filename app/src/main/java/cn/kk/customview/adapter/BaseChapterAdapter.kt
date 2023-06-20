@@ -14,11 +14,12 @@ import kotlin.math.exp
 class BaseChapterAdapter(chapterData: MutableList<ItemChapterModel>): BaseQuickAdapter<ItemChapterModel, BaseViewHolder>(R.layout.item_chapter_view, chapterData) {
     var mItemSectionClickListener: OnItemSectionClickListener ?= null
     var expandIndex = 0 // 默认展开第一个
+    var highLightSectionPos = -1
 
     override fun convert(holder: BaseViewHolder, item: ItemChapterModel) {
         val chapterView = holder.getView<ItemFolderView>(R.id.folder_view)
         if (holder.layoutPosition == expandIndex) {
-            chapterView.setData(item, true)
+            chapterView.setData(item, true, highLightSectionPos)
         } else {
             chapterView.setData(item)
         }
