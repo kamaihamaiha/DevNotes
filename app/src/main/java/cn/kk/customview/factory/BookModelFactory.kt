@@ -30,7 +30,7 @@ class BookModelFactory {
                 }
             }
             // 找不到，就默认返回第一个
-            if (mBooks.isEmpty()) return BookModel("Unknow", 0, mutableListOf())
+            if (mBooks.isEmpty()) return BookModel("Unknown", 0, mutableListOf())
             return mBooks[0]
         }
 

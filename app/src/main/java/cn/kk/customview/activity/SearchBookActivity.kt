@@ -16,6 +16,8 @@ import cn.kk.base.bean.BaseItem
 import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.R
 import cn.kk.customview.activity.book.BookDetailActivity
+import cn.kk.customview.bean.BookModel
+import cn.kk.customview.bean.ItemChapterModel
 import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
@@ -59,9 +61,42 @@ class SearchBookActivity: BaseActivity() {
         }.apply {
             setEmptyView(mEmptyView)
             setOnItemClickListener { adapter, view, position ->
-                // todo open book
-                UIHelper.toast(data[position].title, this@SearchBookActivity)
-//                openNextUI(BookDetailActivity::class.java, data[position].title, data[position])
+                //  open book
+                val curModel = data[position]
+//                UIHelper.toast(curModel.title, this@SearchBookActivity)
+                if (curModel.type == BaseItem.Type.TYPE_BOOK) {
+                    openNextUI(BookDetailActivity::class.java, curModel.title, curModel)
+                } else if (curModel.type == BaseItem.Type.TYPE_CHAPTER) {
+                    // 先查找对应的 bookModel
+                    var targetBookModel: BookModel?=null
+                    for (bookModel in mBookList) {
+                        if (bookModel.itemAction == (curModel as ItemChapterModel).bookType) {
+                            // 计算 chapter index
+                            targetBookModel = bookModel
+                            targetBookModel.expandChapterIndex = curModel.chapterPos
+                            break
+                        }
+                    }
+                    if (targetBookModel != null) {
+                        openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel)
+                    } else {
+                        UIHelper.toast("没有找到", this@SearchBookActivity)
+                    }
+
+                } else if (curModel.type == BaseItem.Type.TYPE_SECTION) {
+                    var targetBookModel: BookModel?=null
+                    for (bookModel in mBookList) {
+                        if (bookModel.itemAction == curModel.bookType) {
+                            // 计算 chapter index
+                            targetBookModel = bookModel
+                            targetBookModel.expandChapterIndex = curModel.chapterPos
+                            break
+                        }
+                    }
+                    if (targetBookModel != null) {
+                        openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel)
+                    }
+                }
             }
         }
 
@@ -115,13 +150,25 @@ class SearchBookActivity: BaseActivity() {
    private fun getBookKeywords(): MutableList<BaseItem> {
         val bookKeywords = mutableListOf<BaseItem>()
         mBookList.forEach {
+            val bookType = it.itemAction
             bookKeywords.add(it.apply { type = BaseItem.Type.TYPE_BOOK })
+
+            var chapterPos = 0
             it.chapterModelList.forEach { chapter ->
-                bookKeywords.add(chapter.apply { type = BaseItem.Type.TYPE_CHAPTER })
+                bookKeywords.add(chapter.apply {
+                    type = BaseItem.Type.TYPE_CHAPTER
+                    this.bookType = bookType
+                    this.chapterPos = chapterPos
+                })
 
                 chapter.sections.forEach {
-                    bookKeywords.add(it.apply { type = BaseItem.Type.TYPE_SECTION })
+                    bookKeywords.add(it.apply {
+                        type = BaseItem.Type.TYPE_SECTION
+                        this.bookType = bookType
+                        this.chapterPos = chapterPos
+                    })
                 }
+                chapterPos++
             }
         }
 
