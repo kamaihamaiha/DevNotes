@@ -2,6 +2,8 @@ package cn.kk.base.utils
 
 import android.app.Activity
 import android.app.Service
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -12,6 +14,8 @@ import android.provider.Settings
 import androidx.core.app.NotificationManagerCompat
 
 object SystemHelper {
+
+    private var clipboard: ClipboardManager? = null
 
     fun getAppInfo(context: Context){
         val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
@@ -74,4 +78,14 @@ object SystemHelper {
         return ctx.resources.configuration.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO
     }
 
+    fun setClipboardText(text: String?, ctx: Context) {
+        if (clipboard == null) {
+            clipboard = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        }
+        if (clipboard != null) {
+            val clip = ClipData.newPlainText("kk_search", text)
+            clipboard?.setPrimaryClip(clip)
+
+        }
+    }
 }

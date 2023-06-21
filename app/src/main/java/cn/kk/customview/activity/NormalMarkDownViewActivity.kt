@@ -7,6 +7,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.utils.SystemHelper
 import cn.kk.customview.R
 import com.mukesh.MarkdownView
 import kotlinx.android.synthetic.main.activity_normal_markdown_view.*
@@ -64,7 +65,8 @@ class NormalMarkDownViewActivity: BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.copy_url) {
-            UIHelper.toast("复制链接: ${mUrl}", this@NormalMarkDownViewActivity)
+            SystemHelper.setClipboardText(mUrl, this@NormalMarkDownViewActivity)
+            UIHelper.toast("复制链接", this@NormalMarkDownViewActivity)
             return true
         }
         return super.onOptionsItemSelected(item)
