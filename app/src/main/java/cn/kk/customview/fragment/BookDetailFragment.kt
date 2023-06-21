@@ -92,8 +92,8 @@ class BookDetailFragment: BaseFragment() {
                 mItemSectionClickListener = object : BaseChapterAdapter.OnItemSectionClickListener {
                     override fun onSectionClick(bookType: Int, item: ItemSectionModel) {
                         when(bookType) {
-                            // 大佬分享,技术文章大杂烩
-                            BaseItem.ACTION_BOOK_SOMEONE_SHARE, BaseItem.ACTION_BOOK_SOME_ARTICLES, BaseItem.ACTION_BOOK_GRADLE -> {
+                            // 大佬分享,理财知识,技术文章大杂烩,Gradle
+                            BaseItem.ACTION_BOOK_SOMEONE_SHARE, BaseItem.ACTION_BOOK_FINANCIAL, BaseItem.ACTION_BOOK_SOME_ARTICLES, BaseItem.ACTION_BOOK_GRADLE -> {
                                 if (item.webUrl.isNullOrEmpty()) return
                                 openNextUIWithMarkdown(NormalMarkDownViewActivity::class.java, item.title, item.webUrl, false)
                             }

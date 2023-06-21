@@ -53,6 +53,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_BOOK_SOMEONE_SHARE = 228      // 大佬分享
         val ACTION_BOOK_SOME_ARTICLES = 229      // 技术文章大杂烩
         val ACTION_BOOK_GRADLE = 230      // Gradle
+        val ACTION_BOOK_FINANCIAL = 231      // 理财知识
         // endregion
 
         // region normal chapter and section
