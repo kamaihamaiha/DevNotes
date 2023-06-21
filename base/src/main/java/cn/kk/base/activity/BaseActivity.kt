@@ -9,14 +9,12 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
-import android.view.WindowManager
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import cn.kk.base.LogHelper
 import cn.kk.base.R
 import cn.kk.base.UIHelper
@@ -43,7 +41,7 @@ abstract class BaseActivity: BasicActivity() {
     protected var baseToolbar: Toolbar?= null
     private var baseProgressDialog: ProgressDialog?= null
 
-    private val title by lazy {
+    protected val mTitle by lazy {
         intent.getStringExtra(INTENT_TITLE_KEY)
     }
     protected val ui_type by lazy {
@@ -150,7 +148,7 @@ abstract class BaseActivity: BasicActivity() {
 
     protected open fun showTitle(){
         val tvTitle = findViewById<TextView>(R.id.tv_page_title)
-        tvTitle?.text = title
+        tvTitle?.text = mTitle
         tvTitle?.setOnLongClickListener {
             showToast(TAG)
             true

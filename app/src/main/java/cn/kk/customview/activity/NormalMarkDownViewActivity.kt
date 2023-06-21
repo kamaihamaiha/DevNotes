@@ -1,8 +1,11 @@
 package cn.kk.customview.activity
 
+import android.view.Menu
+import android.view.MenuItem
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import com.mukesh.MarkdownView
@@ -13,13 +16,17 @@ import kotlinx.android.synthetic.main.activity_normal_markdown_view.*
  */
 class NormalMarkDownViewActivity: BaseActivity() {
     lateinit var markDownView: MarkdownView
+    val mUrl by lazy {
+        intent.getStringExtra(INTENT_MARKDOWN_PATH_KEY).toString()
+    }
     override fun getLayout(): Int {
        return R.layout.activity_normal_markdown_view
     }
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-        val markDownPath = intent.getStringExtra(INTENT_MARKDOWN_PATH_KEY).toString()
+        setSupportActionBar(baseToolbar) // 添加 menu 菜单，必须要设置 actionBar
+
         val local = intent.getBooleanExtra(INTENT_MARKDOWN_LOCAL_KEY, true)
 
         markDownView = findViewById(R.id.markdown_view)
@@ -28,7 +35,7 @@ class NormalMarkDownViewActivity: BaseActivity() {
         markDownView.webChromeClient = WebChromeClient()
 
         if (local) {
-            markDownView.loadMarkdownFromAssets(markDownPath)
+            markDownView.loadMarkdownFromAssets(mUrl)
         } else {
             markDownView.webViewClient = object : WebViewClient(){
                 override fun onPageFinished(view: WebView?, url: String?) {
@@ -36,7 +43,7 @@ class NormalMarkDownViewActivity: BaseActivity() {
                     refresh_view?.isRefreshing = false
                 }
             }
-            markDownView.loadUrl(markDownPath)
+            markDownView.loadUrl(mUrl)
             // 延时show 加载，否则显示不出来
             markDownView.postDelayed({ refresh_view.isRefreshing = true }, 50)
         }
@@ -44,10 +51,23 @@ class NormalMarkDownViewActivity: BaseActivity() {
         // pull refresh
         refresh_view.setOnRefreshListener {
             if (!local) {
-                markDownView.loadUrl(markDownPath)
+                markDownView.loadUrl(mUrl)
                 refresh_view.isRefreshing = true
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_copy_url, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.copy_url) {
+            UIHelper.toast("复制链接: ${mUrl}", this@NormalMarkDownViewActivity)
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {
