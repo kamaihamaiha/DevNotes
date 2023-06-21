@@ -182,6 +182,14 @@
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/lR09lszCULIvnsH30NzIjQ"
+          },
+          {
+            "title": "你可能不知道的ViewPager刷新操作",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://juejin.cn/post/7234060427411603511"
           }
         ],
         "title": "Android 相关"
@@ -204,9 +212,25 @@
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/3sLznTLdPzsWKi9O8CCR4w"
+          },
+          {
+            "title": "我们写的build.gradle是如何跑起来的? - Gradle探究",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://juejin.cn/post/7219925045228240954"
+          },
+          {
+            "title": "Gradle深入解析 - Kotlin Script加载流程",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://juejin.cn/post/7219988638050369594"
           }
         ],
-        "title": "Android 构建"
+        "title": "Android Gradle 构建"
       },
       {
         "bookType": 229,
@@ -352,12 +376,28 @@
             "webUrl": "https://mp.weixin.qq.com/s/5cWSNum_GS-r5CuEv1Agug"
           },
           {
+            "title": "Android 14 新特性：语法性别 Grammatical Gender",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/etTAysCEU3IF1xq1H9-lCQ"
+          },
+          {
             "title": "升级 Android 目标版本到 31(S) 这么多坑",
             "chapter_action": 1,
             "finishTag": true,
             "item_action": 0,
             "section_action": 0,
             "webUrl": "https://mp.weixin.qq.com/s/HhtGV1AWTy2lJo2jwXPcGw"
+          },
+          {
+            "title": "Android 12 存储空间计算的一个误区",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 0,
+            "webUrl": "https://juejin.cn/post/7244809769784590373"
           }
         ],
         "title": "Android 版本适配"
@@ -458,6 +498,14 @@
             "item_action": 0,
             "section_action": 1,
             "webUrl": "https://mp.weixin.qq.com/s/SA2_DsSzXmWtLHf_6so7VA"
+          },
+          {
+            "title": "Kotlin中return@forEach了个寂寞",
+            "chapter_action": 2,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 1,
+            "webUrl": "https://mp.weixin.qq.com/s/46S4zGOiTmobaNqU57gj7w"
           }
         ],
         "title": "Kotlin 相关"
@@ -11992,6 +12040,14 @@
             "finishTag": true,
             "item_action": 0,
             "section_action": 5
+          },
+          {
+            "title": "Android 更新后跑不起来？快来适配 AGP8 和 Flamingo/JDK 17\n",
+            "chapter_action": 1,
+            "finishTag": true,
+            "item_action": 0,
+            "section_action": 5,
+            "webUrl": "https://mp.weixin.qq.com/s/lJ-a4KwdTEmLu-sxkehn0Q"
           }
         ],
         "title": "Android Studio"
