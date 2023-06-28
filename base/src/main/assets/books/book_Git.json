@@ -1,0 +1,288 @@
+{
+  "bookImgRes": 2131230841,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "背景",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "介绍"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "安装 Git"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "起步"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "基本的 Git 概念"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "文件管理和索引"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "提交"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "分支"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "diff"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "合并"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "更改提交"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "储藏和引用日志"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "远程版本库"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "版本库管理"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "补丁"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "钩子"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "合并项目"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "子模块最佳实战"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "结合 SVN 版本库使用 Git"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "高级操作"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "提示、技巧和技术"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "..",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "Git 和 GitHub"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 206,
+  "title": "Git"
+}

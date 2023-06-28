@@ -1,0 +1,678 @@
+{
+  "bookImgRes": 2131230831,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "开场白",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "你数据结构怎么学的",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "数据结构起源",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "基本概念和术语",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "逻辑结构与物理结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 1 章 数据结绪论"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "开场白",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "数据结构与算法关系",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "两种算法比较",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法的特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法设计的要求",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法效率的度量方法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "函数的渐进增长",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法时间复杂度",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "常见的时间复杂度",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "最坏情况与平均情况",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法空间复杂度",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 2 章 算法"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "线性表的抽象数据离诶行",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "线性表的顺序存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "顺序存储结构的插入与删除",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "线性表的链式存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "单链表的读取",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "单链表的插入与删除",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "单链表的整表创建",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "单链表的整表删除",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "单链表结构和顺序存储结构优缺点",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "静态链表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "循环链表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "双向链表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 线性表"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "栈的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的顺序存储结构及实现",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "两栈的共享空间",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的链式存储结构及实现",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的作用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的应用：递归",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "栈的应用：四则运算表达式求值",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "队列的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "队列的抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "循环队列",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "队列的链式存储结构及实现",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 4 章 栈与队列"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "串的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "串的比较",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "串的抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "串的存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "朴素的模式匹配算法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "KMP模式匹配算法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 串"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "树的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "树的抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "树的存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "二叉树的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "二叉树的特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "二叉树的存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "遍历二叉树",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "二叉树的建立",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "线索二叉树",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "树、森林与二叉树的转换",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "哈夫曼树及应用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 树"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "图的定义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "图的抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "图的存储结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "图的遍历",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "最小生成树",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "最短路径",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "拓扑排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "关键路径",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 图"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "查找概论",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "顺序表查找",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "有序表查找",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "线性索引查找",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "二叉树拍讯",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "平衡二叉树",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "多路查找树",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "散列表查找（哈希表）概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "散列函数的构造方法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "处理散列冲突方法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "散列表查找的实现",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 查找"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "排序的基本概念和分类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "冒泡排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "简单选择排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "直接插入排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "希尔排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "堆排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "归并排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "快速排序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "总结",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 排序"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 211,
+  "title": "大话数据结构"
+}

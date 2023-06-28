@@ -1,0 +1,512 @@
+{
+  "bookImgRes": 2131230832,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "搭建编程环境",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "在不同操作系统中搭建 Python 编程环境",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "解决安装问题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "从终端运行 Python 程序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 1 章 起步"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "运行 hello_world.py 时发生的情况",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "变量",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "字符串",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "数字",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "注释",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Python 之禅",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 2 章 变量和简单数据类型"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "列表是什么",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "修改、添加和删除元素",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "组织列表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用列表时避免索引错误",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 列表简介"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "遍历整个列表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "避免缩进错误",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "创建数值列表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用列表的一部分",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "元组",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "设置代码格式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 4 章 操作列表"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "一个简单示例",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "条件测试",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "if 语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 if 语句处理列表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "设置 if 语句的格式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 if 语句"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "一个简单的字典",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用字典",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "遍历字典",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "嵌套",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 字典"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "函数 input() 的工作原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "while 循环简介",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 while 循环来处理列表和字典",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 用户输入和 while 循环"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "定义函数",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "传递实参",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "返回值",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "传递列表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "传递任意数量的实参",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "将函数存储在模块中",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "函数编写指南",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 函数"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "创建和使用类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用类和实例",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "继承",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "导入类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Python 标准库",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "类编码风格",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 类"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "从文件中读取数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "写入文件",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "异常",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "存储数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 10 章 文件和异常"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "测试函数",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "测试类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 11 章 测试代码"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "武装飞船",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "外星人",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "记分",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "项目1：外星人入侵"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "生成数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "下载数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 API",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "项目2：数据可视化"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Django 入门",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "用户账户",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "设置应用程序的样式并对其进行部署",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "项目3：Web 应用程序"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 212,
+  "title": "Python 编程从入门到实践"
+}

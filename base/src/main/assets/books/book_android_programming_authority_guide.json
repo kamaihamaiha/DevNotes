@@ -1,0 +1,1050 @@
+{
+  "bookImgRes": 2131230840,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android 开发基础",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "创建 Android 项目",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android Studio 使用导航",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "用户界面设计",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "从布局 XML 到视图对象",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "部件的实际应用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "创建提示消息",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用模拟器运行应用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：Android 编译过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 1 章 Android 开发初体验"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 2 章 Android 与 MVC 设计模式"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "旋转 GeoQuiz 应用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 Activity 生命周期"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "引入 ViewModel 依赖",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "添加 ViewModel",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "进程销毁时保存数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "ViewModel 与保存实例状态",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：Jetpack、AndroidX 与 架构组件",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 4 章 UI 状态的保存与恢复"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "异常与栈跟踪",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 特有的调试工具",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：探索布局检查器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：探索 Android 性能分析器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 Android 应用的调试"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 第二个 Activity"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android SDK 版本",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 编程与兼容性问题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 Android 开发者文档",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习： 报告编译版本",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 Android SDK 版本与兼容"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "UI 设计的灵活性需求",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "引入 fragment",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 UI fragment 与 Fragment 管理器"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 使用 RecyclerView 显示列表"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 10 章 使用约束布局"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Room 架构组件库",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "创建数据库",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 11 章 数据库与 Room 库"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "单 Activity 多 Fragment",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Fragment argument",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 12 章 Fragment Navigation"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "创建 DialogFragment",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "fragment 间的数据传递",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：事件选择对话框",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 13 章 对话框"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "AppCompat 默认应用栏",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "应用栏菜单",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 Android Assets Studio",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：应用栏、状态栏、工具栏",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：AppCompat 版应用栏",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：RecyclerView 空视图",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 14 章 应用栏"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 15 章 隐式 intent"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "布置照片",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "文件存储",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用相机 intent",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "缩放和显示位图",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "功能声明",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：优化照片显示",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：优化缩略图加载",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 16 章 使用 intent 拍照"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "资源本地化",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "配置修饰符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "测试备选资源",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：确定设备屏幕尺寸",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：日期显示本地化",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 17 章 应用本地化"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "TalkBack",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 18 章 Android 辅助功能"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "为何要用 MVVM 架构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 19 章 数据绑定与 MVVM"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "创建 SoundPool",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "访问 Assets",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：整合测试",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：模拟对象与测试",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 20 章 音频播放与单元测试"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "颜色资源",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "样式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "主题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "添加主题颜色",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "覆盖主题属性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "修改按钮属性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：样式继承拾遗",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：引用主题属性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 21 章 样式与主题"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "统一样式修改",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "shape drawable",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：为什么要使用 XML drawable",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：使用 mipmap 图像",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：使用 9-patch 图像",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：按钮主题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 22 章 XML drawable"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "隐式 intent",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "任务与回退栈",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：进程与任务",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：并发文档",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：应用图标",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 23 章 深入学习 intent 和任务"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Retrofit 网络连接基本",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "从 Flickr 获取 JSON 数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "应用设备配置改变",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：其他 JSON 数据解析器和数据格式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：撤销网络请求",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：管理依赖",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：自定义 Gson 反序列化器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：分页",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：动态调整网格列",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 24 章 HTTP 与后台任务"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 25 章 Looper、Handler 和 HandlerThread"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "搜索 Flickr 网站",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 SearchView",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "sharedpreferences",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "用 Android KTX 编辑 SharedPreferences",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 26 章 搜索"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 27 章 WorkManger"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "普通 intent 与 broadcast intent",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 28 章 broadcast intent"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "最后一段 Flickr 数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "简单方式：使用隐式 intent",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "较难的方式：使用 WebView",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "处理 WebView 的设备旋转问题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "WebView 与定制 UI",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：注入 JavaScript 对象",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：WebView 升级",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "深入学习：Chrome Custom Tabs",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "挑战练习：使用回退键浏览历史网页",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 29 章 网页浏览"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 30 章 定制视图与触摸事件"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "...",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 31 章 属性动画"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 205,
+  "moreItemList": [
+    {
+      "title": "GeoQuiz",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "BeatBox",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "CriminalIntent",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "NerdLauncher",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "PhotoGallery",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "DragAndDraw",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    },
+    {
+      "title": "Sunset",
+      "url": "",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 2053,
+      "section_action": 0
+    }
+  ],
+  "title": "Android\n编程权威指南"
+}

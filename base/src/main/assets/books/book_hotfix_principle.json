@@ -1,0 +1,253 @@
+{
+  "bookImgRes": 2131230844,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "什么是热修复",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "基本概念",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "技术积淀",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "技术概览",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 1 章 热修复技术介绍"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "底层热替换原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "突破底层差异的方法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "编译期与语言特性的影响",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 2 章 热替换代码修复"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "冷启动类加载原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "多态对冷启动类加载的影响",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Dalvik 下完整 dex 方案的新探索",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "入口类与初始化时机的选择",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 冷启动代码修复"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "普遍的实现方式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "资源文件的格式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "运行时资源的解析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "另辟蹊径的资源修复方案",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "更优雅地替换 AssetManager",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "一个意料之外的资源问题",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 4 章 资源热修复技术"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "so 库加载原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "so 库热部署实时生效的可行性分析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "so 库冷部署重启生效实现方案",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "如何正确复制补丁 so 库",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 so 库热修复技术"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Dexposed 浅析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "AndFix 探索历程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Amigo 核心解读",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "腾讯系热修复方案简介",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 其他优秀的热修复方案"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "热修复的专业性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "对 Android 生态的影响",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 与 ios 热修复的不同",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "未来，无限可能",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 热修复技术的未来展望"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 209,
+  "title": "Android热修复技术原理"
+}

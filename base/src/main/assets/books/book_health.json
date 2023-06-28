@@ -1,0 +1,55 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "小区情况",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "症状",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "中信建设-北京新冠一线专家交流会（12月10日）",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        }
+      ],
+      "title": "新冠"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "杂粮",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "水果",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        }
+      ],
+      "title": "美食"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 227,
+  "title": "健康"
+}

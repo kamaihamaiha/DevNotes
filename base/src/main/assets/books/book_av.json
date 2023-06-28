@@ -1,0 +1,452 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "音频知识",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "视频知识",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "C 语言",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "C++",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "FFMpeg",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "Linux",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "WebRTC",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "Android 上的音视频API",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "JNI/NDK",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 9
+        },
+        {
+          "title": "OpenGL 渲染",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 10
+        },
+        {
+          "title": "libyuv",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 11
+        },
+        {
+          "title": "Vulkan",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 12
+        },
+        {
+          "title": "开发通用技能",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 13
+        }
+      ],
+      "title": "知识树"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "搞定音频技术- 极客时间",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "搞定视频技术- 极客时间",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "极课时间，简介地址",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "音视频基础+ffmpeg原理 一课完成音视频技术开发入门",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "FFmpeg音视频核心技术全面精讲+实战（进阶）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "实时互动直播技术（进阶）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "企业级流媒体服务器设计与开发（高级",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "《FFmpeg 从入门到精通》",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "开发商业级热门短视频App 掌握Jetpack组件库",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 9
+        }
+      ],
+      "title": "课程或书本"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "1. 在 Android 平台绘制一张图片，使用至少 3 种不同的 API，ImageView，SurfaceView，自定义 View",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "2. 在 Android 平台使用 AudioRecord 和 AudioTrack API 完成音频 PCM 数据的采集和播放，并实现读写音频 wav 文件",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "3. 在 Android 平台使用 Camera API 进行视频的采集，分别使用 SurfaceView、TextureView 来预览 Camera 数据，取到 NV21 的数据回调",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "4. 学习 Android 平台的 MediaExtractor 和 MediaMuxer API，知道如何解析和封装 mp4 文件",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "5. 学习 Android 平台 OpenGL ES API，了解 OpenGL 开发的基本流程，使用 OpenGL 绘制一个三角形",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "6. 学习 Android 平台 OpenGL ES API，学习纹理绘制，能够使用 OpenGL 显示一张图片",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "7. 学习 MediaCodec API，完成音频 AAC 硬编、硬解",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "8. 学习 MediaCodec API，完成视频 H.264 的硬编、硬解",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "9. 串联整个音视频录制流程，完成音视频的采集、编码、封包成 mp4 输出",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 9
+        },
+        {
+          "title": "10. 串联整个音视频播放流程，完成 mp4 的解析、音视频的解码、播放和渲染",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 10
+        },
+        {
+          "title": "11. 进一步学习 OpenGL，了解如何实现视频的剪裁、旋转、水印、滤镜，并学习 OpenGL 高级特性，如：VBO，VAO，FBO 等等",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 11
+        },
+        {
+          "title": "12. 学习 Android 图形图像架构，能够使用 GLSurfaceviw 绘制 Camera 预览画面",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 12
+        },
+        {
+          "title": "13. 深入研究音视频相关的网络协议，如 rtmp，hls，以及封包格式，如：flv，mp4",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 13
+        },
+        {
+          "title": "14. 深入学习一些音视频领域的开源项目，如 webrtc，ffmpeg，ijkplayer，librtmp 等等",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 14
+        },
+        {
+          "title": "15. 将 ffmpeg 库移植到 Android 平台，结合上面积累的经验，编写一款简易的音视频播放器",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 15
+        },
+        {
+          "title": "16. 将 x264 库移植到 Android 平台，结合上面积累的经验，完成视频数据 H264 软编功能",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 16
+        },
+        {
+          "title": "17. 将 librtmp 库移植到 Android 平台，结合上面积累的经验，完成 Android RTMP 推流功能",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 17
+        },
+        {
+          "title": "18. 上面积累的经验，做一款短视频 APP，完成如：断点拍摄、添加水印、本地转码、视频剪辑、视频拼接、MV 特效等功能",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 18
+        }
+      ],
+      "title": "入门到提高 —— 任务列表"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "grafika",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "android-gpuimage",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "AudioVideoRecordingSample",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "ijkplayer",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "ExoPlayer",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        }
+      ],
+      "title": "开源项目"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "glums",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "李超",
+          "chapter_action": 5,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2,
+          "webUrl": "https://avdancedu.com/categories/"
+        },
+        {
+          "title": "Jhuster",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "雷霄骅",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "DevYK",
+          "chapter_action": 5,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        }
+      ],
+      "title": "行业大佬"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "文档",
+          "chapter_action": 6,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "Android 官方文档"
+    },
+    {
+      "bookType": 220,
+      "sections": [
+        {
+          "title": "入门的技术博客",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "流媒体开发主要工作内容",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "音视频基础 148 题",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "glums 公众号(音视频开发进阶)开放的 播放器实战项目",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "音视频修炼路",
+          "chapter_action": 7,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2,
+          "webUrl": "https://cloud.tencent.com/developer/column/90404"
+        },
+        {
+          "title": "如何系统性学习音视频开发",
+          "chapter_action": 7,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2,
+          "webUrl": "https://mp.weixin.qq.com/s/eIZtPRdU50-HKpqFDA3rvQ"
+        }
+      ],
+      "title": "其他"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 220,
+  "title": "音视频开发"
+}

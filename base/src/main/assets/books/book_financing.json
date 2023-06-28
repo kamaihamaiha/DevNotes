@@ -1,0 +1,39 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 231,
+      "sections": [
+        {
+          "title": "投资中最后悔的事",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/NxkZI-LT7lzhTDXtQxNDig"
+        },
+        {
+          "title": "做好这四点，长期赚钱不难",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/Noa6RAwJgifm8mREWSnxBw"
+        },
+        {
+          "title": "这应该是史上最真诚的买保险建议了",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/CjQHhTxNcBjsZ7sUqkuNQA"
+        }
+      ],
+      "title": "且慢管家"
+    }
+
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 231,
+  "title": "理财知识"
+}

@@ -1,0 +1,245 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 219,
+      "sections": [
+        {
+          "title": "CodeCrafts",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/jkYP1DF2Q7sCHKye_A1XZw"
+        }
+      ],
+      "title": "Android 开发工具"
+    },
+    {
+      "bookType": 219,
+      "sections": [
+        {
+          "title": "Gradle 插件",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "大量的类报红，但是能正常编译运行",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "NDK 项目创建新的 .h 头文件后，无法正常引入其他头系统的头文件",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "Android Studio 运行 Java 的 main 方法",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5,
+          "webUrl": "https://zhuanlan.zhihu.com/p/163338988"
+        },
+        {
+          "title": "Run 按钮灰色了",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "Gradle 依赖路径",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "Android 更新后跑不起来？快来适配 AGP8 和 Flamingo/JDK 17\n",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5,
+          "webUrl": "https://mp.weixin.qq.com/s/lJ-a4KwdTEmLu-sxkehn0Q"
+        }
+      ],
+      "title": "Android Studio"
+    },
+    {
+      "bookType": 219,
+      "title": "Mac 上的工具",
+      "sections": [
+        {
+          "title": "Parallels Desktop 18",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://www.yuque.com/suanshibangeyouquderen-7szjy/pchkwl/giz4ip2bngkbm51g"
+        },
+        {
+          "title": "计算文件 SHA1 哈希值",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/mac_wiki.md"
+        },
+        {
+          "title": "Parallels Desktop 上的 Ubuntu 密码忘记了，重置密码方法",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/mac/reset_pwd_ubuntu_on_parallels-desktop.md"
+        },
+        {
+          "title": "修复: Mac 上软件已损坏无法打开，你应该把它移到废纸篓",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3,
+          "webUrl": "https://www.waodown.com/3217.html"
+        }
+      ]
+    },
+    {
+      "bookType": 219,
+      "title": "Windows 上的工具",
+      "sections": [
+        {
+          "title": "Win10 多种截屏方法",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/tools/win/win_cap_wiki.md"
+        }
+      ]
+    },
+    {
+      "bookType": 219,
+      "title": "Visual Studio",
+      "sections": [
+        {
+          "title": "总览",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio/readme.md"
+        }
+      ]
+    },
+    {
+      "bookType": 219,
+      "title": "VS Code",
+      "sections": [
+        {
+          "title": "总览",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/readme.md"
+        },
+        {
+          "title": "在线教程：极客教程",
+          "chapter_action": 1,
+          "finishTag": true,
+          "htmlTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://geek-docs.com/vscode/vscode-tutorials/what-is-vscode.html"
+        },
+        {
+          "title": "命令面板",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/command_palette.md"
+        },
+        {
+          "title": "从终端中使用`code`调用 vscode",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/start_from_shell.md"
+        },
+        {
+          "title": "预览方法参数",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/preview_params.md"
+        },
+        {
+          "title": "光标移动和选中",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/cursor_move.md"
+        },
+        {
+          "title": "行操作",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/ide/visual_studio_code/line_edit.md"
+        }
+      ]
+    },
+    {
+      "bookType": 219,
+      "title": "CMake 使用",
+      "sections": [
+        {
+          "title": "总揽",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/tools/cmake/readme.md"
+        },
+        {
+          "title": "构建多个源文件",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/tools/cmake/build_multi-source.md"
+        },
+        {
+          "title": "CMake 命令官方文档",
+          "finishTag": true,
+          "webUrl": "https://cmake.org/cmake/help/latest/manual/cmake-commands.7.html"
+        },
+        {
+          "title": "Android Studio 中配置 CMake",
+          "finishTag": true,
+          "webUrl": "https://developer.android.com/studio/projects/configure-cmake"
+        },
+        {
+          "title": "Android NDK CMake 编译",
+          "finishTag": true,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/av/knowledge_tree/ndk/mooc/1.3.md"
+        }
+      ]
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 219,
+  "title": "IDE & Tools"
+}

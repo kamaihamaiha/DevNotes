@@ -1,0 +1,417 @@
+{
+  "bookImgRes": 2131230839,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android 5.0 新特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 6.0 新特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 7.0 新特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 1 章 Android 新特性"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Material Design 概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Design Support Library 常用控件详解",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 2 章 Material Design"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "View 和 ViewGroup",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "坐标系",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的滑动",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "属性动画",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "解析 Scroller",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的事件分发机制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的工作流程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "自定义 View",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "自定义 ViewGroup",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 View 体系与自定义 View"
+    },
+    {
+      "bookType": 204,
+      "sections": [
+        {
+          "title": "线程基础",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "同步",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "阻塞队列",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "线程池",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "AsyncTask 原理",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        }
+      ],
+      "title": "第 4 章 多线程编程"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "网络分层",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "TCP 三次握手与四次挥手",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "HTTP 协议原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "HttpClient 与 HttpURLConnection",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "解析 Volley",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "解析 OkHttp",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "解析 Retrofit",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 网络编程与网络框架"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "六大原则",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "分类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "创建型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "结构型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "行为型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 设计模式"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "EventBus",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "otto",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 事件总线"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "RxJava 基本用法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RxJava 的 Subject",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RxJava 操作符入门",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RxJava 线程控制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RxJava 使用场景",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RxJava 源码解析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 函数响应式编程"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "注解",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "依赖注入的原理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "依赖注入框架",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 注解与依赖注入框架"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "MVC",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "MVP",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "MVVM",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 10 章 应用架构设计"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android 系统架构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 系统源码目录",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Source Insight 使用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "MediaPlayer 框架",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 11 章 系统架构与 MediaPlayer 框架"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 204,
+  "title": "Android\n进阶之光"
+}

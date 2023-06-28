@@ -1,0 +1,216 @@
+{
+  "bookImgRes": -1,
+  "expandChapterIndex": 0,
+  "itemAction": 226,
+  "title": "算法：C语言实现",
+  "chapterModelList": [
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "1.1 算法",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第1章 引言"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "2.1 实现和经验分析",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第2章 算法分析的原理"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "3.1 构建组建",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第3章 基本数据结构"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "4.1 抽象对象和对象集",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第4章 抽象数据结构"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "5.1 递归算法",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第5章 递归与树"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "6.1 游戏规则",
+          "chapter_action": 6,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第6章 基本排序方法"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "7.1 基本算法",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第7章 快速排序"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "8.1 两路归并",
+          "chapter_action": 8,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第8章 归并与归并排序"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "9.1 基本操作的实现",
+          "chapter_action": 9,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第9章 优先队列和堆排序"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "10.1 位、字节和字",
+          "chapter_action": 10,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第10章 基数排序"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "11.1 Batcher奇偶归并排序",
+          "chapter_action": 11,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第11章 特殊用途的排序方法"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "12.1 符号表抽象数据类型",
+          "chapter_action": 12,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第12章 符号表和二叉搜索树"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "13.1 随机化BST",
+          "chapter_action": 13,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第13章 平衡树"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "14.1 散列函数",
+          "chapter_action": 14,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第14章 散列"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "15.1 数字搜索树",
+          "chapter_action": 15,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第15章 基数搜索"
+    },
+    {
+      "bookType": 226,
+      "sections": [
+        {
+          "title": "16.1 游戏规则",
+          "chapter_action": 16,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "第16章 外部搜索"
+    }
+  ]
+}

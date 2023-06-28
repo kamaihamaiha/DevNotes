@@ -1,0 +1,43 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 230,
+      "sections": [
+        {
+          "title": "Gradle常用的几十个命令！",
+          "chapter_action": 0,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/oYQTl5bc8yC2xdjPjJAtRQ"
+        }
+      ],
+      "title": "命令"
+    },
+    {
+      "bookType": 230,
+      "sections": [
+        {
+          "title": "一文搞懂 Gradle 配置，7.0之后有哪些变化？",
+          "chapter_action": 7,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/M48s9_i8WHO91LFQm-Gtkg"
+        },
+        {
+          "title": "todo 2",
+          "chapter_action": 7,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        }
+      ],
+      "title": "其他"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 230,
+  "title": "Gradle"
+}

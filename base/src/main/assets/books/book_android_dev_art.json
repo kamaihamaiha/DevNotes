@@ -1,0 +1,490 @@
+{
+  "bookImgRes": 2131230829,
+  "chapterModelList": [
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Activity 生命周期全面分析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Activity 启动模式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "IntentFilter 的匹配规则",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第一章 Activity 的生命周期和启动模式"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android IPC 机制简介",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 中的多进程模式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "IPC 基础概念介绍",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 的 IPC 方式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Binder 连接池",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "选择合适的 IPC 方式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第二章 IPC 机制"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "View 基础知识",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的滑动",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "弹性滑动",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 事件的分发机制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的滑动冲突",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第三章 View 的事件体系"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "初识 ViewRoot 和 DecorView",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "理解 MeasureSpec",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 的工作流程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "自定义 View",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第四章 View 的工作原理"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "RemoteViews 的应用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RemoteViews 内部机制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "RemoteViews 的意义",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第五章 理解 RemoteViews"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Drawable 简介",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Drawable 分类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "自定义 Drawable",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第六章 Android 的 Drawable"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "View 动画",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "View 动画的特殊使用场景",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "属性动画",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用动画的注意事项",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第七章 动画"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Window 和 WindowManager",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Window 的内部机制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Window 的创建过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第八章 理解 Window 和 WindowManager"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "四大组件运行状态",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Activity 的工作过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Service 的工作过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "BroadcastReceiver 的工作过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "ContentProvider 的工作过程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第九章 四大组件工作过程"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Android 的消息机制概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 的消息机制分析",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "主线程的消息循环",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第十章 Android 的消息机制"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "主线程和子线程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 中的线程状态",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 中的线程池",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第十一章 Android 的线程和线程池"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "Bitmap 的高效加载",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 中的缓存策略",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "ImageLoader 的使用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第十二章 Bitmap 的加载和 Cache"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "使用 CrashHandler 来获取应用的 crash 信息",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用 multidex 来解决方法数越界",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "Android 的动态加载技术",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "反编译初步",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第十三章 综合技术"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "JNI 开发流程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "NDK 开发流程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "JNI 数据类型和类型签名",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "JNI 调用 Java 方法的流程",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第十四章 JNI 和 NDK 编程"
+    },
+    {
+      "bookType": 201,
+      "sections": [
+        {
+          "title": "性能优化方法",
+          "chapter_action": 15,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "内存泄漏分析之 MAT 工具",
+          "chapter_action": 15,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "提高程序的可维护性",
+          "chapter_action": 15,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        }
+      ],
+      "title": "第十五章 Android 性能优化"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 201,
+  "title": "Android\n开发艺术探索"
+}

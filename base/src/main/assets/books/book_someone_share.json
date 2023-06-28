@@ -1,0 +1,36 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 228,
+      "sections": [
+        {
+          "title": "2021年",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/someone_share/caoda_share.md"
+        }
+      ],
+      "title": "曹大"
+    },
+    {
+      "bookType": 228,
+      "sections": [
+        {
+          "title": "2022跨年直播分享",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/someone_share/stormzhang_share.md"
+        }
+      ],
+      "title": "stormzhang"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 228,
+  "title": "大佬分享"
+}

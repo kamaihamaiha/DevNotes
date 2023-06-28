@@ -1,0 +1,966 @@
+{
+  "bookImgRes": 2131230835,
+  "chapterModelList": [
+    {
+      "bookType": 215,
+      "sections": [
+        {
+          "title": "一个简单的 C++ 程序",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "输入输出",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "注释简介",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "控制流",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "类简介",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "书店程序",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        }
+      ],
+      "title": "第 1 章 开始"
+    },
+    {
+      "bookType": 215,
+      "sections": [
+        {
+          "title": "基本内置类型",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "变量",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "复合类型",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "const 限定符",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "处理类型",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "自定义数据结构",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        }
+      ],
+      "title": "第 2 章 变量和基本类型"
+    },
+    {
+      "bookType": 215,
+      "sections": [
+        {
+          "title": "命名空间的 using 声明",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "标准库类型 string",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "标准库类型 vector",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "迭代器介绍",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "数组",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "多维数组",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 3 章 字符串、向量和数组"
+    },
+    {
+      "bookType": 215,
+      "sections": [
+        {
+          "title": "基础",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "算数运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "逻辑和关系运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "赋值运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "递增和递减运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "成员访问运算符",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "条件运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "位运算符",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "sizeof 运算符",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 9
+        },
+        {
+          "title": "逗号运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "运算符优先级表",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 4 章 表达式"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "简单语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "语句作用域",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "条件语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "迭代语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "跳转语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "try 语句块和异常处理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 语句"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "函数基础",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "参数传递",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "返回类型和 return 语句",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "函数重载",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "函数匹配",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "函数指针",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 函数"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "定义抽象数据类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "访问控制与封装",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "类的其他特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "类的作用域",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "构造函数再探",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "类的静态成员",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 类"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "IO 类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "文件输入输出",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "string流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 IO库"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "顺序容器概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "容器库概览",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "顺序容器操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "vector 对象是如何增长的",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "额外的 string 操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "容器适配器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 顺序容器"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "初识泛型算法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "定向操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "再探迭代器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "泛型算法结构",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "特定容器算法",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 10 章 泛型算法"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "使用关联容器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "关联容器概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "关联容器操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "无须容器",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 11 章 关联容器"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "动态内存与智能指针",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "动态数组",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用标准库：文本查询程序",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 12 章 动态内存"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "拷贝、赋值与销毁",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "拷贝控制和资源管理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "交换操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "拷贝控制示例",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "动态内存管理类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "对象移动",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 13 章 拷贝控制"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "基本概念",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "输入和输出运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算数和关系运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "赋值运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "下标运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "递增和递减运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "成员访问运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "重载、类型转换与运算符",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 14 章 重载运算与类型转换"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "概述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "定义基类和派生类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "虚函数",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "抽象基类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "访问控制与继承",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "继承中的类作用域",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "构造函数与拷贝控制",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "容器与继承",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "文本查询程序再探",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 15 章 面向对象程序设计"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "定义模板",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "模板实参推断",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "重载与模板",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "可变参数模板",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "模板特例化",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 16 章 模板与泛型编程"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "tuple 类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "bitset 类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "正则表达式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "随机数",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "IO 库再探",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 17 章 标准库特殊设施"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "异常处理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "命名空间",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "多重继承与虚继承",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 18 章 用于大型程序的工具"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "控制内存分配",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "运行时类型识别",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "枚举类型",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "类成员指针",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "嵌套类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "union：一种节省空间的类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "局部类",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "固有的不可移植的特性",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 19 章 特殊工具与技术"
+    },
+    {
+      "bookType": 0,
+      "sections": [
+        {
+          "title": "标注库名字和头文件",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "算法概览",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "随机数",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "附录A 章 标准库"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 215,
+  "moreItemList": [
+    {
+      "title": "C++ 那些事",
+      "url": "https://github.com/Light-City/CPlusPlusThings.git",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 0,
+      "section_action": 0
+    },
+    {
+      "title": "C++ 入门",
+      "url": "https://juejin.cn/post/6844904039407173646",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 0,
+      "section_action": 0
+    },
+    {
+      "title": "慕课网重学 C++",
+      "url": "https://github.com/kamaihamaiha/DevNotes/blob/master/doc/av/knowledge_tree/c_and_cpp/cpp/readme.md",
+      "chapter_action": 0,
+      "finishTag": false,
+      "item_action": 0,
+      "section_action": 0
+    }
+  ],
+  "title": "C++ Primer"
+}

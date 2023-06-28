@@ -1,0 +1,471 @@
+{
+  "bookImgRes": 2131230830,
+  "chapterModelList": [
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "定义",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "历史",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "基本组成",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "FFmpeg 的编解码工具 ffmpeg",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "FFmpeg 的播放器 ffplay",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "FFmpeg 的多媒体分析器 ffprobe",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "FFmpeg 编译",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "编码支持与定制",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 8
+        }
+      ],
+      "title": "第 1 章 FFmpeg"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "ffmpeg 常用命令",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "ffprobe 常用命令",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "ffplay 常用命令",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        }
+      ],
+      "title": "第 2 章 FFmpeg 工具使用基础"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "音视频文件转 MP4 格式",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "视频文件转 FLV",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "视频文件转 M3U8",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "视频文件切片",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "音视频文件音视频流抽取",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "系统资源的使用情况",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        }
+      ],
+      "title": "第 3 章 FFmpeg 转封装"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "软编码 H.264 与 H.265",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "硬编解码",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "输入 MP3",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "输出 AAC",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "系统资源使用情况",
+          "chapter_action": 4,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        }
+      ],
+      "title": "第 4 章 FFmpeg 转码"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "发布与录制 RTMP 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "录制 RTSP 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "录制 HTTP 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "复制和发布 UDP/TCP 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "推多路流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "生成 HDS 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "生成 DASH 流",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 5 章 FFmpeg 流媒体"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "Filter 描述格式",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "为视频添加水印",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "生成画中画",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "视频多宫格处理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "音频流滤镜操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "音频音量探测",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "为视频加字幕",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "视频抠图合并",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "3D 视频处理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "定时视频截图",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "生成测试元数据",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "对音视频倍速处理",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 6 章 FFmpeg 滤镜使用"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "FFmpeg 中 Linux 设备操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "FFmpeg 中 OS X 设备操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "FFmpeg 中 Windows 设备操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 7 章 FFmpeg 采集设备"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "音视频流封装",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "音视频文件解封装",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "音视频文件转封装",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "视频截取",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "avio 内存数据操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 8 章 FFmpeg 接口 libavformat 的使用"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "FFmpeg 旧接口的使用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "FFmpeg 新接口的使用",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 9 章 FFmpeg 接口 libavcodec 的使用"
+    },
+    {
+      "bookType": 210,
+      "sections": [
+        {
+          "title": "filtergraph 和 filter 简述",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "FFmpeg 中预留的滤镜",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "avfilter 流程图",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        },
+        {
+          "title": "使用滤镜加 LOGO 操作",
+          "chapter_action": 0,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0
+        }
+      ],
+      "title": "第 10 章 FFmpeg 接口 libavfilter 的使用"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 210,
+  "title": "FFmpeg 从入门到精通",
+  "moreItemList": [
+    {
+      "title": "自己写的 CLion 练习代码",
+      "url": "https://github.com/kamaihamaiha/audio_video_dev_codes/tree/main/ffmpeg_dev/README.md",
+      "chapter_action": 0,
+      "finishTag": true,
+      "item_action": 0,
+      "section_action": 0
+    },
+    {
+      "title": "FFmpeg 原理(在线电子书)",
+      "url": "https://ffmpeg.xianwaizhiyin.net",
+      "chapter_action": 0,
+      "finishTag": true,
+      "item_action": 0,
+      "section_action": 0
+    }
+  ]
+}

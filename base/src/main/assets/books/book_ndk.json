@@ -1,0 +1,132 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 221,
+      "sections": [
+        {
+          "title": "简介",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "JNI 基本概念",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        }
+      ],
+      "title": "入门"
+    },
+    {
+      "bookType": 221,
+      "sections": [
+        {
+          "title": "NDK 工程结构",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "CMake 编译",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "Java 调用 C/C++ 方式一：静态注册",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "Java 调用 C/C++ 方式二：动态注册",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "Java 与 JNI 引用类型转换",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "JNI 访问 Java 类字段",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "JNI 访问 Java 类方法",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "JNI 访问 Java 类回调方法 和 子线程访问 Java 类的回调方法",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "JNI 创建 Java 类",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 9
+        },
+        {
+          "title": "JNI 引用类型",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 10
+        },
+        {
+          "title": "JNI 异常处理",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 11
+        },
+        {
+          "title": "JNI 线程操作",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 12
+        }
+      ],
+      "title": "基础 Demo 之 Mooc 网学习 NDK"
+    },
+    {
+      "bookType": 221,
+      "sections": [
+        {
+          "title": "一篇文章教你掌握jni技术",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/UIkHnLatzoW_vmk_bSwXFA"
+        }
+      ],
+      "title": "相关文章"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 221,
+  "title": "NDK 开发"
+}

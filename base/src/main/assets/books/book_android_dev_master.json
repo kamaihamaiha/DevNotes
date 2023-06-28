@@ -1,0 +1,269 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 218,
+      "sections": [
+        {
+          "title": "崩溃优化",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "内存优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "卡顿优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "启动优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "IO 优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "存储优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "网络优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "耗电优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 8
+        },
+        {
+          "title": "UI 优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 9
+        },
+        {
+          "title": "包体积优化",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 10
+        },
+        {
+          "title": "想成为 Android 高手，你需要先搞定这三个问题",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 11
+        }
+      ],
+      "title": "高质量开发"
+    },
+    {
+      "bookType": 218,
+      "sections": [
+        {
+          "title": "如何提升组织与个人的研发效能",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "关于编译，你需要了解什么？",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "编译插桩的三种方法: AspectJ、ASM、ReDex",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "大数据与 AI，如何高效地测试？",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "从每月到每天，如何给版本发布提速？",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "数据评估",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "线上疑难问题该如何排查和跟踪？",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 7
+        },
+        {
+          "title": "做一名有高度的移动开发工程师",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 8
+        }
+      ],
+      "title": "高效开发"
+    },
+    {
+      "bookType": 218,
+      "sections": [
+        {
+          "title": "聊聊重构：优秀的架构都是演进而来的",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "Native Hook 技术，天使还是魔鬼？",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "移动开发新大陆：Android 音视频开发",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "动态化实践，如何选择适合自己的方案？",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "聊聊 Flutter，面对层出不穷的新技术该如何跟进？",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "Android 开发高手课学习心得",
+          "chapter_action": 3,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        }
+      ],
+      "title": "架构演进"
+    },
+    {
+      "bookType": 218,
+      "sections": [
+        {
+          "title": "AMS 插桩强化练习",
+          "chapter_action": 4,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "让 Sample 跑起来"
+    },
+    {
+      "bookType": 218,
+      "sections": [
+        {
+          "title": "Android JVM TI 机制详解",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "专栏学得苦？可能是方法没找对",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "专栏学得苦？可能你还需要一套配套学习书单",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "Native 下如何获取调用栈？",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 4
+        },
+        {
+          "title": "聊聊 Framework 的学习方法",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 5
+        },
+        {
+          "title": "Android 工程师的 “面试指南”",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        },
+        {
+          "title": "程序员修炼之路，设计能力的提升途径",
+          "chapter_action": 5,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 6
+        }
+      ],
+      "title": "特别放送"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 218,
+  "title": "Android 开发高手课"
+}

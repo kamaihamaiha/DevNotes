@@ -1,0 +1,54 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 222,
+      "sections": [
+        {
+          "title": "要点",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        },
+        {
+          "title": "准备",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 2
+        },
+        {
+          "title": "简历要点",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3
+        },
+        {
+          "title": "提高面试通过率",
+          "chapter_action": 1,
+          "finishTag": true,
+          "section_action": 4
+        }
+      ],
+      "title": "面试攻略"
+    },
+    {
+      "bookType": 222,
+      "sections": [
+        {
+          "title": "湘财证券",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1
+        }
+      ],
+      "title": "面试公司记录"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 222,
+  "title": "面试"
+}
