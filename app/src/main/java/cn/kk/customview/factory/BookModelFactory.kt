@@ -4,7 +4,6 @@ import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.MyApp
 import cn.kk.customview.bean.BookModel
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 /**
  * 课本工厂
@@ -15,12 +14,21 @@ class BookModelFactory {
     companion object {
 
         private val mBooks by lazy {
-            getBooks(AssetsHelper.getBooksValue(MyApp.application))
+            getBooks()
         }
 
-        fun getBooks(bookLisJson: String): MutableList<BookModel> {
-            val typeToken = object : TypeToken<List<BookModel>>() {}.type
-            return Gson().fromJson<List<BookModel>>(bookLisJson, typeToken).toMutableList()
+        fun getBooks(): MutableList<BookModel> {
+            val bookList = mutableListOf<BookModel>()
+            val booksNameList = AssetsHelper.getBooksNameList(MyApp.application)
+            for (name in booksNameList) {
+                val bookOriginalValue = AssetsHelper.getBookOriginalValue(MyApp.application, name)
+                try {
+                    val bookModel = Gson().fromJson<BookModel>(bookOriginalValue, BookModel::class.java)
+                    bookList.add(bookModel)
+                } catch (e: Exception) {
+                }
+            }
+            return bookList
         }
 
         fun getBookByAction(itemAction: Int): BookModel {

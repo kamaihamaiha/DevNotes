@@ -3,10 +3,11 @@ package cn.kk.base.utils
 import android.content.Context
 import android.text.TextUtils
 import cn.kk.base.bean.BaseItem
+import org.json.JSONArray
 
 object AssetsHelper {
 
-    val BOOK_LIST_FILE = "book_list.json"
+    val BOOK_NAMW_LIST_FILE = "book_name_list.json"
     val BASE_BOOK_URL = "https://github.com/kamaihamaiha/DevNotes/blob/master/doc"
     val BOOK_ANDROID_DEV_PERFORMANCE_URL = "/android_dev_performance"
     val README_NAME = "readme.md"
@@ -15,8 +16,24 @@ object AssetsHelper {
         return ctx.assets.open(String.format("%s/%s", dirName, fileName)).bufferedReader().use { it.readText() }
     }
 
-    fun getBooksValue(ctx: Context): String{
-        return ctx.assets.open(String.format("%s/%s", "books", BOOK_LIST_FILE)).bufferedReader().use { it.readText() }
+
+    /**
+     * 返回 book name set
+     */
+    fun getBooksNameList(ctx: Context): MutableSet<String> {
+        val bookNames = ctx.assets.open(String.format("%s/%s", "books", BOOK_NAMW_LIST_FILE)).bufferedReader().use { it.readText() }
+        val jsonArray = JSONArray(bookNames)
+        val bookNameSet = mutableSetOf<String>()
+
+        for (i in 0 until jsonArray.length()) {
+            val item = jsonArray.getString(i)
+            bookNameSet.add(item)
+        }
+        return bookNameSet
+    }
+
+    fun getBookOriginalValue(ctx: Context, bookName: String): String {
+        return ctx.assets.open(String.format("%s/%s", "books", bookName)).bufferedReader().use { it.readText() }
     }
 
     fun getHtmlFilePath(fileName: String): String{

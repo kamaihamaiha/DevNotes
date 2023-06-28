@@ -33,7 +33,7 @@ class SearchBookActivity: BaseActivity() {
     }
 
     private val mBookList by lazy {
-        BookModelFactory.getBooks(AssetsHelper.getBooksValue(this@SearchBookActivity))
+        BookModelFactory.getBooks()
     }
 
     // 可以进行关键字搜索的所有 model 集合

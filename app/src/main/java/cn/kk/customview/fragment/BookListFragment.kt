@@ -39,9 +39,7 @@ class BookListFragment: BaseFragment() {
         val rvBookList = rootView.findViewById<RecyclerView>(R.id.rv_book)
         // init book data
 
-        val bookLisJson = AssetsHelper.getBooksValue(context!!)
-
-        val bookListV2 = BookModelFactory.getBooks(bookLisJson)
+        val bookListV2 = BookModelFactory.getBooks()
 
         rvBookList.apply {
             layoutManager = GridLayoutManager(context, 3)
