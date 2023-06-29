@@ -1,0 +1,722 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 基本规定",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 自然人",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 法人",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 非法人组织",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 民事权利",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第六章 民事法律行为",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第七章 代理",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第八章 民事责任",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第九章 诉讼时效",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        },
+        {
+          "title": "第十章 期间计算",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": ""
+        }
+      ],
+      "title": "第一编 总则"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定（第一分编 通则）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 物权的设立、变更、转让和消灭",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 物权的保护",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 一般规定（第二分编 所有权）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 国家所有权和集体所有权、私人所有权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第六章 业主的建筑物区分所有权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第七章 相邻关系",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第八章 共有",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第九章 所有权获取的特别规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十章 一般规定（第三分编 用益物权）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十一章 土地承包经营权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十二章 建设用地使用权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十三章 宅基地使用权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十四章 居住权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十五章 地役权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十六章 一般规定（第四分编 担保物权）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十七章 抵押权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十八章 质权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十九章 留置权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十章 占有（第五分编 占有）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第二编 物权"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定（第一分编 通则）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 合同的订立",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 合同的效力",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 合同的履行",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 合同的保全",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第六章 合同的变更和转让",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第七章 合同的权利义务终止",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第八章 违约责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第九章 买卖合同（第二分编 典型合同）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十章 供用电、水、气、热力合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十一章 赠与合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十二章 借款合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十三章 保证合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十四章 租赁合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十五章 融资租赁合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十六章 保理合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十七章 承揽合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十八章 建设工程合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十九章 运输合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十章 技术合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十一章 保管合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十二章 仓储合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十三章 委托合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十四章 物业服务合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十五章 行纪合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十六章 中介合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十七章 合伙合同",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十八章 无因管理（第三分编 准合同）",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二十九章 不当得利",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第三编 合同"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 生命权、身体权和健康权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 姓名权和名称权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 肖像权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 名誉权和荣誉权",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第六章 隐私权和个人信息保护",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第四编 人格权"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 结婚",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 家庭关系",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 离婚",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 收养",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第五编 婚姻家庭"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 法定继承",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 遗嘱继承和遗赠",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 遗产的处理",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第六编 继承"
+    },
+    {
+      "bookType": 232,
+      "sections": [
+        {
+          "title": "第一章 一般规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第二章 损害赔偿",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第三章 责任主体的特殊规定",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第四章 产品责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第五章 机动车交通事故责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第六章 医疗损害责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第八章 环境污染和生态破坏责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第九章 高度危险责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第九章 饲养动物损害责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "第十章 建筑物和物件损害责任",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "第七编 侵权责任"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "itemAction": 232,
+  "title": "民法典"
+}
