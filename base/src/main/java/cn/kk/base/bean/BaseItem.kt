@@ -15,6 +15,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
     var bookType = 0
     var chapterPos = 0
     var sectionPos = 0
+    var data_source = ""
 
     enum class Type {
         TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, UNKNOWN

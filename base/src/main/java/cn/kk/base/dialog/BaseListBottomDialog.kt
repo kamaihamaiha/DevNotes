@@ -6,11 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.R
 import cn.kk.base.activity.BaseActivity
-import cn.kk.base.bean.BaseItem
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 
-abstract  class  BaseListBottomDialog<B: BaseItem> (mActivity: BaseActivity, val models: MutableList<B>, theme: Int = R.style.EdgeToEdgeDialogStyle): BaseBottomDialog(mActivity, theme) {
+abstract  class  BaseListBottomDialog<B: Any> (mActivity: BaseActivity, val models: MutableList<B>, theme: Int = R.style.EdgeToEdgeDialogStyle): BaseBottomDialog(mActivity, theme) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

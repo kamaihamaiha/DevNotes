@@ -7,10 +7,11 @@
         {
           "title": "第一章 基本规定",
           "chapter_action": 1,
-          "finishTag": false,
+          "finishTag": true,
           "item_action": 0,
           "section_action": 0,
-          "webUrl": ""
+          "webUrl": "",
+          "data_source": "c_1_p_1_civil_code.json"
         },
         {
           "title": "第二章 自然人",
@@ -714,6 +715,28 @@
         }
       ],
       "title": "第七编 侵权责任"
+    },
+    {
+      "bookType": 228,
+      "sections": [
+        {
+          "title": "法律属于含义",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        },
+        {
+          "title": "施行日期",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": ""
+        }
+      ],
+      "title": "附则"
     }
   ],
   "expandChapterIndex": 0,

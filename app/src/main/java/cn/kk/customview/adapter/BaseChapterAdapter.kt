@@ -10,6 +10,9 @@ import kotlin.math.exp
 
 /**
  * 通用章节适配器
+ * 1. 二级列表
+ * 2. 第一层是自定义的 ItemFolderView(TextView + RecyclerView)
+ * 3. 第二层是 RecyclerView 对应的普通 item_list
  */
 class BaseChapterAdapter(chapterData: MutableList<ItemChapterModel>): BaseQuickAdapter<ItemChapterModel, BaseViewHolder>(R.layout.item_chapter_view, chapterData) {
     var mItemSectionClickListener: OnItemSectionClickListener ?= null

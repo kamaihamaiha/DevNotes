@@ -1,5 +1,6 @@
 package cn.kk.customview.factory
 
+import cn.kk.base.bean.ChapterModel
 import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.MyApp
 import cn.kk.customview.bean.BookModel
@@ -45,6 +46,14 @@ class BookModelFactory {
         fun createBook(actionBook: Int): BookModel {
             return getBookByAction(actionBook)
         }
+
+        // region chapter
+        fun getChapterModel(assertFilePath: String): ChapterModel {
+            val jsonData = AssetsHelper.getChapterOriginalValue(MyApp.application, assertFilePath)
+            return Gson().fromJson(jsonData, ChapterModel::class.java)
+        }
+
+        // endregion
     }
 
 }

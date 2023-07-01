@@ -130,6 +130,7 @@
 
         <!--book-->
         <activity android:name=".activity.book.BookDetailActivity"/>
+        <activity android:name=".activity.book.chapter.ChapterDetailActivity"/>
 
         <!--NDK-->
         <activity android:name=".activity.ndk.NdkHomeActivity"/>

@@ -1,5 +1,6 @@
 package cn.kk.base.dialog
 
+import android.content.Context
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
@@ -11,9 +12,9 @@ import cn.kk.base.bean.WikiModel
 /**
  * 简单的底部 wiki 弹窗 dialog
  */
-class WikiBottomDialog(mActivity: BaseActivity,val model: WikiModel ,theme: Int = R.style.EdgeToEdgeDialogStyle): BaseBottomDialog(mActivity, theme) {
+class WikiBottomDialog(mContext: Context,val model: WikiModel ,theme: Int = R.style.EdgeToEdgeDialogStyle): BaseBottomDialog(mContext, theme) {
 
-    constructor(mActivity: BaseActivity): this(mActivity, WikiModel(),0)
+    constructor(mContext: Context): this(mContext, WikiModel(),0)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

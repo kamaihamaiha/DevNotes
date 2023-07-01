@@ -1,13 +1,14 @@
 package cn.kk.base.dialog
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import cn.kk.base.UIHelper
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-abstract class BaseBottomDialog(val contex: Activity, theme: Int): BottomSheetDialog(contex, theme) {
+abstract class BaseBottomDialog(context: Context, theme: Int): BottomSheetDialog(context, theme) {
 
     constructor(context: Activity):this(context, 0){
 

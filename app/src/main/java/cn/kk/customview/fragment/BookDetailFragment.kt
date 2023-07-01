@@ -26,6 +26,8 @@ import cn.kk.customview.activity.more.audio.AudioActivity
 import cn.kk.customview.activity.more.video.VideoActivity
 import cn.kk.customview.adapter.BaseChapterAdapter
 import cn.kk.base.bean.BaseItem
+import cn.kk.customview.activity.book.chapter.ChapterDetailActivity
+import cn.kk.customview.bean.BookItem
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.bean.ItemSectionModel
 import cn.kk.customview.factory.BookModelFactory
@@ -236,6 +238,11 @@ class BookDetailFragment: BaseFragment() {
                                         }
                                     }
                                     else -> {}
+                                }
+                            }
+                            BaseItem.ACTION_BOOK_CIVIL_CODE -> { // 民法典
+                                if (!item.data_source.isNullOrEmpty()) {
+                                    startNextUI(ChapterDetailActivity::class.java, item.title, item.data_source)
                                 }
                             }
                         }

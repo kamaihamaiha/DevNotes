@@ -22,6 +22,7 @@ abstract class BaseFragment: Fragment() {
 
     // region Intent
     protected val INTENT_MODEL_KEY = "model"
+    protected val INTENT_MODEL_DATA_SOURCE_KEY = "model_data_source" // 目前数据源仅来自于 assets 下
 
     // endregion
 
@@ -75,6 +76,10 @@ abstract class BaseFragment: Fragment() {
 
     protected fun <T: Activity> startNextUI(targetActivity: Class<T>, title: String){
         (activity as BaseActivity).openNextUI(targetActivity, title)
+    }
+
+    protected fun <T: Activity> startNextUI(targetActivity: Class<T>, title: String, dataSource: String){
+        (activity as BaseActivity).openNextUI(targetActivity, title, dataSource)
     }
 
     protected fun <T: Activity> startNextUI(targetActivity: Class<T>, title: String, type: Int){

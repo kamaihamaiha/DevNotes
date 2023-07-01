@@ -36,6 +36,7 @@ abstract class BaseActivity: BasicActivity() {
     protected val INTENT_MARKDOWN_PATH_KEY = "markdown_path"
     protected val INTENT_MARKDOWN_LOCAL_KEY = "markdown_is_local"
     protected val INTENT_MODEL_KEY = "model"
+    protected val INTENT_MODEL_DATA_SOURCE_KEY = "model_data_source" // 目前数据源仅来自于 assets 下
 
     protected lateinit var mSelf: BaseActivity
     protected var baseToolbar: Toolbar?= null
@@ -226,6 +227,14 @@ abstract class BaseActivity: BasicActivity() {
     open fun <T: Activity> openNextUI(targetActivity: Class<T>, title: String){
         startActivity(Intent(this, targetActivity).apply {
             putExtra(INTENT_TITLE_KEY, title)
+        })
+        slideAnimEnter()
+    }
+
+    open fun <T: Activity> openNextUI(targetActivity: Class<T>, title: String, dataSource: String){
+        startActivity(Intent(this, targetActivity).apply {
+            putExtra(INTENT_TITLE_KEY, title)
+            putExtra(INTENT_MODEL_DATA_SOURCE_KEY, dataSource)
         })
         slideAnimEnter()
     }
