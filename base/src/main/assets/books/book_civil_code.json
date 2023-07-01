@@ -16,10 +16,11 @@
         {
           "title": "第二章 自然人",
           "chapter_action": 1,
-          "finishTag": false,
+          "finishTag": true,
           "item_action": 0,
           "section_action": 0,
-          "webUrl": ""
+          "webUrl": "",
+          "data_source": "c_2_p_1_civil_code.json"
         },
         {
           "title": "第三章 法人",
