@@ -5,11 +5,15 @@ import cn.kk.base.bean.BaseMoreItem
 import java.io.Serializable
 
 /**
- * @param itemAction 区分 book
+ * @param bookType 区分 book
  */
-class BookModel(title: String, val itemAction: Int, val chapterModelList: MutableList<ItemChapterModel>): BaseItem(title, Type.TYPE_BOOK), Serializable {
+class BookModel(title: String, bookType: Int, val chapterModelList: MutableList<ItemChapterModel>): BaseItem(title, Type.TYPE_BOOK), Serializable {
 
     constructor(): this("", -1, mutableListOf())
+
+    init {
+        super.bookType = this.bookType
+    }
 
     var bookImgRes: Int = -1
     var expandChapterIndex = 0

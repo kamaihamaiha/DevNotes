@@ -10,7 +10,8 @@
           "finishTag": true,
           "item_action": 0,
           "section_action": 0,
-          "webUrl": ""
+          "webUrl": "",
+          "data_source": "xx.json"
         }
       ],
       "title": "chapter 1"
@@ -24,13 +25,14 @@
           "finishTag": true,
           "item_action": 0,
           "section_action": 1,
-          "webUrl": ""
+          "webUrl": "",
+          "data_source": "xx.json"
         }
       ],
       "title": "chapter 2"
     }
   ],
   "expandChapterIndex": 0,
-  "itemAction": 228,
+  "bookType": 228,
   "title": "book demo"
 }

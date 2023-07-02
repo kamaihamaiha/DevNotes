@@ -26,8 +26,7 @@ import cn.kk.customview.activity.more.audio.AudioActivity
 import cn.kk.customview.activity.more.video.VideoActivity
 import cn.kk.customview.adapter.BaseChapterAdapter
 import cn.kk.base.bean.BaseItem
-import cn.kk.customview.activity.book.chapter.ChapterDetailActivity
-import cn.kk.customview.bean.BookItem
+import cn.kk.customview.activity.book.chapter.SectionDetailActivity
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.bean.ItemSectionModel
 import cn.kk.customview.factory.BookModelFactory
@@ -55,10 +54,10 @@ class BookDetailFragment: BaseFragment() {
         val bookModel = arguments?.getSerializable(INTENT_MODEL_KEY) as BookModel
 
         // region 添加书籍信息到本地数据库
-        bookListViewModel.getBook(bookModel.itemAction).observe(viewLifecycleOwner, Observer { book ->
+        bookListViewModel.getBook(bookModel.bookType).observe(viewLifecycleOwner, Observer { book ->
             if (book == null) {
 //                showToast("add book: ${bookModel.title}")
-                BookRepository.getInstance().addBook(Book(bookModel.itemAction, bookModel.title, bookModel.bookImgRes))
+                BookRepository.getInstance().addBook(Book(bookModel.bookType, bookModel.title, bookModel.bookImgRes))
             } else {
 //                showToast(bookModel.title.plus(" 已经添加过了"))
             }
@@ -124,11 +123,11 @@ class BookDetailFragment: BaseFragment() {
                                         when(item.section_action) {
                                             1 -> startNextUI(AudioActivity::class.java, item.title)
                                             2 -> startNextUI(VideoActivity::class.java, item.title)
-                                            3 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.action_book_c))
-                                            4 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.action_book_c_plus))
-                                            5 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.action_book_ffmpeg))
-                                            6 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.action_book_linux))
-                                            9 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.ACTION_BOOK_NDK))
+                                            3 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_c))
+                                            4 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_c_plus))
+                                            5 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_ffmpeg))
+                                            6 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_linux))
+                                            9 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.ACTION_BOOK_NDK))
                                             10 -> startNextUI(OpenGLDemoActivity::class.java, item.title)
                                         }
                                     }
@@ -136,7 +135,7 @@ class BookDetailFragment: BaseFragment() {
                                         when(item.section_action) {
                                             1 -> startNextUI(AudioActivity::class.java, item.title)
                                             2 -> startNextUI(VideoActivity::class.java, item.title)
-                                            8 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByAction(BaseItem.action_book_ffmpeg))
+                                            8 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_ffmpeg))
                                         }
 
                                     }
@@ -240,9 +239,9 @@ class BookDetailFragment: BaseFragment() {
                                     else -> {}
                                 }
                             }
-                            BaseItem.ACTION_BOOK_CIVIL_CODE -> { // 民法典
+                            BaseItem.ACTION_BOOK_CIVIL_CODE, BaseItem.ACTION_BOOK_PENAL_CODE -> { // 法律相关
                                 if (!item.data_source.isNullOrEmpty()) {
-                                    startNextUI(ChapterDetailActivity::class.java, item.title, item.data_source)
+                                    startNextUI(SectionDetailActivity::class.java, item.title, item.data_source!!)
                                 }
                             }
                         }

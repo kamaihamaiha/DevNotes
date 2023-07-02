@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
 
     <include
-        android:id="@+id/title"
         layout="@layout/layout_title"/>
 
     <androidx.fragment.app.FragmentContainerView

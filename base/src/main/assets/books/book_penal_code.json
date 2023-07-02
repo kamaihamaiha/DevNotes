@@ -1,0 +1,170 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 233,
+      "sections": [
+        {
+          "title": "第一章 刑法的任务、基本原则和适用范围",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "c_1_p_1_penal_code.json"
+        },
+        {
+          "title": "第二章 犯罪",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "c_2_p_1_penal_code.json"
+        },
+        {
+          "title": "第三章 刑罚",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "c_3_p_1_penal_code.json"
+        },
+        {
+          "title": "第四章 刑罚的具体运用",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "c_4_p_1_penal_code.json"
+        },
+        {
+          "title": "第五章 其他规定",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "c_5_p_1_penal_code.json"
+        }
+      ],
+      "title": "第一编 总则"
+    },
+    {
+      "bookType": 233,
+      "sections": [
+        {
+          "title": "第一章 危害国家安全罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_1_p_2_penal_code.json"
+        },
+        {
+          "title": "第二章 危害公共安全罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_2_p_2_penal_code.json"
+        },
+        {
+          "title": "第三章 破坏社会主义市场经济秩序罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_3_p_2_penal_code.json"
+        },
+        {
+          "title": "第四章 侵犯公民人身权利、民族权利罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_4_p_2_penal_code.json"
+        },
+        {
+          "title": "第五章 侵犯财产罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_5_p_2_penal_code.json"
+        },
+        {
+          "title": "第六章 妨害社会管理秩序罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_6_p_2_penal_code.json"
+        },
+        {
+          "title": "第七章 危害国防利益罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_7_p_2_penal_code.json"
+        },
+        {
+          "title": "第八章 贪污贿赂罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_8_p_2_penal_code.json"
+        },
+        {
+          "title": "第九章 渎职罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_9_p_2_penal_code.json"
+        },
+        {
+          "title": "第十章 军人违反职责罪",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "c_10_p_2_penal_code.json"
+        }
+      ],
+      "title": "第二编 分则"
+    },
+    {
+      "bookType": 233,
+      "sections": [
+        {
+          "title": "施行日期",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "附则"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "bookType": 233,
+  "title": "中华人民共和国刑法"
+}

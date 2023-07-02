@@ -13,9 +13,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.fragment.BaseFragment
-import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.R
-import cn.kk.customview.activity.SearchBookActivity
+import cn.kk.customview.activity.SearchAllBookActivity
 import cn.kk.customview.activity.book.BookDetailActivity
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.factory.BookModelFactory
@@ -31,7 +30,7 @@ class BookListFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-       val toolbar = rootView.findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = rootView.findViewById<Toolbar>(R.id.toolbar)
         toolbar.inflateMenu(R.menu.menu_search)
         toolbar.setTitle("")
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
@@ -79,7 +78,7 @@ class BookListFragment: BaseFragment() {
             R.id.menu_book_search -> {
                 // start search activity
                 try {
-                    startNextUI(SearchBookActivity::class.java, "")
+                    startNextUI(SearchAllBookActivity::class.java, "")
                     return true
                 } catch (e: Exception) {
                     e.printStackTrace()

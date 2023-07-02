@@ -1,6 +1,6 @@
 package cn.kk.customview.factory
 
-import cn.kk.base.bean.ChapterModel
+import cn.kk.base.bean.SectionDetailModel
 import cn.kk.base.utils.AssetsHelper
 import cn.kk.customview.MyApp
 import cn.kk.customview.bean.BookModel
@@ -32,9 +32,9 @@ class BookModelFactory {
             return bookList
         }
 
-        fun getBookByAction(itemAction: Int): BookModel {
+        fun getBookByType(bookType: Int): BookModel {
             for (book in mBooks) {
-                if (book.itemAction == itemAction) {
+                if (book.bookType == bookType) {
                     return book
                 }
             }
@@ -43,14 +43,21 @@ class BookModelFactory {
             return mBooks[0]
         }
 
-        fun createBook(actionBook: Int): BookModel {
-            return getBookByAction(actionBook)
+        fun createBook(bookType: Int): BookModel {
+            return getBookByType(bookType)
         }
 
-        // region chapter
-        fun getChapterModel(assertFilePath: String): ChapterModel {
-            val jsonData = AssetsHelper.getChapterOriginalValue(MyApp.application, assertFilePath)
-            return Gson().fromJson(jsonData, ChapterModel::class.java)
+        // region section
+        fun getSectionDetailModel(assertFilePath: String?): SectionDetailModel {
+            assertFilePath?.let {
+                try {
+                    val jsonData = AssetsHelper.getSectionOriginalValue(MyApp.application, it)
+                    return Gson().fromJson(jsonData, SectionDetailModel::class.java)
+                } catch (e: Exception) {
+                    return SectionDetailModel()
+                }
+            }
+            return SectionDetailModel()
         }
 
         // endregion

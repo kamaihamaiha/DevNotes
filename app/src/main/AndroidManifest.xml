@@ -82,7 +82,8 @@
         <activity android:name=".activity.NormalTabActivity"/>
         <activity android:name=".activity.NormalWebViewActivity"/>
         <activity android:name=".activity.NormalMarkDownViewActivity"/>
-        <activity android:name=".activity.SearchBookActivity"/>
+        <activity android:name=".activity.SearchAllBookActivity"/>
+        <activity android:name=".activity.SearchSpecifyBookActivity"/>
 
         <activity
             android:name=".ui.system.CoordinatorLayoutActivity"
@@ -129,8 +130,8 @@
         <activity android:name=".activity.arch.AndroidSysArchActivity"/>
 
         <!--book-->
-        <activity android:name=".activity.book.BookDetailActivity"/>
-        <activity android:name=".activity.book.chapter.ChapterDetailActivity"/>
+        <activity android:name=".activity.book.BookDetailActivity" />
+        <activity android:name=".activity.book.chapter.SectionDetailActivity"/>
 
         <!--NDK-->
         <activity android:name=".activity.ndk.NdkHomeActivity"/>

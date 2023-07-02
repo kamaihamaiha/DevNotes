@@ -26,8 +26,7 @@ class NormalMarkDownViewActivity: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-        setSupportActionBar(baseToolbar) // 添加 menu 菜单，必须要设置 actionBar
-        supportActionBar?.title = "" // 避免 actionBar 的 title 默认显示为 app name
+        setMyToolBar()
 
         val local = intent.getBooleanExtra(INTENT_MARKDOWN_LOCAL_KEY, true)
 

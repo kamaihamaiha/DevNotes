@@ -36,6 +36,7 @@ abstract class BaseActivity: BasicActivity() {
     protected val INTENT_MARKDOWN_PATH_KEY = "markdown_path"
     protected val INTENT_MARKDOWN_LOCAL_KEY = "markdown_is_local"
     protected val INTENT_MODEL_KEY = "model"
+    protected val INTENT_BOOK_TYPE_KEY = "book_type"
     protected val INTENT_MODEL_DATA_SOURCE_KEY = "model_data_source" // 目前数据源仅来自于 assets 下
 
     protected lateinit var mSelf: BaseActivity
@@ -110,6 +111,11 @@ abstract class BaseActivity: BasicActivity() {
 
     protected open fun setListViewID(): Int{
         return -1
+    }
+
+    protected open fun setMyToolBar(){
+        setSupportActionBar(baseToolbar) // 添加 menu 菜单，必须要设置 actionBar
+        supportActionBar?.title = "" // 避免 actionBar 的 title 默认显示为 app name
     }
 
     /**
@@ -258,6 +264,14 @@ abstract class BaseActivity: BasicActivity() {
         slideAnimEnter()
     }
 
+    open fun <T: Activity> openSectionDetailUI(targetActivity: Class<T>, title: String, type: Int){
+        startActivity(Intent(this, targetActivity).apply {
+            putExtra(INTENT_TITLE_KEY, title)
+            putExtra(INTENT_TYPE_KEY, type)
+        })
+        slideAnimEnter()
+    }
+
     /**
      * @param type 这个参数暂时不用
      */
@@ -298,7 +312,7 @@ abstract class BaseActivity: BasicActivity() {
      */
     protected open fun ignoreSystemFontSize(): Boolean = true
 
-    private fun slideAnimEnter(){
+    protected fun slideAnimEnter(){
         slideAnimExit = true
         overridePendingTransition(R.anim.in_right, R.anim.out_left)
     }

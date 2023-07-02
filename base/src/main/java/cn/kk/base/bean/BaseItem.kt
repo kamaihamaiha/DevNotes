@@ -15,10 +15,11 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
     var bookType = 0
     var chapterPos = 0
     var sectionPos = 0
-    var data_source = ""
+    var nodePos = 0
+    var data_source: String ?= null
 
     enum class Type {
-        TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, UNKNOWN
+        TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, TYPE_NODE ,UNKNOWN
     }
 
     companion object {
@@ -56,6 +57,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_BOOK_GRADLE = 230      // Gradle
         val ACTION_BOOK_FINANCIAL = 231      // 理财知识
         val ACTION_BOOK_CIVIL_CODE = 232      // 民法典
+        val ACTION_BOOK_PENAL_CODE = 233      // 刑法
         // endregion
 
         // region normal chapter and section

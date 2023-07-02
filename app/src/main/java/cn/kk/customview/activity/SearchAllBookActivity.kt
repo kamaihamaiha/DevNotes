@@ -5,17 +5,16 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.AdapterView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.BaseItem
-import cn.kk.base.utils.AssetsHelper
+import cn.kk.base.bean.NodeModel
 import cn.kk.customview.R
 import cn.kk.customview.activity.book.BookDetailActivity
+import cn.kk.customview.activity.book.chapter.SectionDetailActivity
 import cn.kk.customview.bean.BookModel
 import cn.kk.customview.bean.ItemChapterModel
 import cn.kk.customview.factory.BookModelFactory
@@ -23,13 +22,16 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.activity_search_book.*
 
-class SearchBookActivity: BaseActivity() {
+/**
+ * 搜索所有课本信息，根据关键字搜索
+ */
+class SearchAllBookActivity: BaseActivity() {
     override fun getLayout(): Int {
         return R.layout.activity_search_book
     }
 
     private val mEmptyView by lazy {
-        LayoutInflater.from(this@SearchBookActivity).inflate(R.layout.item_list_empty, null)
+        LayoutInflater.from(this@SearchAllBookActivity).inflate(R.layout.item_list_empty, null)
     }
 
     private val mBookList by lazy {
@@ -47,7 +49,7 @@ class SearchBookActivity: BaseActivity() {
         super.doWhenOnCreate()
 
         // init search list
-        rv_result?.layoutManager = LinearLayoutManager(this@SearchBookActivity)
+        rv_result?.layoutManager = LinearLayoutManager(this@SearchAllBookActivity)
         rv_result?.adapter = object : BaseQuickAdapter<BaseItem, BaseViewHolder>(R.layout.item_book_search_result, mSearchKeywordResultList) {
             override fun convert(holder: BaseViewHolder, item: BaseItem) {
                 holder.setText(R.id.tv_title, item.title)
@@ -55,6 +57,7 @@ class SearchBookActivity: BaseActivity() {
                     BaseItem.Type.TYPE_BOOK -> R.drawable.icon_list_book
                     BaseItem.Type.TYPE_CHAPTER -> R.drawable.icon_chapter
                     BaseItem.Type.TYPE_SECTION -> R.drawable.icon_section
+                    BaseItem.Type.TYPE_NODE -> R.drawable.icon_node
                     else -> R.drawable.icon_unknown
                 })
             }
@@ -70,7 +73,7 @@ class SearchBookActivity: BaseActivity() {
                     // 先查找对应的 bookModel
                     var targetBookModel: BookModel?=null
                     for (bookModel in mBookList) {
-                        if (bookModel.itemAction == (curModel as ItemChapterModel).bookType) {
+                        if (bookModel.bookType == (curModel as ItemChapterModel).bookType) {
                             // 计算 chapter index
                             targetBookModel = bookModel
                             targetBookModel.expandChapterIndex = curModel.chapterPos
@@ -80,13 +83,13 @@ class SearchBookActivity: BaseActivity() {
                     if (targetBookModel != null) {
                         openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel)
                     } else {
-                        UIHelper.toast("没有找到", this@SearchBookActivity)
+                        UIHelper.toast("没有找到", this@SearchAllBookActivity)
                     }
 
                 } else if (curModel.type == BaseItem.Type.TYPE_SECTION) {
                     var targetBookModel: BookModel?=null
                     for (bookModel in mBookList) {
-                        if (bookModel.itemAction == curModel.bookType) {
+                        if (bookModel.bookType == curModel.bookType) {
                             // 计算 chapter index
                             targetBookModel = bookModel
                             targetBookModel.expandChapterIndex = curModel.chapterPos
@@ -96,6 +99,12 @@ class SearchBookActivity: BaseActivity() {
                     }
                     if (targetBookModel != null) {
                         openNextUI(BookDetailActivity::class.java, targetBookModel.title, targetBookModel.apply { locationSection = true })
+                    }
+                } else if (curModel.type == BaseItem.Type.TYPE_NODE) {
+
+                    //  找到对应的 json 文件名即可
+                    curModel.data_source?.let {
+                        openNextUI(SectionDetailActivity::class.java, curModel.title, curModel.data_source!!)
                     }
                 }
             }
@@ -130,9 +139,15 @@ class SearchBookActivity: BaseActivity() {
                 val input = s.toString()
                 mSearchKeywordResultList.clear()
                 mBookDataKeywords.forEach {
-                    if (input.isNotEmpty() && it.title.lowercase().contains(input.lowercase())) {
-                        // 加入搜索结果
-                        mSearchKeywordResultList.add(it)
+                    if (input.isNotEmpty()) {
+                        if (it.title.lowercase().contains(input.lowercase())) {
+                            // 加入搜索结果
+                            mSearchKeywordResultList.add(it)
+                        }
+                        if (it.type == BaseItem.Type.TYPE_NODE && (it as NodeModel).index.contains(input.lowercase())) {
+                            // 加入搜索结果
+                            mSearchKeywordResultList.add(it)
+                        }
 
                     }
                 }
@@ -151,7 +166,7 @@ class SearchBookActivity: BaseActivity() {
    private fun getBookKeywords(): MutableList<BaseItem> {
         val bookKeywords = mutableListOf<BaseItem>()
         mBookList.forEach {
-            val bookType = it.itemAction
+            val bookType = it.bookType
             bookKeywords.add(it.apply { type = BaseItem.Type.TYPE_BOOK })
 
             var chapterPos = 0
@@ -162,7 +177,7 @@ class SearchBookActivity: BaseActivity() {
                     this.chapterPos = chapterPos
                 })
 
-                var sectionPos = 0;
+                var sectionPos = 0
                 chapter.sections.forEach {
                     bookKeywords.add(it.apply {
                         type = BaseItem.Type.TYPE_SECTION
@@ -170,6 +185,20 @@ class SearchBookActivity: BaseActivity() {
                         this.chapterPos = chapterPos
                         this.sectionPos = sectionPos
                     })
+
+                    var nodePos = 0
+                    val curDataSource = it.data_source
+                    it.getDetailModel().nodeModelList?.forEach {
+                        bookKeywords.add(it.apply {
+                            type = BaseItem.Type.TYPE_NODE
+                            this.bookType = bookType
+                            this.chapterPos = chapterPos
+                            this.sectionPos = sectionPos
+                            this.nodePos = nodePos
+                            this.data_source = curDataSource // 保存数据源文件名（搜索出结果，点击跳转时用到）
+                        })
+                        nodePos++
+                    }
                     sectionPos++
                 }
                 chapterPos++
@@ -182,7 +211,8 @@ class SearchBookActivity: BaseActivity() {
                BaseItem.Type.TYPE_BOOK -> 0
                BaseItem.Type.TYPE_CHAPTER -> 1
                BaseItem.Type.TYPE_SECTION -> 2
-               else -> 3
+               BaseItem.Type.TYPE_NODE -> 3
+               else -> 4
 
            }
        }
