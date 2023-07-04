@@ -33,16 +33,16 @@
         {
           "title": "如何让努力不白费",
           "chapter_action": 2,
-          "finishTag": false,
+          "finishTag": true,
           "item_action": 0,
-          "section_action": 0
+          "section_action": 2
         },
         {
           "title": "你完成了工作，为什么他们还是不满意？",
           "chapter_action": 2,
-          "finishTag": false,
+          "finishTag": true,
           "item_action": 0,
-          "section_action": 1
+          "section_action": 3
         },
         {
           "title": "接到需求任务，你要先做哪件事？",
