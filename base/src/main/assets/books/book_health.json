@@ -33,20 +33,66 @@
       "sections": [
         {
           "title": "杂粮",
-          "chapter_action": 7,
+          "chapter_action": 1,
           "finishTag": false,
           "item_action": 0,
           "section_action": 0
         },
         {
           "title": "水果",
-          "chapter_action": 7,
+          "chapter_action": 1,
           "finishTag": false,
           "item_action": 0,
           "section_action": 4
         }
       ],
       "title": "美食"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "姨妈期三尺三不吃",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://www.xiaohongshu.com/explore/638ed3f0000000001e03eb54"
+        },
+        {
+          "title": "女性脾虚的8大表现",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://www.xiaohongshu.com/explore/64578c3a0000000012032f2b"
+        },
+        {
+          "title": "养生食谱｜7款养气血豆浆，生理期女孩喝起来",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://www.xiaohongshu.com/explore/63b1007f000000002203454b"
+        },
+        {
+          "title": "姨妈期巨巨巨好喝的掉秤汤！吃饱才有力气减",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://www.xiaohongshu.com/explore/645ba77e000000001203ef78"
+        },
+        {
+          "title": "姨妈期怎么吃｜一周食谱越吃越健康",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://www.xiaohongshu.com/explore/6291cbec000000002103653b"
+        }
+      ],
+      "title": "女性"
     }
   ],
   "expandChapterIndex": 0,

@@ -1,8 +1,7 @@
 package cn.kk.customview.activity
 
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.util.Log
+import android.webkit.*
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 
@@ -19,7 +18,7 @@ class NormalWebViewActivity: BaseActivity() {
         val webUrl = intent.getStringExtra(INTENT_WEB_URL_KEY).toString()
         val webView = findViewById<WebView>(R.id.web_view)
 
-        webView.loadUrl(webUrl)
+        WebView.setWebContentsDebuggingEnabled(true)
         webView.settings.javaScriptEnabled = true
         webView.webChromeClient = WebChromeClient()
 
@@ -29,7 +28,20 @@ class NormalWebViewActivity: BaseActivity() {
                 super.onPageFinished(view, url)
                 hideProgressDialog()
             }
+
+            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+                request?.url.toString().let {
+                    Log.d(TAG, "shouldOverrideUrlLoading: ${it}")
+                    if (it.startsWith("xhsdiscover://")) {
+
+                        return true
+                    }
+                }
+                return super.shouldOverrideUrlLoading(view, request)
+            }
+
         }
+        webView.loadUrl(webUrl)
     }
 
 }

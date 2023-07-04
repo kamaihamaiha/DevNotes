@@ -236,6 +236,9 @@ class BookDetailFragment: BaseFragment() {
                                             else -> {}
                                         }
                                     }
+                                    2 -> { // 女性
+                                         startNextUI(NormalWebViewActivity::class.java, item.title, -1, item.webUrl)
+                                    }
                                     else -> {}
                                 }
                             }
