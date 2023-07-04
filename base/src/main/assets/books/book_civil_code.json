@@ -25,10 +25,11 @@
         {
           "title": "第三章 法人",
           "chapter_action": 1,
-          "finishTag": false,
+          "finishTag": true,
           "item_action": 0,
           "section_action": 0,
-          "webUrl": ""
+          "webUrl": "",
+            "data_source": "c_3_p_1_civil_code.json"
         },
         {
           "title": "第四章 非法人组织",
