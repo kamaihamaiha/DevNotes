@@ -11,6 +11,7 @@
 ### [设计模式](./doc/design_pattern/readme.md)
 
 ### Android 相关
+- [Android 官方指南](https://developer.android.com/guide?hl=zh-cn)
 - [架构](./doc/arch/README.md)
 - [构建](./doc/android_build/readme.md)
 - [常用功能汇总](./doc/common/readme.md)
@@ -21,6 +22,7 @@
 - [svg 相关](./doc/svg_note/README.md)
 - [版本适配](./doc/version_adapt/README.md)
 - [面试](./doc/interview/README.md)
+- [测试相关](./doc/android_test/readme.md)
 
 #### 购买课程
 
