@@ -99,6 +99,14 @@
           "item_action": 0,
           "section_action": 0,
           "webUrl": "https://juejin.cn/post/7234060427411603511"
+        },
+        {
+          "title": "如何优雅实现App换肤？",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/4HStGmBQtajFkb0rmP-vfw"
         }
       ],
       "title": "Android 相关"
@@ -269,6 +277,14 @@
           "item_action": 0,
           "section_action": 0,
           "webUrl": "https://mp.weixin.qq.com/s/NiV51jOeCnTRgo-TLFsw7g"
+        },
+        {
+          "title": "Android 卡死如何监控？",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/garlSl7k8eHd71nQosKQSA"
         }
       ],
       "title": "Android 崩溃/异常/卡顿/优化等处理"
@@ -324,6 +340,20 @@
         }
       ],
       "title": "Android 列表"
+    },
+    {
+      "bookType": 229,
+      "sections": [
+        {
+          "title": "大型 Android 项目架构最佳实践",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/V9M69of40c-yre86LDmmZA"
+        }
+      ],
+      "title": "Android 架构"
     },
     {
       "bookType": 229,
