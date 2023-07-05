@@ -145,6 +145,14 @@
           "item_action": 0,
           "section_action": 0,
           "webUrl": "https://juejin.cn/post/7219988638050369594"
+        },
+        {
+          "title": "Gradle深入解析 - Task原理(Graph篇)",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://juejin.cn/post/7241492186919239717"
         }
       ],
       "title": "Android Gradle 构建"
@@ -293,22 +301,6 @@
       "bookType": 229,
       "sections": [
         {
-          "title": "Android 14 适配要点",
-          "chapter_action": 2,
-          "finishTag": true,
-          "item_action": 0,
-          "section_action": 1,
-          "webUrl": "https://mp.weixin.qq.com/s/5cWSNum_GS-r5CuEv1Agug"
-        },
-        {
-          "title": "Android 14 新特性：语法性别 Grammatical Gender",
-          "chapter_action": 2,
-          "finishTag": true,
-          "item_action": 0,
-          "section_action": 1,
-          "webUrl": "https://mp.weixin.qq.com/s/etTAysCEU3IF1xq1H9-lCQ"
-        },
-        {
           "title": "升级 Android 目标版本到 31(S) 这么多坑",
           "chapter_action": 1,
           "finishTag": true,
@@ -402,6 +394,30 @@
     {
       "bookType": 229,
       "sections": [
+        {
+          "title": "Android 14 适配要点",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/5cWSNum_GS-r5CuEv1Agug"
+        },
+        {
+          "title": "Android 14 新特性：语法性别 Grammatical Gender",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/etTAysCEU3IF1xq1H9-lCQ"
+        },
+        {
+          "title": "深度解读 Android 14 的 8 个重要新特性～",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://mp.weixin.qq.com/s/OLesUOMKyLdglh9KY_8GNg"
+        },
         {
           "title": "新功能之 TextView 搜索结果高亮和焦点移动～",
           "chapter_action": 2,
