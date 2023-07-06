@@ -25,6 +25,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
     companion object {
 
         // region book:
+        val action_book_android_dev_guide = 200 // android 开发指南（官网）
         val action_book_android_dev_art = 201
         val action_book_linux = 202
         val action_book_android_custom_view_elementary = 203

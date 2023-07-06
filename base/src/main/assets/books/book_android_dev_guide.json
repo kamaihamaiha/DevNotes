@@ -1,0 +1,533 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "建立首个应用",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用基础知识",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用资源",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用清单文件",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "应用基础知识"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "设备兼容性",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": " 大屏设备-平板设备、可折叠设备、ChromeOS",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Wear",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Android TV",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Android for Cars",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "ChromeOS 设备",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Android（go版本）",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "设备"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "简介",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用架构指南",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "模块化",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "架构组件",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用入口点",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用导航",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "依赖项注入",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用启动",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "应用架构"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "构建 Android 界面",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "创建向后兼容的界面",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "界面"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "应用兼容性",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "与其他应用交互",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "intent 和 intent 过滤器",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "音频和视频",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "服务",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "后台任务",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "闹钟权限",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "应用数据和文件",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "用户数据和身份",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "用户位置信息",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "相机",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "传感器",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "连接性",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Renderscript",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Android App Bundle",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "section",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Google Play",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Google 助理",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "SDK 扩展",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "核心主题"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "开发",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "优化",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "分发",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "游戏"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "Health Connect",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "Health Connect 指南",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "健康与健身应用"
+    },
+    {
+      "bookType": 200,
+      "sections": [
+        {
+          "title": "测试",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "性能",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "无障碍",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "隐私设置",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "安全性",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "SDK",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "为数十亿用户打造产品",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        },
+        {
+          "title": "为企业打造产品",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": "xx.json"
+        }
+      ],
+      "title": "最佳实战"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "bookType": 200,
+  "title": "Android 开发者指南"
+}
