@@ -13,6 +13,7 @@
 ### 单个知识点
 
 - [应用快捷方式](#应用快捷方式)
+- [App Links](#App Links)
 
 
 
@@ -26,3 +27,12 @@
         - 应用架构
           - 应用入口点
             - 应用快捷方式
+
+#### App Links
+
+步骤：
+
+- Create a Intent Handler for URIs
+- Request APP Links Verification
+- Declare Website Associations
+- Test App Links
