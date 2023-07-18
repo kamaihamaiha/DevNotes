@@ -236,7 +236,7 @@ class BookDetailFragment: BaseFragment() {
                                             else -> {}
                                         }
                                     }
-                                    2 -> { // 女性
+                                    2, 3 -> { // 女性, 菜谱
                                          startNextUI(NormalWebViewActivity::class.java, item.title, -1, item.webUrl)
                                     }
                                     else -> {}

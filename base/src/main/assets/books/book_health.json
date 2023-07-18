@@ -93,6 +93,28 @@
         }
       ],
       "title": "女性"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "程序员做菜指南",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://github.com/kamaihamaiha/HowToCook"
+        },
+        {
+          "title": "土豆炒牛肉",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://www.xiaohongshu.com/explore/646893950000000027029528"
+        }
+      ],
+      "title": "菜谱"
     }
   ],
   "expandChapterIndex": 0,
