@@ -14,3 +14,11 @@
 - AndroidXTest 的 JUnit4 规则
 - AndroidJUnitRunner
 
+### Mockito
+
+- [官方文档](https://javadoc.io/static/org.mockito/mockito-core/5.4.0/org/mockito/Mockito.html)
+
+#### 相关文章
+
+- [Mockito使用指南 - 单元测试的正确姿势](https://juejin.cn/post/6844904001855569933#heading-2)
+
