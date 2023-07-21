@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="cn.kk.customview">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="com.android.hardware.Camera"/>
-    <uses-feature android:name="com.android.hardware.Camera.autofocus"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="com.android.hardware.Camera" />
+    <uses-feature android:name="com.android.hardware.Camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name=".MyApp"
@@ -21,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/KKTheme">
 
-        <receiver android:name=".appwidget.KKAppWidgetNight"
+        <receiver
+            android:name=".appwidget.KKAppWidgetNight"
             android:label="@string/appwidget_night">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -31,7 +34,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/k_k_app_widget_info_night" />
         </receiver>
-        <receiver android:name=".appwidget.KKAppWidget"
+        <receiver
+            android:name=".appwidget.KKAppWidget"
             android:label="@string/appwidget_day">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -49,10 +53,24 @@
             android:value="${MTA_CHANNEL_VALUE}"/>
         -->
         <activity android:name=".activity.HomeTabActivity">
+            <tools:validation testUrl="https://dict.eudic.net/webting/play" />
+            <tools:validation testUrl="https://dict.eudic.net/webting/play?id=05e200d9-d8f3-11ec-80d1-00505686c5e6" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="dict.eudic.net"
+                    android:pathPrefix="/webting/play" />
             </intent-filter>
         </activity>
         <activity android:name="cn.kk.base.activity.CommentActivity" />
@@ -76,14 +94,14 @@
         <activity android:name=".ui.system.DialogActivity" />
         <activity android:name=".ui.system.ImmersiveModeActivity" />
 
-        <activity android:name=".ui.hencoder.GraphicLocationAndSizeMeasureActivity"/>
-        <activity android:name=".activity.NormalListActivity"/>
-        <activity android:name=".activity.NormalViewActivity"/>
-        <activity android:name=".activity.NormalTabActivity"/>
-        <activity android:name=".activity.NormalWebViewActivity"/>
-        <activity android:name=".activity.NormalMarkDownViewActivity"/>
-        <activity android:name=".activity.SearchAllBookActivity"/>
-        <activity android:name=".activity.SearchSpecifyBookActivity"/>
+        <activity android:name=".ui.hencoder.GraphicLocationAndSizeMeasureActivity" />
+        <activity android:name=".activity.NormalListActivity" />
+        <activity android:name=".activity.NormalViewActivity" />
+        <activity android:name=".activity.NormalTabActivity" />
+        <activity android:name=".activity.NormalWebViewActivity" />
+        <activity android:name=".activity.NormalMarkDownViewActivity" />
+        <activity android:name=".activity.SearchAllBookActivity" />
+        <activity android:name=".activity.SearchSpecifyBookActivity" />
 
         <activity
             android:name=".ui.system.CoordinatorLayoutActivity"
@@ -120,46 +138,48 @@
         <activity android:name=".activity.work.WebViewOperaLogsToClientActivity" />
         <activity android:name=".activity.work.SaveLogActivity" />
         <activity android:name=".activity.work.WebViewScrollCapActivity" />
-        <activity android:name=".activity.work.KeyboardStateActivity" android:configChanges="keyboard|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".activity.work.KeyboardStateActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize" />
 
         <!--arch-->
-        <activity android:name=".activity.arch.MvcActivity"/>
-        <activity android:name=".activity.arch.MvpActivity"/>
-        <activity android:name=".activity.arch.MvvmActivity"/>
-        <activity android:name=".activity.arch.JetPackActivity"/>
-        <activity android:name=".activity.arch.AndroidSysArchActivity"/>
+        <activity android:name=".activity.arch.MvcActivity" />
+        <activity android:name=".activity.arch.MvpActivity" />
+        <activity android:name=".activity.arch.MvvmActivity" />
+        <activity android:name=".activity.arch.JetPackActivity" />
+        <activity android:name=".activity.arch.AndroidSysArchActivity" />
 
         <!--book-->
         <activity android:name=".activity.book.BookDetailActivity" />
-        <activity android:name=".activity.book.chapter.SectionDetailActivity"/>
+        <activity android:name=".activity.book.chapter.SectionDetailActivity" />
 
         <!--NDK-->
-        <activity android:name=".activity.ndk.NdkHomeActivity"/>
+        <activity android:name=".activity.ndk.NdkHomeActivity" />
 
         <!--more-->
-        <activity android:name=".activity.more.WorkActivity"/>
-        <activity android:name=".activity.more.NetActivity"/>
-        <activity android:name=".activity.more.BlogsActivity"/>
-        <activity android:name=".activity.more.LinuxActivity"/>
-        <activity android:name=".activity.more.GitActivity"/>
-        <activity android:name=".activity.more.audio.AudioActivity"/>
-        <activity android:name=".activity.more.video.VideoActivity"/>
-        <activity android:name=".activity.more.ZongHeActivity"/>
+        <activity android:name=".activity.more.WorkActivity" />
+        <activity android:name=".activity.more.NetActivity" />
+        <activity android:name=".activity.more.BlogsActivity" />
+        <activity android:name=".activity.more.LinuxActivity" />
+        <activity android:name=".activity.more.GitActivity" />
+        <activity android:name=".activity.more.audio.AudioActivity" />
+        <activity android:name=".activity.more.video.VideoActivity" />
+        <activity android:name=".activity.more.ZongHeActivity" />
 
         <!--more Linux-->
-        <activity android:name=".activity.more.MixDevActivity"/>
+        <activity android:name=".activity.more.MixDevActivity" />
 
         <!--more Audio-->
-        <activity android:name=".activity.more.audio.AudioBasicActivity"/>
+        <activity android:name=".activity.more.audio.AudioBasicActivity" />
 
         <!--Audio & Video-->
-        <activity android:name="cn.kk.av.task_list.Task1DrawPicture"/>
-        <activity android:name="cn.kk.av.task_list.Task2AudioRecord"/>
-        <activity android:name="cn.kk.av.task_list.task3.Task3CameraPreview"/>
-        <activity android:name="cn.kk.av.task_list.Task4MediaExtractor"/>
-        <activity android:name="cn.kk.av.task_list.task7.Task7MediaCodecAAC"/>
-        <activity android:name="cn.kk.av.task_list.task8.Task8MediaCodecH264"/>
-        <activity android:name="cn.kk.av.task_list.task15.Task15SimplePlayer"/>
+        <activity android:name="cn.kk.av.task_list.Task1DrawPicture" />
+        <activity android:name="cn.kk.av.task_list.Task2AudioRecord" />
+        <activity android:name="cn.kk.av.task_list.task3.Task3CameraPreview" />
+        <activity android:name="cn.kk.av.task_list.Task4MediaExtractor" />
+        <activity android:name="cn.kk.av.task_list.task7.Task7MediaCodecAAC" />
+        <activity android:name="cn.kk.av.task_list.task8.Task8MediaCodecH264" />
+        <activity android:name="cn.kk.av.task_list.task15.Task15SimplePlayer" />
 
         <provider
             android:exported="false"
@@ -168,7 +188,7 @@
             android:name="androidx.core.content.FileProvider">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
 
     </application>
