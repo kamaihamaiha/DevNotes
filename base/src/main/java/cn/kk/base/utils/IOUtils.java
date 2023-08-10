@@ -3,11 +3,14 @@ package cn.kk.base.utils;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.text.format.DateUtils;
+
+import androidx.core.content.FileProvider;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -192,4 +195,45 @@ public class IOUtils {
         return path;
     }
 
+    // 应用外部专属存储目录，带 kk_search
+    // sdcard/Android/data/{pkgName}/files/kk_search
+    public static File getExternalStoragePrivateWithSearch(Context ctx) {
+        return new File(getExternalStoragePrivate(ctx), "kk_search");
+    }
+
+    // 应用外部专属存储目录
+    // sdcard/Android/data/{pkgName}/files
+    public static File getExternalStoragePrivate(Context ctx) {
+        if (ctx == null) return Environment.getExternalStorageDirectory();
+        return ctx.getExternalFilesDir(null);
+    }
+
+    public static void openPdf(Activity activity, String path) {
+        openFile(activity, path, "application/pdf");
+    }
+
+    public static void openAudio(Activity activity, String path) {
+        openFile(activity, path, "audio/mpeg");
+    }
+
+    public static void openFile(Activity activity, String path, String mimeType) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        File file = new File(path);
+        Uri uri = Uri.fromFile(file);
+        //适配android 7.0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //7.0获取存储文件的uri
+            uri = FileProvider.getUriForFile(activity, getFileProviderName(activity), file);
+            //赋予临时权限
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        }
+        intent.setData(uri);
+        intent.setDataAndType(uri, mimeType);
+        activity.startActivity(intent);
+    }
+
+    public static String getFileProviderName(Context ctx){
+        return String.format("%s.file.provider", ctx.getPackageName());
+    }
 }

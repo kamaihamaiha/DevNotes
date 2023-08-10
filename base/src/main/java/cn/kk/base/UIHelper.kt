@@ -2,12 +2,16 @@ package cn.kk.base
 
 import android.app.Activity
 import android.content.Context
-import android.content.DialogInterface
+import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.net.Uri
+import android.os.Build
+import android.print.PdfPrint
+import android.print.PrintAttributes
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextUtils
@@ -18,15 +22,21 @@ import android.view.TouchDelegate
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
+import android.webkit.WebView
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import cn.kk.base.io.ObjectCallback
+import cn.kk.base.utils.IOUtils
 import cn.kk.base.utils.PatternHelper
+import java.io.File
+import java.util.*
 
 
 object UIHelper {
@@ -122,6 +132,7 @@ object UIHelper {
 
     // region Screen
 
+    @RequiresApi(Build.VERSION_CODES.R)
     fun getScreenSize(activity: Activity): Point {
         return Point(activity.windowManager.currentWindowMetrics.bounds.right, activity.windowManager.currentWindowMetrics.bounds.bottom)
     }
@@ -373,7 +384,68 @@ object UIHelper {
 
     }
     // region AlertDialog
+    fun showAlertDialog(activity: Activity, title: String, msg: String, callback: BooleanCallback) {
+        AlertDialog.Builder(activity).apply {
+            this.setTitle(title)
+            this.setMessage(msg)
+            setNegativeButton("取消"
+            ) { dialog, which -> dialog?.dismiss() }
+            setPositiveButton("确定"
+            ) { dialog, which ->
+                dialog?.dismiss()
+                callback.onResult(true)
+            }
+        }.create().apply {
+            setCanceledOnTouchOutside(true)
+            show()
+        }
+    }
 
+    // endregion
+
+    // region pdf
+
+    fun exportPdf(activity: Activity, webview: WebView, title: String?, progressCallback: ObjectCallback<String>, retCallback: ObjectCallback<String>) {
+        progressCallback.onResult(false, "loading...")
+        val dpi = activity.resources.displayMetrics.densityDpi
+        val attributes = PrintAttributes.Builder()
+            .setMediaSize(PrintAttributes.MediaSize.ISO_A4)
+            .setResolution(
+                PrintAttributes.Resolution(
+                    UUID.randomUUID().toString(),
+                    title!!, dpi, dpi
+                )
+            )
+            .setMinMargins(PrintAttributes.Margins.NO_MARGINS).build()
+        val pdfPrint = PdfPrint(attributes)
+        val fileName: String = String.format("%s.pdf", title)
+        pdfPrint.print(
+            webview.createPrintDocumentAdapter(fileName),
+            IOUtils.getExternalStoragePrivateWithSearch(activity),
+            fileName, object : PdfPrint.CallbackPrint {
+                override fun success(path: String?) {
+                    activity.sendBroadcast(Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(File(path))))
+
+                    retCallback.onResult(true, path)
+
+                    val msg = String.format("已导出到%s", fileName)
+
+                    showAlertDialog(activity, "Export pdf", msg, object : BooleanCallback {
+                        override fun onResult(result: Boolean) {
+                            if (result) {
+                                IOUtils.openPdf(activity, path)
+                            }
+                        }
+
+                    })
+                }
+
+                override fun onFailure(msg: String?) {
+                    msg?.let { retCallback.onResult(false, it) }
+                }
+
+            })
+    }
 
     // endregion
 

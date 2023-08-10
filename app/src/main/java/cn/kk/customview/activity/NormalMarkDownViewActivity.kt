@@ -59,7 +59,7 @@ class NormalMarkDownViewActivity: BaseActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_copy_url, menu)
+        menuInflater.inflate(R.menu.menu_webview, menu)
         return true
     }
 
@@ -67,6 +67,15 @@ class NormalMarkDownViewActivity: BaseActivity() {
         if (item.itemId == R.id.copy_url) {
             SystemHelper.setClipboardText(mUrl, this@NormalMarkDownViewActivity)
             UIHelper.toast("复制链接", this@NormalMarkDownViewActivity)
+            return true
+        } else if (item.itemId == R.id.export) {
+            UIHelper.exportPdf(this, markDownView, mTitle,
+                { success, result ->
+                    result?.let {
+                        showProgressDialog(it)
+                    }
+                }
+            ) { success, result -> hideProgressDialog() }
             return true
         }
         return super.onOptionsItemSelected(item)
