@@ -236,11 +236,14 @@ class BookDetailFragment: BaseFragment() {
                                             else -> {}
                                         }
                                     }
-                                    2, 3 -> { // 女性, 菜谱
+                                    2, 3, 4 -> { // 女性, 菜谱, 疾病
                                          startNextUI(NormalWebViewActivity::class.java, item.title, -1, item.webUrl)
                                     }
                                     else -> {}
                                 }
+                            }
+                            BaseItem.ACTION_BOOK_DIGITAL_PRODUCTS -> {
+                                startNextUI(NormalWebViewActivity::class.java, item.title, -1, item.webUrl)
                             }
                             BaseItem.ACTION_BOOK_CIVIL_CODE, BaseItem.ACTION_BOOK_PENAL_CODE -> { // 法律相关
                                 if (!item.data_source.isNullOrEmpty()) {

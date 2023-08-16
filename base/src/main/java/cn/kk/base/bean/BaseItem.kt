@@ -59,6 +59,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_BOOK_FINANCIAL = 231      // 理财知识
         val ACTION_BOOK_CIVIL_CODE = 232      // 民法典
         val ACTION_BOOK_PENAL_CODE = 233      // 刑法
+        val ACTION_BOOK_DIGITAL_PRODUCTS = 234      // 数码产品
         // endregion
 
         // region normal chapter and section

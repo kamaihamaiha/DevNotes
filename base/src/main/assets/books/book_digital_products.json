@@ -1,0 +1,22 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 234,
+      "sections": [
+        {
+          "title": "NUC 9 幽灵峡谷",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://www.intel.cn/content/www/cn/zh/products/sku/190109/intel-nuc-9-extreme-kit-nuc9i7qnx/specifications.html"
+        }
+      ],
+      "title": "电脑"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "bookType": 228,
+  "title": "数码产品"
+}

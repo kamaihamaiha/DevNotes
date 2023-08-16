@@ -115,6 +115,20 @@
         }
       ],
       "title": "菜谱"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "脂溢性皮炎",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/tree/master/doc/health/Seborrhoeic_dermatitis.md"
+        }
+      ],
+      "title": "疾病"
     }
   ],
   "expandChapterIndex": 0,
