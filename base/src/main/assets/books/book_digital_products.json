@@ -14,6 +14,20 @@
         }
       ],
       "title": "电脑"
+    },
+    {
+      "bookType": 234,
+      "sections": [
+        {
+          "title": "国光的黑苹果安装教程",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://apple.sqlsec.com/"
+        }
+      ],
+      "title": "黑苹果刷机"
     }
   ],
   "expandChapterIndex": 0,
