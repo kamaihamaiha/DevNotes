@@ -92,4 +92,8 @@ dependencies {
     // SwipeRefresh
     api 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
+    // 引入 build gradle 为了方便查 gradle task 的源码; compileOnly 为了不让它打包进 apk
+//    compileOnly 'com.android.tools.build:gradle:7.2.0'
+//    compileOnly 'com.android.tools.build:gradle:3.2.0'
+    // 上面的库有 AppPlugin.kt，用到了 Plugin.java 类，这个类在 https://github.com/gradle/gradle/tree/master/subprojects/core-api/src/main/java/org/gradle/api 包下
 }

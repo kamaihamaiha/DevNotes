@@ -112,6 +112,14 @@ def buildTime(){
     return fmtDate
 }
 
+gradle.taskGraph.whenReady {
+    it.allTasks.each { task ->
+
+        // 打印出某个 task 对应是哪个类执行的
+        println "task name: ${task.name} : ${task.class.name - '_Decorated'}"
+    }
+}
+
 dependencies {
     api project(path: ':elementary')
     api project(path: ':openGL')
