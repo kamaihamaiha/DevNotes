@@ -13,7 +13,7 @@
   - 注意 Ubuntu 网络设置 VPN 开启，设置如下：
     ![](./imgs/img.png)
     ![](./imgs/img_1.png)
-
+- [install oh-my-zsh]()
 
 
 
