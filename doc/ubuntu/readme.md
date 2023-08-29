@@ -7,13 +7,13 @@
 - [恢复默认镜像源](https://www.linuxshelltips.com/restore-default-repositories-in-ubuntu/)
 - 镜像源文件路径：`/etc/apt/sources.list`
 - [安装 Android Studio](https://linuxhint.com/install-android-studio-ubuntu22-04/)
-- [梯子工具 class for windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+- [梯子工具 clash for windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)
   - 是跨平台的，不是给 Windows 系统专用的，是窗口（Window）版
   - [使用说明](https://github.com/cybery2019/clashforwindows-)
   - 注意 Ubuntu 网络设置 VPN 开启，设置如下：
     ![](./imgs/img.png)
     ![](./imgs/img_1.png)
-
+- [install oh-my-zsh]()
 
 
 
