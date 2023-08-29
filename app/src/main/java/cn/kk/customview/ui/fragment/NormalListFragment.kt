@@ -1,10 +1,12 @@
 package cn.kk.customview.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.R
+import cn.kk.base.activity.BaseActivity
 import cn.kk.base.adapter.ListAdapter
 import cn.kk.base.bean.ListItemAction
 import cn.kk.base.fragment.BaseFragment
@@ -16,10 +18,7 @@ import cn.kk.customview.chapter.c1.DrawBasicActivity
 import cn.kk.customview.config.UIConfig
 import cn.kk.customview.ui.LottieAnimActivity
 import cn.kk.customview.activity.NormalViewActivity
-import cn.kk.customview.activity.work.KeyboardStateActivity
-import cn.kk.customview.activity.work.WebViewOperaLogsToClientActivity
-import cn.kk.customview.activity.work.SaveLogActivity
-import cn.kk.customview.activity.work.WebViewScrollCapActivity
+import cn.kk.customview.activity.work.*
 import cn.kk.customview.chapter.AnimInterpolatorActivity
 import cn.kk.customview.chapter.ViewAnimIntrosActivity
 import cn.kk.customview.ui.cool300.chapter1.*
@@ -176,6 +175,11 @@ class NormalListFragment: BaseFragment(), ListAdapter.ItemClickListener {
                     14 -> startNextUI(WebViewScrollCapActivity::class.java, title)
                     15 -> SystemHelper.openSysNotificationSetting(requireContext()) // 打开系统通知设置
                     16 -> startNextUI(KeyboardStateActivity::class.java, title) // 蓝牙键盘
+//                    17 -> startNextUI(ChangeLauncherIconActivity::class.java, title)
+                    17 -> startActivity(Intent(requireContext(), ChangeLauncherIconActivity::class.java).apply {
+                        putExtra("title", title)
+                        putExtra("activity", activity?.componentName?.className?:"")
+                    })
                 }
             }
             // endregion

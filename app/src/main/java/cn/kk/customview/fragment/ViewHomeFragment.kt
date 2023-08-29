@@ -104,6 +104,7 @@ class ViewHomeFragment: BaseFragment() {
                 addItem("WebView 滚动截图", true)
                 addItem("打开系统通知设置", true)
                 addItem("蓝牙键盘状态", true)
+                addItem("修改 App 图标", true)
             })
             // endregion
         })

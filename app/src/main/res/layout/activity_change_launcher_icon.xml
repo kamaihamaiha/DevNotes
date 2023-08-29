@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_title"/>
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_app_launcher_cur"
+            android:src="@drawable/icon_cat"
+            android:layout_marginStart="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:background="@drawable/ic_arrow_right"
+            android:layout_centerInParent="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/iv_app_launcher_next"
+            android:src="@drawable/icon_cat_v2"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_change_app_icon"
+        android:text="change app icon"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        style="@style/Button_Corner_Primary_Alpha"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
