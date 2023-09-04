@@ -9,6 +9,9 @@
 
 ### 不容易改的
 
+- 听力pdf/图片分享，系统切换主题后，点击按钮分享、保存等操作会闪退
+  - 问题：在主题切换后，Activity 和 Fragment 会重新实例化，然后 Activity 中持有的 Fragment 不是重新实例化的 fragment 对象了，所以会报错。
+    - 解决办法：不要通过 Activity 中持有的 Fragment 对象来操作 Fragment，而是通过 FragmentManager 来操作 Fragment。但是我用的是 FragmentPagerAdapter 加载的fragment，因此我是在 fragment 中通过 getActivity() 来获取 Activity，然后通过给 Activity 设置监听的方式解决
 - 通用拼写组件
 - 词典通用拼写组件测试用例
 - 听力，热门配音页面加过滤标签。线上版本过滤没有效果，本地编译正常
