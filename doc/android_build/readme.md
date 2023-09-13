@@ -2,6 +2,7 @@
 
 - [从命令行构建应用](https://developer.android.com/studio/build/building-cmdline?hl=zh-cn)
 - [Gradle 常见命令](#gradle-常见命令)
+- 混淆
 
 
 ### Gradle 常见命令
@@ -148,4 +149,12 @@
  ./gradlew assembleDebug -PisTest=true 
 
 # 
+```
+
+
+### 混淆
+
+[反混淆堆栈日志：](https://stackoverflow.com/questions/56006933/how-to-deobfuscate-an-android-stacktrace-using-mapping-file)
+```shell
+retrace.bat|retrace.sh [-verbose] mapping.txt [<stacktrace_file>]
 ```
