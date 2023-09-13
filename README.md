@@ -12,6 +12,7 @@
 
 ### Android 相关
 - [Android 官方指南](https://developer.android.com/guide?hl=zh-cn)
+- [提升Android开发的7个资源](./doc/android_resources.md)
 - [架构](./doc/arch/README.md)
 - [构建](./doc/android_build/readme.md)
 - [常用功能汇总](./doc/common/readme.md)
