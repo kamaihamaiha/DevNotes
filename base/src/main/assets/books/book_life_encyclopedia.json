@@ -129,9 +129,31 @@
         }
       ],
       "title": "疾病"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
+          "title": "上海市公租房",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://zfzl.fgj.sh.gov.cn/gg_house/read_me.html"
+        },
+        {
+          "title": "关于老破小",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/tree/master/doc/books/Life_encyclopedia/reside.md"
+        }
+      ],
+      "title": "居住篇"
     }
   ],
   "expandChapterIndex": 0,
   "bookType": 227,
-  "title": "健康"
+  "title": "生活百科"
 }
