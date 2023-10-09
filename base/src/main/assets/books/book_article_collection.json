@@ -183,6 +183,22 @@
           "item_action": 0,
           "section_action": 0,
           "webUrl": "https://juejin.cn/post/7202944248869797949"
+        },
+        {
+          "title": "系统开发专用版 Android Studio for Platform上手指南",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://mp.weixin.qq.com/s/yPoHt9gfZjyQM5sppJ30dg"
+        },
+        {
+          "title": "编完 aosp 还在刷机？云安卓了解一下，来试试网页版模拟器吧！",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://juejin.cn/post/7160930401844723720"
         }
       ],
       "title": "Android 系统开发"
