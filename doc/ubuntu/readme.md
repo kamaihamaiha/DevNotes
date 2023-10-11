@@ -14,6 +14,7 @@
     ![](./imgs/img.png)
     ![](./imgs/img_1.png)
 - [install oh-my-zsh]()
+- [wifi 搜索不到网络](#wifi-no-net)
 
 
 
@@ -45,4 +46,12 @@
 
 
 #### 安装 Android Studio
+
+#### wifi-no-net
+
+是因为没有网卡驱动，安装下（我的是 bcm的）
+```
+sudo apt-get install bcmwl-kernel-source
+```
+安装后，再到设置页面砍下 wifi 设置
 
