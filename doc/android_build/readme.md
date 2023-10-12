@@ -156,5 +156,6 @@
 
 [反混淆堆栈日志：](https://stackoverflow.com/questions/56006933/how-to-deobfuscate-an-android-stacktrace-using-mapping-file)
 ```shell
+# 我的 mac 下工具命令路径: ~/Library/Android/sdk/tools/proguard/bin/retrace.sh
 retrace.bat|retrace.sh [-verbose] mapping.txt [<stacktrace_file>]
 ```

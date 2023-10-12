@@ -14,6 +14,7 @@ import cn.kk.av.task_list.task15.Task15SimplePlayer
 import cn.kk.av.task_list.task3.Task3CameraPreview
 import cn.kk.av.task_list.task7.Task7MediaCodecAAC
 import cn.kk.av.task_list.task8.Task8MediaCodecH264
+import cn.kk.base.UIHelper
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.base.utils.AssetsHelper
 import cn.kk.bean.BookViewModel
@@ -93,6 +94,16 @@ class BookDetailFragment: BaseFragment() {
                 mItemSectionClickListener = object : BaseChapterAdapter.OnItemSectionClickListener {
                     override fun onSectionClick(bookType: Int, item: ItemSectionModel) {
                         when(bookType) {
+                            BaseItem.ACTION_BOOK_ANDROID_DEV_GUIDE -> {
+                                if (!item.finishTag) {
+                                    UIHelper.toast("还没好...", context)
+                                    return
+                                }
+                                // 打开二级book
+                                if (item.item_book_type > 0) { // 有效的书
+                                    openBook(item.item_book_type)
+                                }
+                            }
                             // 大佬分享,理财知识,技术文章大杂烩,Gradle
                             BaseItem.ACTION_BOOK_SOMEONE_SHARE, BaseItem.ACTION_BOOK_FINANCIAL, BaseItem.ACTION_BOOK_SOME_ARTICLES, BaseItem.ACTION_BOOK_GRADLE -> {
                                 if (item.webUrl.isNullOrEmpty()) return
@@ -125,7 +136,7 @@ class BookDetailFragment: BaseFragment() {
                                             2 -> startNextUI(VideoActivity::class.java, item.title)
                                             3 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_c))
                                             4 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_c_plus))
-                                            5 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_ffmpeg))
+                                            5 -> openBook(item.item_book_type)
                                             6 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.action_book_linux))
                                             9 -> startNextUI(BookDetailActivity::class.java, item.title, BookModelFactory.getBookByType(BaseItem.ACTION_BOOK_NDK))
                                             10 -> startNextUI(OpenGLDemoActivity::class.java, item.title)
@@ -256,6 +267,11 @@ class BookDetailFragment: BaseFragment() {
                 }
             }
         }
+    }
+
+    fun openBook(bookType: Int){
+        val bookModel = BookModelFactory.getBookByType(bookType)
+        startNextUI(BookDetailActivity::class.java, bookModel.title, bookModel)
     }
 
     interface ScrollOrientationListener {

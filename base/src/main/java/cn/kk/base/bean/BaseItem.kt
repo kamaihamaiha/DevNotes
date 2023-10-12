@@ -13,10 +13,11 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
 
     // 定位chapter和book 使用
     var bookType = 0
+    var item_book_type = 0 // 跳转book使用
     var chapterPos = 0
     var sectionPos = 0
     var nodePos = 0
-    var data_source: String ?= null
+    var data_source: String ?= null // 数据来源：本地book json 文件或者在线链接地址
 
     enum class Type {
         TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, TYPE_NODE ,UNKNOWN
@@ -25,7 +26,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
     companion object {
 
         // region book:
-        val action_book_android_dev_guide = 200 // android 开发指南（官网）
+        val ACTION_BOOK_ANDROID_DEV_GUIDE = 200 // android 开发指南（官网）
         val action_book_android_dev_art = 201
         val action_book_linux = 202
         val action_book_android_custom_view_elementary = 203
@@ -60,6 +61,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_BOOK_CIVIL_CODE = 232      // 民法典
         val ACTION_BOOK_PENAL_CODE = 233      // 刑法
         val ACTION_BOOK_DIGITAL_PRODUCTS = 234      // 数码产品
+        val ACTION_BOOK_ANDROID_TEST = 235      // 在Android平台上测试应用
         // endregion
 
         // region normal chapter and section

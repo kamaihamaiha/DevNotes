@@ -1,0 +1,347 @@
+{
+  "bookImgRes": -1,
+  "chapterModelList": [
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "肺腑之言",
+          "chapter_action": 1,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "前言"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "测试基础知识",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "构建有效的单元测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "自动执行界面测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "测试应用组件集成",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "测试界面性能",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "UI Automator",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "AndroidXTest 的 JUnit4 规则",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "AndroidJUnitRunner",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "示例",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "文档"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "构建本地单元测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "本地测试"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "构建插桩测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "自动化界面测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "AndroidX 测试库",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "插桩测试"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "Espresso",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 基础知识",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 设置说明",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 备忘单",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 空闲资源",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso-Intents",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 列表",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Multiprocess Espresso",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso 测试方案",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "Espresso Web",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "无障碍功能检查",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "其他 Espresso 资源",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "Espresso"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "测试 content provider",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "测试服务",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        },
+        {
+          "title": "使用 UI Automator 编写自动化测试",
+          "chapter_action": 2,
+          "finishTag": false,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "",
+          "data_source": ""
+        }
+      ],
+      "title": "测试其他组件"
+    },
+    {
+      "bookType": 235,
+      "sections": [
+        {
+          "title": "Mockito使用指南 - 单元测试的正确姿势",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://juejin.cn/post/6844904001855569933#heading-2",
+          "data_source": ""
+        },
+        {
+          "title": "Robolectric实现Android应用单元测试",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://www.jianshu.com/p/e1322d411c6c",
+          "data_source": ""
+        }
+      ],
+      "title": "其他相关文章"
+    }
+  ],
+  "expandChapterIndex": 0,
+  "bookType": 235,
+  "title": "在Android平台上测试应用"
+}
