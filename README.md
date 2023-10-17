@@ -46,6 +46,7 @@
 ### [大佬分享](./doc/someone_share/readme.md)
 
 ### [错误整理](./doc/error/readme.md)
+### [英语学习](./doc/books/english/readme.md)
 
 
 
