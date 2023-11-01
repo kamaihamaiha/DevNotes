@@ -66,7 +66,9 @@ object ViewHelper {
 
             // 控件尺寸要调整
             (targetView.layoutParams as LinearLayout.LayoutParams).apply {
-                height = (UIHelper.getScreenSize(activity).x * MAX_RADIO).toInt()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    height = (UIHelper.getScreenSize(activity).x * MAX_RADIO).toInt()
+                }
             }
         }
 
