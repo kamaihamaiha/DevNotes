@@ -46,5 +46,7 @@
 
 ### 没找到办法的
 
+- BottomSheetDialog 里面有两个 RecyclerView. RecyclerView 列表内容多时，需要滚动。但是如果往下滚动会有问题，就是直接滚动 BottomSheetDialog 了
+
 
 
