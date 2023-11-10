@@ -74,8 +74,40 @@
     },
     {
       "bookType": 219,
-      "title": "Mac 上的工具",
+      "title": "Mac 使用",
       "sections": [
+        {
+          "title": "终端使用",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/basic_dev_tools/blob/main/Mac_Note/terminal.md"
+        },
+        {
+          "title": "环境变量设置",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/basic_dev_tools/blob/main/Mac_Note/env_var.md"
+        },
+        {
+          "title": "常见操作/快捷键",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/basic_dev_tools/blob/main/Mac_Note/normal.md"
+        },
+        {
+          "title": "开发工具",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 1,
+          "webUrl": "https://github.com/kamaihamaiha/basic_dev_tools/blob/main/Mac_Note/install_dev_tools.md"
+        },
         {
           "title": "Parallels Desktop 18",
           "chapter_action": 2,
@@ -107,6 +139,14 @@
           "item_action": 0,
           "section_action": 3,
           "webUrl": "https://www.waodown.com/3217.html"
+        },
+        {
+          "title": "修复: Mac 上外接键盘F1～F12 功能键问题",
+          "chapter_action": 2,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 3,
+          "webUrl": "https://www.zhihu.com/people/peakjuliy/answers"
         }
       ]
     },
