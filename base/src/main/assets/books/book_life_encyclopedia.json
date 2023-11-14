@@ -142,6 +142,20 @@
       "bookType": 227,
       "sections": [
         {
+          "title": "移动宽带套餐",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 0,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/tree/master/doc/books/Life_encyclopedia/communication.md"
+        }
+      ],
+      "title": "交流通讯篇"
+    },
+    {
+      "bookType": 227,
+      "sections": [
+        {
           "title": "上海市公租房",
           "chapter_action": 3,
           "finishTag": true,
