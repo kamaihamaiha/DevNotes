@@ -112,6 +112,14 @@
           "item_action": 0,
           "section_action": 4,
           "webUrl": "https://www.xiaohongshu.com/explore/646893950000000027029528"
+        },
+        {
+          "title": "广式萝卜牛杂煲",
+          "chapter_action": 3,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 4,
+          "webUrl": "https://github.com/kamaihamaiha/DevNotes/tree/master/doc/books/Life_encyclopedia/diet.md"
         }
       ],
       "title": "菜谱"
