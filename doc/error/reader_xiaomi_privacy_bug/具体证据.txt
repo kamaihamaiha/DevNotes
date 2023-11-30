@@ -1,0 +1,7 @@
+硬件序列号
+发生时间：2023-11-29 16:02:19 
+违规md5：md5=C9F0981BA3C6888FE993AFFE1152D4C1,
+违规包名：pkg=lexue.mryyyd,
+违规动作：action=android.permission.READ_PHONE_STATE_SERIALNO,
+违规详情：content=getprop读取全部属性(包括serialno),callstack:java.lang.Runtime.exec:721;java.lang.Runtime.exec:525;java.lang.Runtime.exec:422;com.qiniu.android.dns.local.Ϳ.ʼ:7;com.qiniu.android.dns.local.Ϳ$Ϳ.<init>:20;com.qiniu.android.dns.local.Ϳ.ʻ:2;com.eusoft.dict.ޗ.<init>:318;com.eusoft.dict.ލ.<clinit>:237;com.eusoft.dict.ލ.ʽʽ:1;com.eusoft.utils.֏.clearCache:207;com.eusoft.dict.LocalStorage.extractDicRes:1453;com.eusoft.dict.LocalStorage.setMainLocalLibraryPath:909;com.eusoft.dict.LocalStorage.<init>:25;com.eusoft.dict.LocalStorage.sharedInstance:7;com.eusoft.dict.util.JniApi.init:46;com.eusoft.dict.util.JniApi.getAppContext:7;com.eusoft.ting.provider.TingContentProvider.ʾ:8;com.eusoft.ting.provider.TingContentProvider.query:1;android.content.ContentProvider.query:1058;android.content.ContentProvider.query:1150;android.content.ContentProvider$Transport.query:242;android.content.ContentResolver.query:840;android.content.ContentResolver.query:753;android.content.ContentResolver.query:711;com.eusoft.ting.api.֏.ʼﹳ:307;com.eusoft.ting.ui.view.PlaybackInfoBar.ˋˋ:64;
+

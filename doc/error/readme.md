@@ -42,11 +42,17 @@
 - TabLayout 高度、宽度充满、indicator 距离文字颜色
 - Toolbar 上面的 icon 图片左边距
 - menu text color 修改卡住
+- [阅读app 小米审核隐私政策没通过](reader_xiaomi_privacy_bug/reader_xiaomi_privacy_bug_report.md)
 
 
 ### 没找到办法的
 
 - BottomSheetDialog 里面有两个 RecyclerView. RecyclerView 列表内容多时，需要滚动。但是如果往下滚动会有问题，就是直接滚动 BottomSheetDialog 了
+- android.app.RemoteServiceException
+    - 发生率很低，万分之几的概率。但是总是会发生，很多是华为设备
+    - [相关分析文章](https://www.jianshu.com/p/5857673e73e3)
+
+
 
 
 
