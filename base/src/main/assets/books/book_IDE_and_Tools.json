@@ -68,6 +68,14 @@
           "item_action": 0,
           "section_action": 5,
           "webUrl": "https://mp.weixin.qq.com/s/lJ-a4KwdTEmLu-sxkehn0Q"
+        },
+        {
+          "title": "查看所有断点",
+          "chapter_action": 1,
+          "finishTag": true,
+          "item_action": 0,
+          "section_action": 5,
+          "webUrl": "https://github.com/kamaihamaiha/basic_dev_tools/blob/main/android_studio/readme.md"
         }
       ],
       "title": "Android Studio"
