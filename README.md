@@ -31,7 +31,7 @@
 - [皇叔训练营](./doc/android_training_camp/readme.md)
 - [Android 开发高手课](./doc/android_dev_performance/readme.md)
 - [开发商业级热门短视频App 掌握Jetpack组件库]()
-- [Top团队大牛带你玩转Android性能分析与优化](./doc/android_perforrmance_and_optimize/README.md)
+- [Top团队大牛带你玩转Android性能分析与优化](doc/android_performance_and_optimize/README.md)
 - [Android 应用程序构建实战+原理精讲]()
 - [10x 程序员工作法](./doc/geek_time/effective_work_method/readme.md)
 
