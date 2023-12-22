@@ -168,6 +168,21 @@ abstract class BaseActivity: BasicActivity() {
        }
     }
 
+    protected open fun updateTitle(title: String){
+        val tvTitle = findViewById<TextView>(R.id.tv_page_title)
+        tvTitle?.text = title
+        tvTitle?.setOnLongClickListener {
+            showToast(TAG)
+            true
+        }
+
+        // long click toolbar
+        baseToolbar?.setOnLongClickListener {
+            showToast(TAG)
+            true
+        }
+    }
+
     protected open fun initAdapter(){
         if (rvList == null) {
             return

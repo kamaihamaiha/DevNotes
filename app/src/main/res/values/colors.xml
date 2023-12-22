@@ -12,6 +12,7 @@
     <color name="text_color_1">#4a4a4a</color>
     <color name="text_color_2">#585858</color>
 
+    <color name="divider_color">@color/white_alpha_50</color>
     <color name="white">#FFFFFF</color>
     <color name="white_alpha_50">#7FFFFFFF</color>
 

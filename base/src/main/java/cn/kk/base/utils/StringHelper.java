@@ -5,6 +5,10 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -147,6 +151,24 @@ public class StringHelper {
 
         return sb.toString();
     }
+
+    public static String urlEncode(String url) {
+        try {
+            return URLEncoder.encode(url, "utf-8").replace("+", "%20");
+        } catch (UnsupportedEncodingException e) {
+            return url;
+        }
+    }
+
+    public static String urlDecode(String url){
+        try {
+            return URLDecoder.decode(url, "utf-8") .replaceAll("^\"|\"$", "");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
+
     public static void main(String[] args) {
 
 
