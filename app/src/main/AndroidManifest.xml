@@ -184,6 +184,7 @@
 
         <!--more Audio-->
         <activity android:name=".activity.more.audio.AudioBasicActivity" />
+        <activity android:name=".activity.more.BaiduPanActivity" />
 
         <!--Audio & Video-->
         <activity android:name="cn.kk.av.task_list.Task1DrawPicture" />

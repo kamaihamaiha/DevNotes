@@ -3,6 +3,7 @@ package cn.kk.customview.io
 import android.content.Context
 import android.os.Handler
 import okhttp3.*
+import org.json.JSONObject
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import kotlin.Exception
@@ -49,6 +50,11 @@ class NetOkHttpHelper(context: Context) {
     }
 
     // region net request
+
+    fun getBaiduPanUserInfo(accessToken: String, callback: ResultCallback){
+        val url = "https://pan.baidu.com/rest/2.0/xpan/nas?method=uinfo&access_token=${accessToken}"
+        getInstance().getAsync(url, callback)
+    }
 
     /**
      * 异步 GET 请求

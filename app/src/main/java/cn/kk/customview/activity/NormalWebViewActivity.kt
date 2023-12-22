@@ -1,5 +1,7 @@
 package cn.kk.customview.activity
 
+import android.app.Activity
+import android.content.Intent
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -8,6 +10,7 @@ import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.SystemHelper
 import cn.kk.customview.R
+import cn.kk.customview.activity.more.BaiduPanActivity
 
 /**
  * 通用显示网页
@@ -45,9 +48,22 @@ class NormalWebViewActivity: BaseActivity() {
 
                         return true
                     }
+                    // https://openapi.baidu.com/oauth/2.0/login_success#expires_in=2592000&access_token=123.4177eb716eec044b1278d92268391b91.Y3lc2VTqNsoWKgJ4c-8M4Sq1jqOQDt6XtqA0jfD.UjUzlw&session_secret=&session_key=&scope=basic+netdisk
+                    Log.d(TAG, "shouldOverrideUrlLoading: ${it}")
+                    if (it.startsWith("https://openapi.baidu.com/oauth/2.0/login_success")) {
+                        val token = it.substringAfter("access_token=")
+                        Log.d(TAG, "shouldOverrideUrlLoading: token=${token}")
+//                        UIHelper.toast("token=${token}", this@NormalWebViewActivity)
+                        val intent = Intent()
+                        intent.putExtra("token", token)
+                        setResult(Activity.RESULT_OK, Intent().apply { putExtra(BaiduPanActivity.INTENT_ACCESS_TOKEN, token) })
+                        finish()
+                        return true
+                    }
                 }
                 return super.shouldOverrideUrlLoading(view, request)
             }
+
 
         }
         mWebView.loadUrl(mWebUrl)
