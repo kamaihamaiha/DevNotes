@@ -1,5 +1,7 @@
 package cn.kk.customview.activity
 
+import android.content.Intent
+import android.content.IntentFilter
 import android.util.Log
 import android.view.View
 import androidx.core.view.*
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.receiver.ScreenChangeReceiver
 import cn.kk.base.utils.IOUtils
 import cn.kk.customview.R
 import cn.kk.customview.fragment.*
@@ -18,6 +21,9 @@ import kotlinx.android.synthetic.main.activity_home_tab.*
 class HomeTabActivity: BaseActivity() {
     private val fragmentList = mutableMapOf<Int, Fragment>()
     private var lastTabId = -1
+    val mScreenChangeReceiver by lazy {
+        ScreenChangeReceiver()
+    }
 
     override fun getLayout(): Int {
         return R.layout.activity_home_tab
@@ -69,8 +75,18 @@ class HomeTabActivity: BaseActivity() {
 
         IOUtils.write2SDCard("hello android!")
 
+        // register screen on/off receiver
+         val intentFilter = IntentFilter()
+         intentFilter.addAction(Intent.ACTION_SCREEN_ON)
+         intentFilter.addAction(Intent.ACTION_SCREEN_OFF)
+         registerReceiver(mScreenChangeReceiver, intentFilter)
+
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(mScreenChangeReceiver)
+    }
    private fun getFragment(id: Int): Fragment {
         if (!fragmentList.containsKey(id)) {
             val existFragment = supportFragmentManager.findFragmentByTag(id.toString())
