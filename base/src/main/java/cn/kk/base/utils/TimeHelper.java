@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class TimeHelper {
 
     private static final SimpleDateFormat SMF = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss:SSS");
-
+    private static final SimpleDateFormat sdf_ymd_hm = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.ENGLISH);
 
     /**
      * 将 ms 格式化成 时:分
@@ -24,5 +24,12 @@ public class TimeHelper {
 
     public static String getTimeSecond(){
         return SMF.format(new Date());
+    }
+
+    public static String getTime(long time) {
+        if (time <= 0) {
+            return "0000:00:00";
+        }
+        return sdf_ymd_hm.format(new Date(time));
     }
 }

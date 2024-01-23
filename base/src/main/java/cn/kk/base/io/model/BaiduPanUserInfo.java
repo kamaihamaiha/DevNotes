@@ -1,4 +1,4 @@
-package cn.kk.customview.io.bean;
+package cn.kk.base.io.model;
 
 import com.google.gson.annotations.SerializedName;
 

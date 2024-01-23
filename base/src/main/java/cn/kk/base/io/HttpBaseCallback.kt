@@ -6,7 +6,7 @@ import java.lang.Exception
 /**
  * 网络请求结果回调
  */
-abstract class ResultCallback {
+abstract class HttpBaseCallback {
 
     abstract fun onResponse(data: String)
 

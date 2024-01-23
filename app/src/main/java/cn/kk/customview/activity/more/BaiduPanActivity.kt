@@ -11,15 +11,14 @@ import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.MyApp
 import cn.kk.customview.R
 import cn.kk.customview.activity.NormalWebViewActivity
-import cn.kk.customview.io.NetOkHttpHelper
-import cn.kk.customview.io.ResultCallback
-import cn.kk.customview.io.bean.BaiduPanUserInfo
-import cn.kk.customview.io.bean.FileListModel
+import cn.kk.base.io.net.NetOkHttpHelper
+import cn.kk.customview.io.HttpBaseCallback
+import cn.kk.customview.io.model.BaiduPanUserInfo
+import cn.kk.customview.io.model.FileListModel
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.gson.Gson
 import okhttp3.Request
-import org.json.JSONObject
 import java.lang.Exception
 
 class BaiduPanActivity: BaseActivity() {
@@ -134,7 +133,7 @@ class BaiduPanActivity: BaseActivity() {
     }
 
     private fun getUserInfo(token: String){
-        NetOkHttpHelper.getInstance().getBaiduPanUserInfo(token, object : ResultCallback(){
+        NetOkHttpHelper.getInstance().getBaiduPanUserInfo(token, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
                 mPanUserInfo = Gson().fromJson(data, BaiduPanUserInfo::class.java)
                 setTitle(String.format("%s的网盘", mPanUserInfo!!.baidu_name))
@@ -152,7 +151,7 @@ class BaiduPanActivity: BaseActivity() {
         updateTitle(if (isRootDir()) title else dirName)
     }
     private fun getCurPathFileList(path: String){
-        NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : ResultCallback(){
+        NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
                 val fileListModel = Gson().fromJson(data, FileListModel::class.java)
                 fileListModel.list?.filter { it.supportType() }?.forEach { // 过滤文件类型

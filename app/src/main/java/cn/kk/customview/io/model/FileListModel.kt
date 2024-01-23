@@ -1,4 +1,4 @@
-package cn.kk.customview.io.bean
+package cn.kk.customview.io.model
 
 import cn.kk.base.utils.DateHelper
 

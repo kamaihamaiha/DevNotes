@@ -3,9 +3,8 @@ package cn.kk.customview.activity.arch.mvp.io
 import cn.kk.customview.activity.arch.mvp.NetRequestTask
 import cn.kk.customview.activity.arch.mvp.callback.HttpCallback
 import cn.kk.customview.activity.arch.mvp.model.LoginInfoModel
-import cn.kk.customview.io.NetOkHttpHelper
-import cn.kk.customview.io.ResultCallback
-import com.google.gson.Gson
+import cn.kk.base.io.net.NetOkHttpHelper
+import cn.kk.customview.io.HttpBaseCallback
 import okhttp3.Request
 import java.lang.Exception
 
@@ -19,7 +18,7 @@ class LoginNetTask: NetRequestTask<String, LoginInfoModel> {
 
         callback.onStart()
 
-        NetOkHttpHelper.getInstance().postAsyncForm(data, object : ResultCallback(){
+        NetOkHttpHelper.getInstance().postAsyncForm(data, object : HttpBaseCallback() {
             override fun onResponse(data: String) {
                // 解析 data
 //                val model = Gson().fromJson(data, LoginInfoModel::class.java)

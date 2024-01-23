@@ -1,9 +1,8 @@
 package cn.kk.customview
 
 import android.app.Application
-import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import cn.kk.customview.io.NetOkHttpHelper
+import cn.kk.base.io.net.NetOkHttpHelper
 import cn.kk.io.db.BookRepository
 
 class MyApp: Application() {

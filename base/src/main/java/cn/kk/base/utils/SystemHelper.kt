@@ -7,6 +7,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Environment
 import android.os.Vibrator
@@ -19,6 +20,15 @@ object SystemHelper {
 
     fun getAppInfo(context: Context){
         val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+    }
+
+    fun getVersionName(context: Context): String? {
+        try {
+            val pinfo = context.packageManager.getPackageInfo(context.packageName, 0)
+            return pinfo.versionName
+        } catch (e: PackageManager.NameNotFoundException) {
+        }
+        return "1.0.0"
     }
 
     /**
