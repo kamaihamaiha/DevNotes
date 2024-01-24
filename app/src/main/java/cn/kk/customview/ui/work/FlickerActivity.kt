@@ -2,9 +2,9 @@ package cn.kk.customview.ui.work
 
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
+import android.widget.Button
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_flicker.*
 
 /**
  * 闪烁动画
@@ -23,7 +23,7 @@ class FlickerActivity: BaseActivity() {
             repeatCount = Int.MAX_VALUE
         }
 
-
+        val btn_play = findViewById<Button>(R.id.btn_play)
         btn_play.setOnClickListener {
             if (btn_play.animation == null) {
                 btn_play.startAnimation(alphaAnim)

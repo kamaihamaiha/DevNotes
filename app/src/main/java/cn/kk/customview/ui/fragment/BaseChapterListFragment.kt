@@ -3,12 +3,12 @@ package cn.kk.customview.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
 import cn.kk.customview.adapter.BaseChapterAdapter
 import cn.kk.customview.bean.ItemChapterModel
 import cn.kk.customview.bean.ItemSectionModel
-import kotlinx.android.synthetic.main.chapter_list_layout.*
 
 /**
  * 以章节列表形式显示(基类)
@@ -33,7 +33,7 @@ abstract class BaseChapterListFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val rv_chapter_list = view.findViewById<RecyclerView>(R.id.rv_chapter_list)
         rv_chapter_list.layoutManager = LinearLayoutManager(context)
         val chapterModelList = mutableListOf<ItemChapterModel>()
 

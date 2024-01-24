@@ -3,6 +3,7 @@ package cn.kk.customview.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
 import cn.kk.customview.config.UIConfig
@@ -11,7 +12,6 @@ import cn.kk.customview.ui.fragment.NormalListFragment
 import cn.kk.elementary.anim.adapter.BaseFragmentAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.fragment_home_view.*
 
 class ViewHomeFragment: BaseFragment() {
     val tabs_name = arrayOf("系统学习","系统UI","炫酷应用 300例","第三方UI","Hencoder", "work" )
@@ -20,9 +20,11 @@ class ViewHomeFragment: BaseFragment() {
         return R.layout.fragment_home_view
     }
 
+    lateinit var viewPager: ViewPager2
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewPager = view.findViewById(R.id.viewPager)
         viewPager.adapter = BaseFragmentAdapter(requireActivity(), mutableListOf<Fragment>().apply {
             // add fragment ui
             add(NormalListFragment().apply {
@@ -113,6 +115,7 @@ class ViewHomeFragment: BaseFragment() {
         viewPager.currentItem = (viewPager.adapter as BaseFragmentAdapter).itemCount - 1
 
         // bind tabLayout and viewPager
+        val tabs = view.findViewById<TabLayout>(R.id.tabs)
         TabLayoutMediator(tabs, viewPager, true, object: TabLayoutMediator.TabConfigurationStrategy{
             override fun onConfigureTab(tab: TabLayout.Tab, position: Int) {
                 tab.text = tabs_name[position]

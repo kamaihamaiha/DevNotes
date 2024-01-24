@@ -2,9 +2,9 @@ package cn.kk.customview.ui.cool300.chapter5
 
 import android.content.res.ColorStateList
 import android.graphics.drawable.RippleDrawable
+import android.widget.ImageView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_simple_143.*
 
 class Simple_143: BaseActivity() {
     override fun getLayout(): Int {
@@ -14,7 +14,7 @@ class Simple_143: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
-
+        val iv_apple = findViewById<ImageView>(R.id.iv_apple)
         iv_apple.setOnClickListener {
             val myColorStateList = createColorStateList(0xffffffff.toInt(),
                 0xffffff00.toInt(), 0xff0000ff.toInt(), 0xffff0000.toInt()

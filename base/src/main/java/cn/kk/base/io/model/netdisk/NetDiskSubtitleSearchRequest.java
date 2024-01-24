@@ -42,32 +42,6 @@ public class NetDiskSubtitleSearchRequest {
         return false;
     }
 
-    public void parseResponse(Response response, ObjectCallback<NetDiskSearchSubtitleResponse[]> callback){
-        if (!response.isSuccessful()) {
-            ThreadHelper.INSTANCE.runOnUIThread(() -> callback.onResult(false, new IOException(response.code() + ": " + response.message())));
-            return;
-        }
-        try {
-            String json = response.body().string();
-            ThreadHelper.INSTANCE.runOnUIThread(() -> {
-                if (isValid(json)) {
-                    NetDiskSearchSubtitleResponse[] subtitleResponseArray = parseSubtitles(json);
-                    if (subtitleResponseArray != null) {
-                        callback.onSuccess(subtitleResponseArray);
-                    } else {
-                        callback.onError(null, new IOException("parse subtitle response failed"));
-                    }
-                } else {
-                    NetDiskSearchSubtitleResponse.WaitResponse waitResponse = parseWaitResponse(json);
-                    callback.onError(null, new IOException(waitResponse.msg));
-                }
-            });
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            ThreadHelper.INSTANCE.runOnUIThread(() -> callback.onError(null, new IOException(e.getMessage())));
-        }
-    }
 
     private NetDiskSearchSubtitleResponse[] parseSubtitles(String json){
         try {

@@ -5,11 +5,10 @@ import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RoundRectShape
+import android.widget.Button
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.simple_009.*
-import kotlinx.android.synthetic.main.simple_010.*
 
 /**
  * 使用 ShapeDrawable 创建渐变圆角按钮
@@ -21,7 +20,9 @@ class Simple_010: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-
+        val btn_1 = findViewById<Button>(R.id.btn_1)
+        val btn_2 = findViewById<Button>(R.id.btn_2)
+        val btn_3 = findViewById<Button>(R.id.btn_3)
         // 四个角为圆角
         val shapeDrawable = ShapeDrawable(RoundRectShape(floatArrayOf(100f,100f,100f,100f,100f,100f,100f,100f), null, null))
 

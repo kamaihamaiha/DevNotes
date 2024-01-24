@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
@@ -15,7 +16,6 @@ import cn.kk.elementary.drawview.fragment.PaintFunsFragment
 import cn.kk.elementary.drawview.fragment.PaintTextFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.fragment_normal_tab.*
 
 /**
  * Fragment: tab + viewPager(Fragment)
@@ -33,9 +33,12 @@ class NormalTabFragment : BaseFragment() {
         return R.layout.fragment_normal_tab
     }
 
+    lateinit var tabs: TabLayout
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
+        tabs = view.findViewById<TabLayout>(R.id.tabs)
         viewPager.adapter =
             BaseFragmentAdapter(activity as BaseActivity, mutableListOf<Fragment>().apply {
                 when(partType) {

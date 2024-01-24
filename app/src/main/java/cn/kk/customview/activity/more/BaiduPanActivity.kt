@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.io.net.NetDiskBaiduManager
 import cn.kk.customview.MyApp
 import cn.kk.customview.R
 import cn.kk.customview.activity.NormalWebViewActivity
@@ -29,6 +30,8 @@ class BaiduPanActivity: BaseActivity() {
 
     val INTENT_DIR_PATH_KEY = "path"
     val SP_PAN_ACCESS_TOKEN_KEY = "pan_access_token_key"
+    val SP_PAN_REFRESH_TOKEN_KEY = "pan_refresh_token_key"
+    val SP_PAN_EXPIRE_STAMP_KEY = "pan_expire_stamp_key"
     var panAccessToken = ""
     var mPanUserInfo: BaiduPanUserInfo ?= null
     var dirPath = ""
@@ -75,30 +78,34 @@ class BaiduPanActivity: BaseActivity() {
 
 
         panAccessToken = MyApp.getInstance().prefs.getString(SP_PAN_ACCESS_TOKEN_KEY, "")?:""
-        if (panAccessToken.isEmpty()) { // todo 还要判断有效期
+        val validStampEnd = MyApp.getInstance().prefs.getLong(SP_PAN_EXPIRE_STAMP_KEY, 0)
+        val validTime = validStampEnd > System.currentTimeMillis()
+        if (TextUtils.isEmpty(panAccessToken)) {
             // 未授权
             /**
              * 1. 打开百度授权页面
              * 2. 获取根目录下的文件
              */
-
             startActivityForResult(
-                Intent(this@BaiduPanActivity, NormalWebViewActivity::class.java).apply {
-                    putExtra(INTENT_WEB_URL_KEY, getAuthUrl())
-                }, PAN_REQUEST_CODE
+                Intent(this@BaiduPanActivity, NormalWebViewActivity::class.java)
+                    .apply {
+                        putExtra(INTENT_WEB_URL_KEY, getAuthUrl())
+                    }, PAN_REQUEST_CODE
             )
         } else {
             // 已授权
-            /**
-             * 1. 获取用户信息
-             * 2. 获取根目录下的文件
-             */
-            getUserInfo(panAccessToken)
+            if (validTime) {
+                /**
+                 * 1. 获取用户信息
+                 * 2. 获取根目录下的文件
+                 */
+                getUserInfo(panAccessToken)
 
-            dirPath = intent.getStringExtra(INTENT_DIR_PATH_KEY) ?: ""
-            getCurPathFileList(dirPath)
-
-            val a: Short
+                dirPath = intent.getStringExtra(INTENT_DIR_PATH_KEY) ?: ""
+                getCurPathFileList(dirPath)
+            } else { // 刷新 token
+                refreshPanAccessToken()
+            }
         }
 
     }
@@ -130,6 +137,33 @@ class BaiduPanActivity: BaseActivity() {
         val url = String.format("%sresponse_type=%s&client_id=%s&redirect_uri=%s&scope=%s&display=%s",
             PAN_AUTH_BASEURL, response_type, client_id, redirect_uri, scope, display)
         return url
+    }
+
+    private fun refreshPanAccessToken() {
+        val refreshToken = MyApp.getInstance().prefs.getString(SP_PAN_REFRESH_TOKEN_KEY, "")?:""
+        if (refreshToken.isEmpty()) {
+            UIHelper.toast( "refreshToken is empty!", this@BaiduPanActivity)
+            return
+        }
+        val appKey = NetDiskBaiduManager.BaiduPanAppConfig.appKey
+        val secretKey = NetDiskBaiduManager.BaiduPanAppConfig.secretKey
+
+        NetDiskBaiduManager.refreshNetDisk_BaiduAccessToken(refreshToken, appKey, secretKey
+        ) { success, result ->
+            result?.let {
+                // save token to sp file
+                panAccessToken = it.access_token
+                MyApp.getInstance().prefs.edit().putString(SP_PAN_ACCESS_TOKEN_KEY, it.access_token)
+                    .apply()
+                MyApp.getInstance().prefs.edit()
+                    .putString(SP_PAN_REFRESH_TOKEN_KEY, it.refresh_token).apply()
+                val expiresStamp = System.currentTimeMillis() + it.expires_in * 1000L
+                MyApp.getInstance().prefs.edit().putLong(SP_PAN_EXPIRE_STAMP_KEY, expiresStamp)
+                    .apply()
+                getUserInfo(panAccessToken)
+            }
+        }
+
     }
 
     private fun getUserInfo(token: String){

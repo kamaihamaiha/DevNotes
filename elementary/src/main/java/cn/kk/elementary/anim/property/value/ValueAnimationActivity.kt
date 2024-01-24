@@ -2,11 +2,14 @@ package cn.kk.elementary.anim.property.value
 
 import android.animation.Animator
 import android.animation.ValueAnimator
+import android.os.Build
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import androidx.annotation.RequiresApi
 import cn.kk.base.*
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.activity_anim_property.*
 
 /**
  * 属性动画
@@ -33,7 +36,7 @@ import kotlinx.android.synthetic.main.activity_anim_property.*
 class ValueAnimationActivity: BaseActivity() {
 
     val viewBlockY by lazy {
-        viewBlock.y
+        findViewById<View>(R.id.viewBlock).y
     }
 
     lateinit var valueAnimator: ValueAnimator
@@ -56,7 +59,9 @@ class ValueAnimationActivity: BaseActivity() {
         mediaHelper = MediaHelper(this)
         btn_play.setOnClickListener {
             if (!playState) {
-                valueAnimator = createAnim()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    valueAnimator = createAnim()
+                }
                 setAnimMoreOperation()
                 valueAnimator.start()
             } else {
@@ -69,8 +74,10 @@ class ValueAnimationActivity: BaseActivity() {
     }
 
     // region 1. ValueAnimator 的简单使用
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun createAnim(): ValueAnimator {
         // region step1. 创建 ValueAnimator 实例. 只水平移动。
+        val viewBlock = findViewById<View>(R.id.viewBlock)
         val maxHorizontalDistance = UIHelper.getScreenSize(this).x - viewBlock.width
 
         // 移动的转折点数组
@@ -99,7 +106,7 @@ class ValueAnimationActivity: BaseActivity() {
         animator.addUpdateListener {
 
             val curValue: Int = it.animatedValue as Int
-            tv_value.text = curValue.toString()
+            findViewById<TextView>(R.id.tv_value).text = curValue.toString()
 
             // 给控件 viewBlock 执行动画
             viewBlock.layout(
@@ -134,22 +141,22 @@ class ValueAnimationActivity: BaseActivity() {
 
         // region 2.1 监听动画变换的 4 个状态
         valueAnimator.addListener(object : Animator.AnimatorListener{
-            override fun onAnimationStart(animation: Animator?) {
+            override fun onAnimationStart(animation: Animator) {
                playState = true
                 btn_play.text = "cancel"
             }
 
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                playState = false
                 btn_play.text = "play"
             }
 
-            override fun onAnimationCancel(animation: Animator?) {
+            override fun onAnimationCancel(animation: Animator) {
                playState = false
                 btn_play.text = "restart"
             }
 
-            override fun onAnimationRepeat(animation: Animator?) {
+            override fun onAnimationRepeat(animation: Animator) {
             }
 
         })

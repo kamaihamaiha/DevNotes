@@ -4,12 +4,13 @@ import android.graphics.drawable.TransitionDrawable
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.WikiModel
 import cn.kk.base.dialog.WikiBottomDialog
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_multi_drawable.*
 import java.util.*
 
 /**
@@ -62,6 +63,10 @@ class MultiDrawable: BaseActivity(), androidx.appcompat.widget.Toolbar.OnMenuIte
         baseToolbar?.setNavigationOnClickListener { finish() }
         baseToolbar?.setOnMenuItemClickListener(this)
 
+        val view_drawable_bg = findViewById<View>(R.id.view_drawable_bg)
+        val et_input = findViewById<EditText>(R.id.et_input)
+        val btn_multi_drawable = findViewById<Button>(R.id.btn_multi_drawable)
+        val btn_rotate = findViewById<Button>(R.id.btn_rotate)
         when (ui_type) {
             // 对应的是 <bitmap> 标签
             TYPE_BITMAP_DRAWABLE -> view_drawable_bg.setBackgroundResource(R.drawable.kk_bitmap_drawable)

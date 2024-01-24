@@ -5,12 +5,12 @@ import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.BaseMoreItem
 import cn.kk.customview.R
 import cn.kk.customview.dialog.MoreInfoListBottomDialog
-import kotlinx.android.synthetic.main.activity_mix_dev.*
 
 /**
  * 混合开发 总结
@@ -21,6 +21,10 @@ class MixDevActivity: BaseActivity() {
 
     override fun getLayout(): Int {
        return R.layout.activity_mix_dev
+    }
+
+    val et_input: EditText by lazy {
+        findViewById(R.id.et_input)
     }
 
     override fun showTitleMoreBtn(): Boolean = true
@@ -77,6 +81,7 @@ class MixDevActivity: BaseActivity() {
         }
 
         // 获取 web 输入
+        val btn_get_web_input = findViewById<Button>(R.id.btn_get_web_input)
         btn_get_web_input.setOnClickListener {
             nativeSDK.getWebEditTextValue(object : Callback{
                 override fun invoke(value: String) {

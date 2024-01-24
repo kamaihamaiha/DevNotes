@@ -32,22 +32,22 @@ object AnimHelper {
         val anim = ObjectAnimator.ofFloat(view, "translationY", if(hide) 0f else view.height.toFloat(), if (hide) view.height.toFloat() else 0f)
         anim.duration = 500
         anim.addListener(object : Animator.AnimatorListener{
-            override fun onAnimationStart(animation: Animator?) {
+            override fun onAnimationStart(animation: Animator) {
                 if (!hide) {
                     view.visibility = View.VISIBLE
                 }
             }
 
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                 if (hide) {
                     view.visibility = View.GONE
                 }
             }
 
-            override fun onAnimationCancel(animation: Animator?) {
+            override fun onAnimationCancel(animation: Animator) {
             }
 
-            override fun onAnimationRepeat(animation: Animator?) {
+            override fun onAnimationRepeat(animation: Animator) {
             }
 
         })

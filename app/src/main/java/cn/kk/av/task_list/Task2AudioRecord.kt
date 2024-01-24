@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.media.*
 import android.os.Build
 import android.os.Environment
+import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import cn.kk.av.task_list.task2.AudioConfig
@@ -13,7 +14,6 @@ import cn.kk.av.task_list.task2.PcmToWavUtil
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.ThreadHelper
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_task2_audio_record.*
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -37,6 +37,18 @@ class Task2AudioRecord: BaseActivity() {
     private var playState = false
     private var mAudioRecord: AudioRecord? = null
     private var mAudioTrack: AudioTrack? = null
+
+    val btn_record_audio by lazy {
+        findViewById<Button>(R.id.btn_record_audio)
+    }
+
+    val btn_play_pcm_audio by lazy {
+        findViewById<Button>(R.id.btn_play_pcm_audio)
+    }
+
+    val btn_play_wav_audio by lazy {
+        findViewById<Button>(R.id.btn_play_wav_audio)
+    }
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
@@ -69,6 +81,7 @@ class Task2AudioRecord: BaseActivity() {
         }
 
         // pcm 2 wav
+        val btn_pcm2wav = findViewById<Button>(R.id.btn_pcm2wav)
         btn_pcm2wav.setOnClickListener {
             pcm2wav()
         }
@@ -153,6 +166,20 @@ class Task2AudioRecord: BaseActivity() {
      */
     private fun startRecord(){
         val minBufferSize = AudioRecord.getMinBufferSize(AudioConfig.SAMPLE_RATE_WITH_HZ, AudioConfig.CHANNEL_CONFIG, AudioConfig.AUDIO_FORMAT)
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.RECORD_AUDIO
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return
+        }
         mAudioRecord = AudioRecord(AudioConfig.AUDIO_SOURCE_MIC, AudioConfig.SAMPLE_RATE_WITH_HZ, AudioConfig.CHANNEL_CONFIG, AudioConfig.AUDIO_FORMAT, minBufferSize)
         val data = ByteArray(minBufferSize)
 

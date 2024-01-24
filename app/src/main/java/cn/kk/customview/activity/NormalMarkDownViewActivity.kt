@@ -5,12 +5,12 @@ import android.view.MenuItem
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.SystemHelper
 import cn.kk.customview.R
 import com.mukesh.MarkdownView
-import kotlinx.android.synthetic.main.activity_normal_markdown_view.*
 
 /**
  * 通用显示 Markdown 文件
@@ -31,6 +31,7 @@ class NormalMarkDownViewActivity: BaseActivity() {
         val local = intent.getBooleanExtra(INTENT_MARKDOWN_LOCAL_KEY, true)
 
         markDownView = findViewById(R.id.markdown_view)
+        val refresh_view = findViewById<SwipeRefreshLayout>(R.id.refresh_view)
 
         markDownView.settings.javaScriptEnabled = true
         markDownView.webChromeClient = WebChromeClient()

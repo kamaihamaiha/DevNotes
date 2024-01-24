@@ -58,7 +58,7 @@ object WebUtil {
         // 设置缓存模式
         webView.settings.cacheMode = WebSettings.LOAD_DEFAULT
         // 开启 Application Caches 功能
-        webView.settings.setAppCacheEnabled(true)
+//        webView.settings.setAppCacheEnabled(true)
         // 设置 Application Caches 缓存目录
         val cachePath = getWebViewCachePath(context)
         val cacheDir = File(cachePath)
@@ -66,6 +66,7 @@ object WebUtil {
         if (!cacheDir.exists() && !cacheDir.isDirectory) {
             cacheDir.mkdirs()
         }
-        webView.settings.setAppCachePath(cachePath)
+//        webView.settings.setAppCachePath(cachePath)
+        webView.settings.cacheMode = WebSettings.LOAD_DEFAULT
     }
 }

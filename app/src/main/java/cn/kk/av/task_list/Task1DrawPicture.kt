@@ -3,11 +3,12 @@ package cn.kk.av.task_list
 import android.graphics.BitmapFactory
 import android.graphics.Paint
 import android.view.SurfaceHolder
+import android.view.SurfaceView
 import android.view.View
+import android.widget.Button
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_draw_picture.*
 
 /**
  * 自定义 view 绘制 bitmap
@@ -22,6 +23,7 @@ class Task1DrawPicture: BaseActivity() {
 
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.cat)
+        val surface_view = findViewById<SurfaceView>(R.id.surface_view)
         surface_view.holder.addCallback(object : SurfaceHolder.Callback{
 
             override fun surfaceCreated(holder: SurfaceHolder) {
@@ -44,7 +46,9 @@ class Task1DrawPicture: BaseActivity() {
 
         })
 
-        btn_show_mode.setOnClickListener {
+        val btn_show_mode = findViewById<Button>(R.id.btn_show_mode)
+        val picture_view = findViewById<PictureView>(R.id.picture_view)
+        findViewById<Button>(R.id.btn_show_mode).setOnClickListener {
             if (surface_view.visibility == View.GONE) {
                 surface_view.visibility = View.VISIBLE
                 picture_view.visibility = View.GONE

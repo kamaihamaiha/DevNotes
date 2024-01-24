@@ -6,6 +6,7 @@ import android.os.Looper
 import android.os.SystemClock
 import android.text.TextUtils
 import android.util.Log
+import cn.kk.base.BaseApp
 import cn.kk.base.io.BooleanCallback
 import cn.kk.base.io.ObjectCallback
 import cn.kk.base.io.model.netdisk.baidu.NetDisk_BaiduAccessTokenResponse
@@ -32,6 +33,17 @@ object NetDiskBaiduManager {
         NetOkHttpHelper.getInstance().getOkhttpClient()
     }
 
+
+
+    // baidu pan
+
+     object BaiduPanAppConfig {
+         var appID = 45394028
+         val appKey: String = "xIG6LSGvRvLGN43OvI9obxeZfEdCZQYQ"
+         var secretKey = "l072dbnqsHQ4b6cWNSdnOlHIg8lHhAau"
+    }
+
+    const val APP_KEY: String = "xIG6LSGvRvLGN43OvI9obxeZfEdCZQYQ"
 
     // region url
     const val NetDisk_Baidu_AUTH_HOST = "https://openapi.baidu.com"
@@ -108,8 +120,8 @@ object NetDiskBaiduManager {
     // endregion
 
     // region request
-    fun getRequest(url: String?, forceRefresh: Boolean = false): Request.Builder {
-      return  TingHttpApi.ShareInstance().getTingRequest(url, forceRefresh)
+    private fun getRequest(url: String, forceRefresh: Boolean = false): Request.Builder {
+      return  Request.Builder().url(url)
     }
 
     fun getNetDisk_BaiduAccessToken(authCode: String?, appKey: String, secretKey: String, redirectUri: String, callback: ObjectCallback<String>) {
@@ -284,8 +296,8 @@ object NetDiskBaiduManager {
      */
     private fun getNetDisk_BaiduUserAgent(): String {
         val userAgent = String.format(
-            "xpanvideo$%s;$%s;$%s;$%s;ts", MyApp.getInstance().getString(R.string.app_name),
-            SystemHelper.getVersionName(MyApp.getInstance()), "Android", Build.VERSION.RELEASE
+            "xpanvideo$%s;$%s;$%s;$%s;ts", "速查手册",
+            SystemHelper.getVersionName(BaseApp.getInstance()), "Android", Build.VERSION.RELEASE
         )
         return StringHelper.urlEncode(userAgent)
     }
@@ -342,11 +354,11 @@ object NetDiskBaiduManager {
         return msg
     }
 
-    fun getNetDisk_BaiduCommonInfo(url: String?, callback: ObjectCallback<String>) {
+    fun getNetDisk_BaiduCommonInfo(url: String, callback: ObjectCallback<String>) {
         getNetDisk_BaiduCommonInfo(url, false, callback)
     }
 
-    fun getNetDisk_BaiduCommonInfo(url: String?, forceRefresh: Boolean, callback: ObjectCallback<String>) {
+    fun getNetDisk_BaiduCommonInfo(url: String, forceRefresh: Boolean, callback: ObjectCallback<String>) {
         var request: Request? = null
         try {
             request = getRequest(url, forceRefresh).build()

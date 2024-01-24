@@ -1,14 +1,15 @@
 package cn.kk.customview.chapter
 
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.TranslateAnimation
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_anim_interpolator.*
 
 /**
  * 动画插值器
@@ -40,7 +41,8 @@ class AnimInterpolatorActivity: BaseActivity() {
         animList.add(alphaInterpolatorAnim)
         animList.add(transInterpolatorAnim)
         animList.add(transInterpolatorAnim2)
-
+        val btn_play = findViewById<Button>(R.id.btn_play)
+        val viewBlock = findViewById<View>(R.id.viewBlock)
         btn_play.setOnClickListener {
 
             val curAnim = animList[(count++) % animList.size]

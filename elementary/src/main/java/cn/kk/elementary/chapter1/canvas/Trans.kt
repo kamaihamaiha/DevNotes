@@ -13,7 +13,7 @@ import cn.kk.elementary.R
  */
 class Trans(context: Context?) : View(context) {
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         val paint = Paint().apply {
@@ -25,11 +25,11 @@ class Trans(context: Context?) : View(context) {
         val top = 0f
         val right = 300f
         val bottom = 200f
-        canvas?.drawRect(left, top, right, bottom, paint)
+        canvas.drawRect(left, top, right, bottom, paint)
 
         // 平移画布，再绘制.
-        canvas?.translate(400f, 200f)
-        canvas?.drawRect(left, top, right, bottom, paint)
+        canvas.translate(400f, 200f)
+        canvas.drawRect(left, top, right, bottom, paint)
 
     }
 }

@@ -2,12 +2,11 @@ package cn.kk.base.activity
 
 import android.view.LayoutInflater
 import android.widget.TextView
-import androidx.fragment.app.FragmentContainerView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.R
 import cn.kk.base.adapter.CommentAdapter
 import cn.kk.base.bean.CommentModel
-import kotlinx.android.synthetic.main.activity_comment.*
 
 class CommentActivity: BaseActivity() {
     override fun getLayout(): Int {
@@ -23,7 +22,8 @@ class CommentActivity: BaseActivity() {
         commentList.add(CommentModel("name1", "", "comment_1", System.currentTimeMillis(), true))
         commentList.add(CommentModel("name2", "", "comment_2", System.currentTimeMillis(), false))
 
-        rv_comment_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val rv_comment_list = findViewById<RecyclerView>(R.id.rv_comment_list)
+         rv_comment_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         val commentAdapter = CommentAdapter(commentList, this)
         rv_comment_list.adapter = commentAdapter
 

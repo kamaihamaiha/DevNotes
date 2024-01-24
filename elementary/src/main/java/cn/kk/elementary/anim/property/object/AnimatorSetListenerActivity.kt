@@ -4,9 +4,10 @@ import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.widget.Button
+import android.widget.ImageView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.activity_animator_set_listener.*
 
 /**
  * 3.5.3 AnimatorSet 监听器
@@ -20,6 +21,9 @@ class AnimatorSetListenerActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
+        val circle1 = findViewById<ImageView>(R.id.circle1)
+        val circle2 = findViewById<ImageView>(R.id.circle2)
+        val circle3 = findViewById<ImageView>(R.id.circle3)
         // region 1. 定义多个动画
         val animCircle1Trans = ObjectAnimator.ofFloat(circle1, "translationY", 0f, 1200f)
         val animCircle2Trans = ObjectAnimator.ofFloat(circle2, "translationY", 0f, 1200f).apply {
@@ -28,25 +32,25 @@ class AnimatorSetListenerActivity: BaseActivity() {
         val animCircle3Trans = ObjectAnimator.ofFloat(circle3, "translationY", 0f, 1200f)
 
 
-        btn_play.setOnClickListener {
+        findViewById<Button>(R.id.btn_play).setOnClickListener {
             animSet = AnimatorSet().apply {
                 play(animCircle1Trans).with(animCircle2Trans)
                 duration = 2000
                 // 添加动画监听
                 addListener(object : Animator.AnimatorListener{
-                    override fun onAnimationStart(animation: Animator?) {
+                    override fun onAnimationStart(animation: Animator) {
                         showToast("start...")
                     }
 
-                    override fun onAnimationEnd(animation: Animator?) {
+                    override fun onAnimationEnd(animation: Animator) {
                         showToast("end...")
                     }
 
-                    override fun onAnimationCancel(animation: Animator?) {
+                    override fun onAnimationCancel(animation: Animator) {
                         showToast("cancel...")
                     }
 
-                    override fun onAnimationRepeat(animation: Animator?) {
+                    override fun onAnimationRepeat(animation: Animator) {
                         showToast("repeat...")
                     }
 
@@ -56,7 +60,7 @@ class AnimatorSetListenerActivity: BaseActivity() {
             animSet.start()
         }
 
-        btn_cancel.setOnClickListener {
+        findViewById<Button>(R.id.btn_cancel).setOnClickListener {
             animSet.cancel()
         }
     }

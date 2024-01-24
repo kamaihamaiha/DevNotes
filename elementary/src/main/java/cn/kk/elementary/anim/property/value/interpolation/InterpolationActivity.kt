@@ -5,12 +5,12 @@ import android.animation.TimeInterpolator
 import android.animation.TypeEvaluator
 import android.animation.ValueAnimator
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.core.animation.doOnEnd
 import cn.kk.base.MediaHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.activity_anim_property.*
 
 /**
  * 属性动画
@@ -23,6 +23,9 @@ class InterpolationActivity : BaseActivity() {
 
     private lateinit var animator: ValueAnimator
     private lateinit var btn_play: Button
+    private val viewBlock by lazy {
+        findViewById<View>(R.id.viewBlock)
+    }
 
     // region 颜色动画 ArgbEvaluator
     private  val animatorArgb: ValueAnimator by lazy {

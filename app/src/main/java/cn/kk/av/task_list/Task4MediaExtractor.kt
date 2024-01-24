@@ -10,13 +10,13 @@ import android.media.MediaMuxer
 import android.os.Build
 import android.os.Environment
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.SystemHelper
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_task4_meida_extractor.*
 import java.nio.ByteBuffer
 
 /**
@@ -39,9 +39,9 @@ class Task4MediaExtractor: BaseActivity() {
 
         checkPermissions()
 
-        btn_extra_video.setOnClickListener { extractorVideoOrVideoData(true) }
-        btn_extra_audio.setOnClickListener { extractorVideoOrVideoData(false) }
-        btn_mux_audio_video.setOnClickListener { muxerVideoAndVideo() }
+        findViewById<Button>(R.id.btn_extra_video).setOnClickListener { extractorVideoOrVideoData(true) }
+        findViewById<Button>(R.id.btn_extra_audio).setOnClickListener { extractorVideoOrVideoData(false) }
+        findViewById<Button>(R.id.btn_mux_audio_video).setOnClickListener { muxerVideoAndVideo() }
     }
 
     /**

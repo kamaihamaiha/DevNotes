@@ -22,7 +22,6 @@ import cn.kk.base.adapter.ListV2Adapter
 import cn.kk.base.bean.HtmlWikiModel
 import cn.kk.base.bean.ListItemAction
 import cn.kk.base.dialog.HtmlBottomDialog
-import kotlinx.android.synthetic.main.layout_title.*
 import java.io.Serializable
 
 /**
@@ -78,7 +77,7 @@ abstract class BaseActivity: BasicActivity() {
 
         mSelf = this
         baseToolbar = findViewById(R.id.toolBar)
-        btn_title_more?.visibility = if(showTitleMoreBtn()) View.VISIBLE else View.INVISIBLE
+        findViewById<View>(R.id.btn_title_more)?.visibility = if(showTitleMoreBtn()) View.VISIBLE else View.INVISIBLE
 
         rvList = findViewById(setListViewID())
 
@@ -239,7 +238,7 @@ abstract class BaseActivity: BasicActivity() {
      * 显示标题栏 more icon
      */
     protected open fun showTitleMoreBtnIcon(){
-        btn_title_more?.visibility = View.VISIBLE
+       findViewById<View>(R.id.btn_title_more)?.visibility = View.VISIBLE
     }
 
     /**
@@ -341,7 +340,8 @@ abstract class BaseActivity: BasicActivity() {
             runOnUiThread(Runnable {
                 if (baseProgressDialog == null) {
                     val themeValue = TypedValue()
-                    theme.resolveAttribute(R.attr.alertDialogTheme, themeValue, true)
+
+                    theme.resolveAttribute(androidx.appcompat.R.attr.alertDialogTheme, themeValue, true)
                     baseProgressDialog = ProgressDialog(this@BaseActivity, themeValue.data)
                 }
                 baseProgressDialog?.apply {

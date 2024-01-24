@@ -55,7 +55,7 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
     private val fontMetrics = Paint.FontMetrics()
 
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
 
         /*val staticLayout =
             StaticLayout(
@@ -64,17 +64,17 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
             )
 
         staticLayout.draw(canvas)*/
-        canvas?.drawBitmap(bitmap, width - avatarWidth, avatarPadding, avatarPaint)
+        canvas.drawBitmap(bitmap, width - avatarWidth, avatarPadding, avatarPaint)
 
         textPaint2.getFontMetrics(fontMetrics)
         val measureWidth = floatArrayOf(0f)
         /*//第二个参数：是否往前测量
         var count = textPaint2.breakText(text, true, width.toFloat(), measureWidth)
-        canvas?.drawText(text, 0, count, 0f, -fontMetrics.top, textPaint2)
+        canvas.drawText(text, 0, count, 0f, -fontMetrics.top, textPaint2)
 
         var oldCount = count;
         count = textPaint2.breakText(text, count, text.length, true, width.toFloat(), measureWidth)
-        canvas?.drawText(
+        canvas.drawText(
             text, oldCount, oldCount + count, 0f,
             -fontMetrics.top + textPaint2.fontSpacing, textPaint2
         )*/
@@ -99,7 +99,7 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
                 text, start, text.length, true,
                 maxWidth, measureWidth
             )
-            canvas?.drawText(
+            canvas.drawText(
                 text, start, start + count, 0f,
                 vertialOffset, textPaint2
             )

@@ -8,10 +8,11 @@ import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
+import android.widget.ImageView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.IOUtils
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_webview_scroll_cap.*
 
 class WebViewScrollCapActivity: BaseActivity() {
     val TEST_URL = "http://beta_dict.eudic.net/ting/articlepdf?mediaId=e81d9146-3b99-11ed-80da-005056863753"
@@ -43,7 +44,10 @@ class WebViewScrollCapActivity: BaseActivity() {
 
         showProgressDialog("loading...")
         webView.loadUrl(TEST_URL)
-
+        val btn_cap = findViewById<Button>(R.id.btn_cap)
+        val btn_save = findViewById<Button>(R.id.btn_save)
+        val btn_save_pictures = findViewById<Button>(R.id.btn_save_pictures)
+        val iv_cap = findViewById<ImageView>(R.id.iv_cap)
         btn_cap.setOnClickListener {
             if (capState) {
                 iv_cap.visibility = View.INVISIBLE

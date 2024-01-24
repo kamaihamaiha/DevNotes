@@ -162,7 +162,7 @@ class ChannelTabViewV2(ctx: Context, attrs: AttributeSet): ViewGroup(ctx, attrs)
     }
 
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
     }
 

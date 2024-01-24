@@ -2,15 +2,15 @@ package cn.kk.customview.ui.hencoder
 
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import cn.kk.customview.ui.fragment.NormalViewFragment
 import cn.kk.elementary.anim.adapter.BaseFragmentAdapter
 import com.example.hencoder.draw.DashBoardView
 import com.example.hencoder.draw.PieView
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_base_sub_tab_viewpager.tabs
-import kotlinx.android.synthetic.main.activity_base_sub_tab_viewpager.viewPager
 
 /**
  * 图形的位置和尺寸测量
@@ -26,7 +26,8 @@ class GraphicLocationAndSizeMeasureActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
-
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        val tabs = findViewById<TabLayout>(R.id.tabs)
         viewPager.adapter = BaseFragmentAdapter(this, mutableListOf<Fragment>().apply {
 
             add(DashBoardFragment())

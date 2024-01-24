@@ -1,9 +1,10 @@
 package cn.kk.elementary.anim.json
 
+import android.widget.Button
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.ListItemAction
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.activity_anim_json.*
+import com.airbnb.lottie.LottieAnimationView
 
 /**
  * 动画
@@ -19,7 +20,8 @@ class JsonAnimActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
-        btn_play.setOnClickListener {
+        val lottieAnim = findViewById<LottieAnimationView>(R.id.lottieAnim)
+        findViewById<Button>(R.id.btn_play).setOnClickListener {
             lottieAnim.setAnimation(itemList[count++ % 4].title)
             lottieAnim.playAnimation()
 

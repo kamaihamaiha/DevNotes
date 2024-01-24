@@ -6,8 +6,11 @@ import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.BaseItem
 import cn.kk.base.bean.NodeModel
@@ -18,7 +21,6 @@ import cn.kk.customview.bean.BookModel
 import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import kotlinx.android.synthetic.main.activity_search_book.*
 
 /**
  * 搜索指定课本信息，根据关键字搜索
@@ -47,6 +49,7 @@ class SearchSpecifyBookActivity: BaseActivity() {
         super.doWhenOnCreate()
 
         // init search list
+        val rv_result = findViewById<RecyclerView>(R.id.rv_result)
         rv_result?.layoutManager = LinearLayoutManager(this@SearchSpecifyBookActivity)
         rv_result?.adapter = object : BaseQuickAdapter<BaseItem, BaseViewHolder>(R.layout.item_book_search_result, mSearchKeywordResultList) {
             override fun convert(holder: BaseViewHolder, item: BaseItem) {
@@ -84,8 +87,8 @@ class SearchSpecifyBookActivity: BaseActivity() {
             }
         }
 
-        btn_cancel.setOnClickListener { finish() }
-
+        findViewById<Button>(R.id.btn_cancel).setOnClickListener { finish() }
+        val et_search = findViewById<EditText>(R.id.et_search)
         et_search.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
                 if (event?.keyCode == KeyEvent.KEYCODE_ENTER) {
@@ -126,6 +129,7 @@ class SearchSpecifyBookActivity: BaseActivity() {
                 }
 
                 // refresh ui
+                val tv_result_count = findViewById<TextView>(R.id.tv_result_count)
                 tv_result_count.text = "共${mSearchKeywordResultList.size}条结果"
                 (rv_result?.adapter as BaseQuickAdapter<BaseItem, BaseViewHolder>)?.notifyDataSetChanged()
 //                changeEmptyViewState()

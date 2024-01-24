@@ -1,9 +1,9 @@
 package cn.kk.customview.activity
 
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.ListItemAction
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_normal_list.*
 
 /**
  * 普通列表 Activity
@@ -37,7 +37,7 @@ class NormalListActivity: BaseActivity() {
                 1 -> openNextUI(NormalViewActivity::class.java, title, NormalViewActivity.VIEW_TYPE_TOUCH_FEED_2)
             }
         }
-        rv_list.adapter = listAdapter
+        findViewById<RecyclerView>(R.id.rv_list).adapter = listAdapter
     }
 
 }

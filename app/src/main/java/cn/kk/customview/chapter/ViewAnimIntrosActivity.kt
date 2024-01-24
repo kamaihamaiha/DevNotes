@@ -1,9 +1,11 @@
 package cn.kk.customview.chapter
 
 import android.view.animation.*
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_view_anim_intros.*
 
 /**
  * 动画的一些例子
@@ -82,6 +84,8 @@ class ViewAnimIntrosActivity: BaseActivity() {
         animList.add(AnimBean(animSet, "set anim xml"))
         animList.add(AnimBean(setAnim, "set anim code"))
 
+        val btn_scale_play = findViewById<Button>(R.id.btn_scale_play)
+        val tv_scale_anim = findViewById<TextView>(R.id.tv_scale_anim)
         btn_scale_play.setOnClickListener {
 
             playAnim(transAnimOut, transAnimIn)
@@ -106,6 +110,8 @@ class ViewAnimIntrosActivity: BaseActivity() {
     }
 
     fun playAnim(aniOut: Animation, animIn: Animation){
+        val tv_scale_anim = findViewById<TextView>(R.id.tv_scale_anim)
+        val ll_three = findViewById<LinearLayout>(R.id.ll_three)
         if (count % 2 == 0) {
             tv_scale_anim.startAnimation(aniOut)
             ll_three.startAnimation(animIn)

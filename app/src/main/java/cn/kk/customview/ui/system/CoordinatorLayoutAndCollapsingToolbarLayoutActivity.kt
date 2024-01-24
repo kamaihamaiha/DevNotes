@@ -4,15 +4,15 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import cn.kk.base.adapter.CommentAdapter
 import cn.kk.base.bean.CommentModel
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_coordinator_collapsing_toolbar.*
-import kotlinx.android.synthetic.main.activity_coordinator_layout.*
-import kotlinx.android.synthetic.main.activity_coordinator_layout.toolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 /**
  * 1. CollapsingToolbarLayout 把 ImageView 和 Toolbar 包裹起来，作为一个可折叠的 Toolbar
@@ -39,8 +39,11 @@ class CoordinatorLayoutAndCollapsingToolbarLayoutActivity: AppCompatActivity() {
         setContentView(R.layout.activity_coordinator_collapsing_toolbar)
 
         setStatusBarTrans()
-
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        val collapsing_toolbar = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
+        val rv_list = findViewById<RecyclerView>(R.id.rv_list)
 
         collapsing_toolbar.title = "Dragon Ball"
 

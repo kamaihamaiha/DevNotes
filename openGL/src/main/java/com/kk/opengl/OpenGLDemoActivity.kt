@@ -1,8 +1,8 @@
 package com.kk.opengl
 
+import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import com.kk.open_gl_lib.R
-import kotlinx.android.synthetic.main.activity_open_gl.*
 
 class OpenGLDemoActivity: BaseActivity() {
     override fun getLayout(): Int {
@@ -14,6 +14,6 @@ class OpenGLDemoActivity: BaseActivity() {
 
         val nativeLib = NativeLib()
 
-        tv_open_GL.text = nativeLib.stringFromJNI()
+        findViewById<TextView>(R.id.tv_open_GL).text = nativeLib.stringFromJNI()
     }
 }
