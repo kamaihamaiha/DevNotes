@@ -2,7 +2,7 @@ ext {
     appVersionCode = 1
     appVersionName = "0.1"
 
-    appCompileSdkVersion = 31
+    appCompileSdkVersion = 34
     appMinSdkVersion = 23
     appTargetSdkVersion = 30 // 28: Android 9
 }
