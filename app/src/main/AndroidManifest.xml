@@ -85,6 +85,7 @@
             </intent-filter>
         </activity-alias>
         <activity android:name="cn.kk.base.activity.CommentActivity" />
+        <activity android:name="cn.kk.base.media.MyPlayerActivity" />
         <activity android:name=".ui.LottieAnimActivity" />
         <activity android:name=".chapter.c1.DrawBasicActivity" />
         <activity android:name="cn.kk.elementary.anim.view.AnimSampleActivity" />

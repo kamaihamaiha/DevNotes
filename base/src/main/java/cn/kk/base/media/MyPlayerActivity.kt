@@ -1,14 +1,20 @@
 package cn.kk.base.media
 
 import androidx.media3.common.MediaItem
+import androidx.media3.datasource.DataSource
+import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.hls.HlsMediaSource
+import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.ui.PlayerView
 import cn.kk.base.R
 import cn.kk.base.activity.BaseActivity
 
 class MyPlayerActivity: BaseActivity() {
 
-    val player by lazy {
+    private val dataSourceFactory: DataSource.Factory = DefaultHttpDataSource.Factory()
+
+    val myExoPlayer by lazy {
         ExoPlayer.Builder(this).build()
     }
     override fun getLayout(): Int {
@@ -18,18 +24,26 @@ class MyPlayerActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
+
+        initPlayer()
+
+    }
+
+    private fun initPlayer(){
+        myExoPlayer.apply {
+                setMediaSource(getHlsMediaSource())
+                prepare()
+//                addListener(playerListener)
+            }
         val playView = findViewById<PlayerView>(R.id.player_view)
-        val myExoPlayer = MyExoPlayer(this)
-        playView.player = myExoPlayer.player // Bind the player to the view.
+        playView.player = myExoPlayer
+        myExoPlayer.play()
+    }
 
-        // Build the media item.
-        val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-0/play.mp3")
-        // Set the media item to be played.
-        player.setMediaItem(mediaItem)
-        // Prepare the player.
-        player.prepare()
-        // Start the playback.
-        player.play()
-
+    private fun getHlsMediaSource(): MediaSource {
+        // Create a HLS media source pointing to a playlist uri.
+        val mediaUrl = intent.getStringExtra(INTENT_MEDIA_URL_KEY)?:""
+        return HlsMediaSource.Factory(dataSourceFactory).
+        createMediaSource(MediaItem.fromUri(mediaUrl))
     }
 }

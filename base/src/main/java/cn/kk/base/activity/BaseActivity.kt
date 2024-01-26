@@ -37,6 +37,7 @@ abstract class BaseActivity: BasicActivity() {
     protected val INTENT_MODEL_KEY = "model"
     protected val INTENT_BOOK_TYPE_KEY = "book_type"
     protected val INTENT_MODEL_DATA_SOURCE_KEY = "model_data_source" // 目前数据源仅来自于 assets 下
+    protected val INTENT_MEDIA_URL_KEY = "media_url" // 音视频播放地址
 
     protected lateinit var mSelf: BaseActivity
     protected var baseToolbar: Toolbar?= null

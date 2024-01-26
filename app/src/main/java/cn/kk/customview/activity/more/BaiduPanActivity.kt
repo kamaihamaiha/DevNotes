@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.io.BooleanCallback
 import cn.kk.base.io.net.NetDiskBaiduManager
 import cn.kk.customview.MyApp
 import cn.kk.customview.R
 import cn.kk.customview.activity.NormalWebViewActivity
 import cn.kk.base.io.net.NetOkHttpHelper
+import cn.kk.base.media.MyPlayerActivity
 import cn.kk.customview.io.HttpBaseCallback
 import cn.kk.customview.io.model.BaiduPanUserInfo
 import cn.kk.customview.io.model.FileListModel
@@ -55,8 +57,23 @@ class BaiduPanActivity: BaseActivity() {
                     if (fileItem.isAudioType()) {
 
                     } else if (fileItem.isVideoType()) {
+                        NetDiskBaiduManager.getNetDiskBaiduMediaStreamUrl(false, panAccessToken, fileItem.path, true, object: BooleanCallback {
+                            override fun onResult(success: Boolean, msg: String?) {
+                                if (!success) {
+                                    UIHelper.toast(msg?:"", this@BaiduPanActivity)
+                                    return
+                                }
+                                startActivity(Intent(this@BaiduPanActivity, MyPlayerActivity::class.java).apply {
+                                    putExtra(INTENT_MEDIA_URL_KEY, msg)
+                                })
+                            }
 
+                        })
                     }
+
+
+
+
                 }
             }
         }
