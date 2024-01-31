@@ -80,7 +80,7 @@ dependencies {
     api 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
     // Glide
     api 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     // okhttp 的一个封装库：OkHttpFinal
 //    api 'cn.finalteam:okhttpfinal:2.0.7'
