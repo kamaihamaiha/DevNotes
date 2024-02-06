@@ -19,8 +19,14 @@ import java.io.InputStreamReader
  * SAF 框架
  * get real path from uri: http://www.java2s.com/example/android/android.media/get-real-file-path-from-a-uri-get-the-the-path-for-storage-access-fra.html
  *
- * 1. 保留权限
+ * ---
+ * [访问共享存储空间中的媒体文件 -- 官方文档](https://developer.android.com/training/data-storage/shared/media?hl=zh-cn#kotlin)
+ * [MediaStore 示例](https://github.com/android/storage-samples/tree/main/MediaStore)
  *
+ * VLC android 是可以访问文件的，也没有申请权限，是怎么做到的？ 看看源码：https://github.com/videolan/vlc-android
+ * ---
+ * [打开系统文件管理器，博客1](https://juejin.cn/post/7015529877717647373)
+ * [打开系统文件管理器，博客2](https://blog.51cto.com/u_13259/6538488)
  */
 class PickFileActivity: BaseActivity() {
 
