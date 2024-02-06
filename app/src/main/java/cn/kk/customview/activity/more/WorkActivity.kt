@@ -36,6 +36,7 @@ class WorkActivity: NormalCardListActivity() {
             })
             add(ItemSimpleCard("TextView 跑马灯效果", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXTVIEW_MARQUEE })
             add(ItemSimpleCard("ImageView svg 锯齿", true).apply { item_action = BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG })
+            add(ItemSimpleCard("文件选择器", true).apply { item_action = BaseItem.ACTION_MORE_WORK_PICK_FILE })
         }
     }
 
@@ -50,6 +51,7 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_ADAPTER_LIST -> openNextUI(NormalWebViewActivity::class.java, item.title, -1, item.web_url)
             BaseItem.ACTION_MORE_WORK_TEXTVIEW_MARQUEE -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXTVIEW_MARQUEE)
             BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_image_view_svg)
+            BaseItem.ACTION_MORE_WORK_PICK_FILE -> openNextUI(PickFileActivity::class.java, item.title)
         }
     }
 

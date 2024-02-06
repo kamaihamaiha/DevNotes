@@ -171,6 +171,7 @@
 
         <!--more-->
         <activity android:name=".activity.more.WorkActivity" />
+        <activity android:name=".activity.more.PickFileActivity" />
         <activity android:name=".activity.more.NetActivity" />
         <activity android:name=".activity.more.BlogsActivity" />
         <activity android:name=".activity.more.LinuxActivity" />
