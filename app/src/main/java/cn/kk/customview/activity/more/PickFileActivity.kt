@@ -4,11 +4,20 @@ import android.app.Activity
 import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
+import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.media3.common.MediaItem
+import androidx.media3.datasource.DataSource
+import androidx.media3.datasource.DefaultHttpDataSource
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.ui.PlayerView
+import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.utils.SystemHelper
 import cn.kk.customview.R
 import java.io.BufferedReader
 import java.io.IOException
@@ -35,26 +44,107 @@ class PickFileActivity: BaseActivity() {
         return R.layout.activity_pick_file
     }
     lateinit var tvFileInfo: TextView
+    lateinit var tvFilePath: TextView
+    lateinit var tvFileName: TextView
+
+    private val dataSourceFactory: DataSource.Factory = DefaultHttpDataSource.Factory()
+
+    val myExoPlayer by lazy {
+        ExoPlayer.Builder(this).build()
+    }
+    var mCurMediaUri: Uri? = null
+
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
-        val btnPick = findViewById<Button>(R.id.btn_pick)
+        val btnPickVideo = findViewById<Button>(R.id.btn_pick_video)
+        val btnPickAudio = findViewById<Button>(R.id.btn_pick_audio)
+        val btnPlay = findViewById<Button>(R.id.btn_play)
         tvFileInfo = findViewById(R.id.tv_file_info)
+        tvFilePath = findViewById(R.id.tv_file_path)
+        tvFileName = findViewById(R.id.tv_file_name)
 
-        btnPick.setOnClickListener {
+        btnPickVideo.setOnClickListener {
             chooseFile()
+        }
+        btnPickAudio.setOnClickListener {
+            chooseFile(false)
+        }
+
+        btnPlay.setOnClickListener {
+            if (mCurMediaUri == null) {
+                UIHelper.toast("请先选择文件", this@PickFileActivity)
+                return@setOnClickListener
+            }
+            tvFileName.text = getNameFromURI(mCurMediaUri!!)
+            initPlayer()
+        }
+
+
+        tvFileInfo.setOnLongClickListener(object : View.OnLongClickListener{
+            override fun onLongClick(view: View?): Boolean {
+                // set text to clipboard
+                SystemHelper.setClipboardText(tvFileInfo.text.toString(), this@PickFileActivity)
+                return true
+            }
+
+        })
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (myExoPlayer.isPlaying) {
+            myExoPlayer.pause()
         }
     }
 
-    fun chooseFile(){
+    override fun onStop() {
+        super.onStop()
+        if (myExoPlayer.isPlaying) {
+            myExoPlayer.pause()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (myExoPlayer.isPlaying) {
+            myExoPlayer.stop()
+            myExoPlayer.release()
+        }
+    }
+    fun chooseFile(videoType: Boolean = true){
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
-            type = "*/*"
+            if (videoType) {
+                type = "video/*"
+            } else {
+                type = "audio/*"
+            }
         }
         startActivityForResult(intent, PICK_FILE_CODE)
     }
 
+    private fun initPlayer(){
+        val mediaItem = MediaItem.Builder()
+            .setUri(mCurMediaUri)
+            .build()
+        myExoPlayer.apply {
+            setMediaItem(mediaItem)
+            prepare()
+        }
+        val playView = findViewById<PlayerView>(cn.kk.base.R.id.player_view)
+        playView.player = myExoPlayer
+        myExoPlayer.play()
+    }
+
+
+
+    /**
+     * 概念:
+     * 内容提供器Uri
+     * 文件系统路径Uri
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // parse file url from data
@@ -65,11 +155,41 @@ class PickFileActivity: BaseActivity() {
 
             data?.data.also {
                 // perform operations on the document using its URI
+                mCurMediaUri = it
                 tvFileInfo.text = it?.path
+                tvFilePath.text = getRealPathFromURI(it!!)
             }
 
         }
 
+    }
+
+    fun getRealPathFromURI(contentUri: Uri): String? {
+        var filePath: String?=null
+        val cursor = contentResolver.query(contentUri, null, null, null, null)
+        if (cursor == null) {
+            filePath = contentUri.path
+        } else {
+            cursor.moveToFirst()
+            val idx = cursor.getColumnIndexOrThrow(MediaStore.Audio.AudioColumns.DOCUMENT_ID)
+            filePath = cursor.getString(idx)
+            cursor.close()
+        }
+        return filePath
+    }
+
+    fun getNameFromURI(contentUri: Uri): String? {
+        var fileName: String?=null
+        val cursor = contentResolver.query(contentUri, null, null, null, null)
+        if (cursor == null) {
+            fileName = contentUri.path
+        } else {
+            cursor.moveToFirst()
+            val idx = cursor.getColumnIndexOrThrow(MediaStore.Audio.AudioColumns.DISPLAY_NAME)
+            fileName = cursor.getString(idx)
+            cursor.close()
+        }
+        return fileName
     }
 
     /**
