@@ -8,8 +8,11 @@ import android.provider.OpenableColumns
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.documentfile.provider.DocumentFile
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.utils.FilePathUtils
 import cn.kk.customview.R
+import com.anggrayudi.storage.file.getAbsolutePath
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -18,8 +21,10 @@ import java.io.InputStreamReader
  * https://developer.android.com/training/data-storage/shared/documents-files?hl=zh-cn
  * SAF 框架
  * get real path from uri: http://www.java2s.com/example/android/android.media/get-real-file-path-from-a-uri-get-the-the-path-for-storage-access-fra.html
- *
+ * [访问共享存储空间中的媒体文件](https://developer.android.com/training/data-storage/shared/media?hl=zh-cn)
  * 1. 保留权限
+ *
+ * com.android.documentsui.base.Providers
  *
  */
 class PickFileActivity: BaseActivity() {
@@ -44,7 +49,12 @@ class PickFileActivity: BaseActivity() {
     fun chooseFile(){
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
-            type = "*/*"
+            /**
+             * see [Intent.setType]
+             */
+            type = "video/*"
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
+
         }
         startActivityForResult(intent, PICK_FILE_CODE)
     }
@@ -57,9 +67,29 @@ class PickFileActivity: BaseActivity() {
             // get real path from uri
 //             val realPath = getRealPathFromURI(data?.data)
 
-            data?.data.also {
+            data?.data?.also {
                 // perform operations on the document using its URI
-                tvFileInfo.text = it?.path
+                keepPermission(it)
+                var fileInfo = "uri path: ${it.path}"
+                it.pathSegments?.forEach {
+                    fileInfo.plus("\npath segments:\t")
+//                    Log.d("PickFileActivity", "pathSegments: $it")
+                }
+                fileInfo = fileInfo.plus("\nAuthority: ${it.authority}")
+                fileInfo = fileInfo.plus("\nUri toString: ${it.toString()}")
+                fileInfo = fileInfo.plus("\nScheme: ${it.scheme}")
+                fileInfo = fileInfo.plus("\nfull path: ${FilePathUtils.getPath(this@PickFileActivity, it)?:"null"}")
+                tvFileInfo.text = fileInfo
+
+
+                val filePath = it.path
+
+                /**
+                 * DocumentFile file = DocumentFile.fromSingleUri(JniApi.getAppContext(), selectedFileUri);
+                 * String absolutePath = DocumentFileUtils.getAbsolutePath(file, JniApi.getAppContext());
+                 */
+                val file = DocumentFile.fromSingleUri(this@PickFileActivity, it)
+                val absolutePath = DocumentFileUtils.getAbsolutePath(file, this@PickFileActivity)
             }
 
         }
