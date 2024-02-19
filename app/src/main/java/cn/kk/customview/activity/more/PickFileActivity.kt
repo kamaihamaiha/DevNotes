@@ -126,8 +126,11 @@ class PickFileActivity: BaseActivity() {
     }
 
     private fun initPlayer(){
+        val path = mCurMediaUri!!.path
+        val uriToString = mCurMediaUri!!.toString()
+        val tempUri = Uri.parse(uriToString)
         val mediaItem = MediaItem.Builder()
-            .setUri(mCurMediaUri)
+            .setUri(tempUri)
             .build()
         myExoPlayer.apply {
             setMediaItem(mediaItem)
