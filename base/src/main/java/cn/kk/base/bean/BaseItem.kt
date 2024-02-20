@@ -223,6 +223,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_MIX_DEV_WEBVIEW = 1321
 
         // region Android 编程权威指南
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_GeoQuiz = 2052
         val ACTION_BOOK_ANDROID_PROGRAMMING_APP_BEATBOX = 2053
 
         // region cool-300

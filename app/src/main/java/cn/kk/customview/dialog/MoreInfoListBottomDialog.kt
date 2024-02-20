@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.TextView
 import cn.kk.base.R
+import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
+import cn.kk.base.bean.BaseItem
 import cn.kk.base.bean.BaseMoreItem
 import cn.kk.base.dialog.BaseListBottomDialog
 import cn.kk.customview.activity.NormalWebViewActivity
@@ -33,7 +35,11 @@ class MoreInfoListBottomDialog(val mActivity: BaseActivity, modelList: MutableLi
         } else {
             if (model.url.isEmpty()) {
 //            mActivity.openNextUI()
-                mActivity.openNextUI(MainActivity::class.java, model.title)
+                if (model.item_action == BaseItem.ACTION_BOOK_ANDROID_PROGRAMMING_APP_BEATBOX) {
+                    mActivity.openNextUI(MainActivity::class.java, model.title)
+                } else {
+                    UIHelper.toast("todo...", mActivity)
+                }
             } else {
                 mActivity.openNextUI(NormalWebViewActivity::class.java, model.title, -1, model.url)
             }
