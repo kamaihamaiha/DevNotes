@@ -9,7 +9,7 @@
         layout="@layout/layout_title" />
 
     <TextView
-        android:id="@+id/tv_file_info"
+        android:id="@+id/tv_uri_path"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -18,14 +18,25 @@
         app:layout_constraintTop_toBottomOf="@id/title_container" />
 
     <TextView
-        android:id="@+id/tv_file_path"
+        android:id="@+id/tv_uri_tostring"
+        android:layout_marginEnd="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_file_info" />
+        app:layout_constraintTop_toBottomOf="@id/tv_uri_path" />
+
+    <TextView
+        android:id="@+id/tv_uri_file_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_uri_tostring" />
 
     <Button
         android:id="@+id/btn_pick_video"

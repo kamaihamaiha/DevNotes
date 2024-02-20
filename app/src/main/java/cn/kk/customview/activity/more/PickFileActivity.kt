@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.documentfile.provider.DocumentFile
 import androidx.media3.common.MediaItem
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultHttpDataSource
@@ -23,11 +24,12 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 
+
 /**
  * https://developer.android.com/training/data-storage/shared/documents-files?hl=zh-cn
  * SAF 框架
  * get real path from uri: http://www.java2s.com/example/android/android.media/get-real-file-path-from-a-uri-get-the-the-path-for-storage-access-fra.html
- *
+ * [使用SAF框架打开文件](https://developer.android.com/guide/topics/providers/document-provider?hl=zh-cn)
  * ---
  * [访问共享存储空间中的媒体文件 -- 官方文档](https://developer.android.com/training/data-storage/shared/media?hl=zh-cn#kotlin)
  * [MediaStore 示例](https://github.com/android/storage-samples/tree/main/MediaStore)
@@ -36,6 +38,9 @@ import java.io.InputStreamReader
  * ---
  * [打开系统文件管理器，博客1](https://juejin.cn/post/7015529877717647373)
  * [打开系统文件管理器，博客2](https://blog.51cto.com/u_13259/6538488)
+ *
+ * ---
+ * [ffmpeg 访问 uri 路径的文件](https://stackoverflow.com/questions/44952055/ffmpeg-android-storage-access-framework)
  */
 class PickFileActivity: BaseActivity() {
 
@@ -43,8 +48,9 @@ class PickFileActivity: BaseActivity() {
     override fun getLayout(): Int {
         return R.layout.activity_pick_file
     }
-    lateinit var tvFileInfo: TextView
-    lateinit var tvFilePath: TextView
+    lateinit var tvUriPath: TextView
+    lateinit var tvUriToString: TextView
+    lateinit var tvUriFilePath: TextView
     lateinit var tvFileName: TextView
 
     private val dataSourceFactory: DataSource.Factory = DefaultHttpDataSource.Factory()
@@ -61,8 +67,9 @@ class PickFileActivity: BaseActivity() {
         val btnPickVideo = findViewById<Button>(R.id.btn_pick_video)
         val btnPickAudio = findViewById<Button>(R.id.btn_pick_audio)
         val btnPlay = findViewById<Button>(R.id.btn_play)
-        tvFileInfo = findViewById(R.id.tv_file_info)
-        tvFilePath = findViewById(R.id.tv_file_path)
+        tvUriPath = findViewById(R.id.tv_uri_path)
+        tvUriToString = findViewById(R.id.tv_uri_tostring)
+        tvUriFilePath = findViewById(R.id.tv_uri_file_path)
         tvFileName = findViewById(R.id.tv_file_name)
 
         btnPickVideo.setOnClickListener {
@@ -82,10 +89,10 @@ class PickFileActivity: BaseActivity() {
         }
 
 
-        tvFileInfo.setOnLongClickListener(object : View.OnLongClickListener{
+        tvUriPath.setOnLongClickListener(object : View.OnLongClickListener{
             override fun onLongClick(view: View?): Boolean {
                 // set text to clipboard
-                SystemHelper.setClipboardText(tvFileInfo.text.toString(), this@PickFileActivity)
+                SystemHelper.setClipboardText(tvUriPath.text.toString(), this@PickFileActivity)
                 return true
             }
 
@@ -142,7 +149,7 @@ class PickFileActivity: BaseActivity() {
 
     /**
      * 概念:
-     * 内容提供器Uri
+     * 内容提供器Uri: content://com.android.providers.media.documents/document/video%3A1000001443
      * 文件系统路径Uri
      */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -156,8 +163,9 @@ class PickFileActivity: BaseActivity() {
             data?.data.also {
                 // perform operations on the document using its URI
                 mCurMediaUri = it
-                tvFileInfo.text = it?.path
-                tvFilePath.text = getRealPathFromURI(it!!)
+                tvUriPath.text = "uri path: " + it?.path
+                tvUriToString.text = "uri toString: " + it?.toString()?:""
+                tvUriFilePath.text = "uri file path: " + getRealPathFromURI(it!!)
             }
 
         }
@@ -165,13 +173,24 @@ class PickFileActivity: BaseActivity() {
     }
 
     fun getRealPathFromURI(contentUri: Uri): String? {
+        // check android version > android 10
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+            var filePath: String? = null
+            val documentFile = DocumentFile.fromSingleUri(applicationContext, contentUri)
+            if (documentFile != null && documentFile.exists()) {
+                filePath = documentFile.uri.path
+            }
+            return filePath
+        }
+
         var filePath: String?=null
-        val cursor = contentResolver.query(contentUri, null, null, null, null)
+        val projection = arrayOf(MediaStore.Video.VideoColumns.DATA)
+        val cursor = contentResolver.query(contentUri, projection, null, null, null)
         if (cursor == null) {
             filePath = contentUri.path
         } else {
             cursor.moveToFirst()
-            val idx = cursor.getColumnIndexOrThrow(MediaStore.Audio.AudioColumns.DOCUMENT_ID)
+            val idx = cursor.getColumnIndexOrThrow(MediaStore.Video.VideoColumns.DATA)
             filePath = cursor.getString(idx)
             cursor.close()
         }
