@@ -87,7 +87,7 @@ class SearchSpecifyBookActivity: BaseActivity() {
             }
         }
 
-        findViewById<Button>(R.id.btn_cancel).setOnClickListener { finish() }
+        findViewById<TextView>(R.id.btn_cancel).setOnClickListener { finish() }
         val et_search = findViewById<EditText>(R.id.et_search)
         et_search.setOnEditorActionListener(object : TextView.OnEditorActionListener {
             override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {

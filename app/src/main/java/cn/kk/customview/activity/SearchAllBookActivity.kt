@@ -112,7 +112,7 @@ class SearchAllBookActivity: BaseActivity() {
                 }
             }
         }
-        val btn_cancel = findViewById<Button>(R.id.btn_cancel)
+        val btn_cancel = findViewById<TextView>(R.id.btn_cancel)
         val et_search = findViewById<EditText>(R.id.et_search)
         val tv_result_count = findViewById<TextView>(R.id.tv_result_count)
         btn_cancel.setOnClickListener { finish() }
