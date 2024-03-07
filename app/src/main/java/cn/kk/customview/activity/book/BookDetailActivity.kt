@@ -50,7 +50,7 @@ class BookDetailActivity : BaseFragmentActivity() {
     }
 
    private fun showMoreInfoDialog(){
-        val dialog = MoreInfoListBottomDialog(this, bookModel.moreItemList!!)
+        val dialog = MoreInfoListBottomDialog(this, bookModel.moreItemList!!, bookModel.bookType)
         dialog.show()
     }
 

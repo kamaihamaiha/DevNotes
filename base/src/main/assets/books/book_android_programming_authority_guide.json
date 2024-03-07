@@ -994,15 +994,15 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2050,
       "section_action": 0
     },
     {
       "title": "BeatBox",
       "url": "",
       "chapter_action": 0,
-      "finishTag": false,
-      "item_action": 2053,
+      "finishTag": true,
+      "item_action": 2051,
       "section_action": 0
     },
     {
@@ -1010,7 +1010,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2052,
       "section_action": 0
     },
     {
@@ -1026,7 +1026,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2054,
       "section_action": 0
     },
     {
@@ -1034,7 +1034,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2055,
       "section_action": 0
     },
     {
@@ -1042,7 +1042,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2056,
       "section_action": 0
     }
   ],

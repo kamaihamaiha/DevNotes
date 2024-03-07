@@ -28,7 +28,7 @@ class MixDevActivity: BaseActivity() {
     override fun onTitleMoreClick() {
         val dialog = MoreInfoListBottomDialog(this, mutableListOf<BaseMoreItem>().apply {
             add(BaseMoreItem("前端开发", "https://gitee.com/kamaihamaiha/h5/blob/master/README.md"))
-        })
+        }, 0) // todo 暂时用0，后面需要时在改成别的值
         dialog.show()
     }
 

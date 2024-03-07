@@ -23,6 +23,10 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         TYPE_BOOK, TYPE_CHAPTER, TYPE_SECTION, TYPE_NODE ,UNKNOWN
     }
 
+    fun  bookTypeAndroidProgramGuide(): Boolean { // Android 编程权威指南
+       return bookType == action_book_android_programming
+    }
+
     companion object {
 
         // region book:
@@ -221,8 +225,13 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         // 更多混合开发笔记
         val ACTION_MORE_MIX_DEV_WEBVIEW = 1321
 
-        // region Android 编程权威指南
-        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_BEATBOX = 2053
+        // region Android 编程权威指南: 205 * 10 + index
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_BEATBOX = 2051
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_CriminalIntent = 2052
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_NerdLauncher = 2053
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_PhotoGallery = 2054
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_DragAndDraw = 2055
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_Sunset = 2056
 
         // region cool-300
         val ACTION_COOL300 = 90
