@@ -1,23 +1,35 @@
 package cn.kk.customview.activity.more
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import cn.kk.customview.R
 import cn.kk.customview.activity.BaseTabActivity
 import cn.kk.customview.activity.NormalCardListActivity
 import cn.kk.customview.activity.NormalViewActivity
 import cn.kk.customview.activity.NormalWebViewActivity
 import cn.kk.base.bean.BaseItem
+import cn.kk.customview.activity.work.BroadcastDemoActivity
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.bean.SimpleWikiModel
 import cn.kk.customview.ui.system.HtmlText
 import cn.kk.customview.ui.work.ExpandViewTouchDemo
 import cn.kk.customview.ui.work.MenuDemoActivity
 import cn.kk.customview.ui.work.RecyclerViewDemoActivity
+import java.util.Locale
 
 /**
  * 工作中总结
  */
 class WorkActivity: NormalCardListActivity() {
-
+    companion object {
+        val ACTION_WORK_UPDATE = "action_work_update"
+        val ACTION_CONFIG_1_CHANGE = "action_config_1_change"
+        val ACTION_CONFIG_2_CHANGE = "action_config_2_change"
+        val ACTION_CONFIG_3_CHANGE = "action_config_3_change"
+    }
     override fun getLayout() = R.layout.activity_normal_list
 
     override fun getListSpanCount() = 2
@@ -37,6 +49,7 @@ class WorkActivity: NormalCardListActivity() {
             add(ItemSimpleCard("TextView 跑马灯效果", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXTVIEW_MARQUEE })
             add(ItemSimpleCard("ImageView svg 锯齿", true).apply { item_action = BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG })
             add(ItemSimpleCard("文件选择器", true).apply { item_action = BaseItem.ACTION_MORE_WORK_PICK_FILE })
+            add(ItemSimpleCard("测试广播", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BROADCAST })
         }
     }
 
@@ -52,7 +65,37 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_TEXTVIEW_MARQUEE -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXTVIEW_MARQUEE)
             BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_image_view_svg)
             BaseItem.ACTION_MORE_WORK_PICK_FILE -> openNextUI(PickFileActivity::class.java, item.title)
+            BaseItem.ACTION_MORE_WORK_BROADCAST -> openNextUI(BroadcastDemoActivity::class.java, item.title)
         }
     }
 
+    private val mReceiver by lazy {
+        object: BroadcastReceiver(){
+            override fun onReceive(context: Context?, intent: Intent?) {
+                intent?.let {
+                    intent.action?.let {
+                        if (it == ACTION_WORK_UPDATE) {
+                            // update data
+                            val info = "config1: ${intent.getBooleanExtra(ACTION_CONFIG_1_CHANGE, false)}, config2: ${intent.getBooleanExtra(ACTION_CONFIG_2_CHANGE, false)}, config3: ${intent.getBooleanExtra(ACTION_CONFIG_3_CHANGE, false)}"
+                            showToast("update data: $info")
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    override fun doWhenOnCreate() {
+        super.doWhenOnCreate()
+
+        // register receiver
+        LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver, IntentFilter(ACTION_WORK_UPDATE))
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(mReceiver)
+    }
 }
