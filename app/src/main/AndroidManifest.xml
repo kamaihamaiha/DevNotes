@@ -154,6 +154,7 @@
             android:name=".activity.work.KeyboardStateActivity"
             android:configChanges="keyboard|keyboardHidden|screenSize" />
         <activity android:name=".activity.work.ChangeLauncherIconActivity"/>
+        <activity android:name=".activity.work.BroadcastDemoActivity"/>
 
         <!--arch-->
         <activity android:name=".activity.arch.MvcActivity" />
