@@ -12,6 +12,7 @@ import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import cn.kk.customview.widget.GradientImageView
+import cn.kk.customview.widget.TextSelectView
 import cn.kk.customview.widget.VocabularyLevelBar
 import cn.kk.customview.widget.work.ChannelTabView
 import cn.kk.customview.widget.work.CheckInWeekView
@@ -60,6 +61,7 @@ class NormalViewActivity: BaseActivity() {
         val VIEW_TYPE_CHANNEL_TAB_VIEW = 106 // channel tab view
         val VIEW_TYPE_WORD_INPUT_VIEW = 107 // 拼写组件
         val VIEW_TYPE_VERTICAL_SCROLL_IMAGE_VIEW = 108 // 可上下滚动图片
+        val VIEW_TYPE_TEXT_SELECT = 109 // 文本选择
     }
 
     override fun getLayout(): Int {
@@ -154,6 +156,12 @@ class NormalViewActivity: BaseActivity() {
                 }
                 Glide.with(this@NormalViewActivity).load(ContextCompat.getDrawable(this, imgRes)).into(iv_pic)
             }
+            VIEW_TYPE_TEXT_SELECT -> {
+                val sentence = "That these United Colonies are, and of right ought to be, free and <span class=\"key\">independent</span> States, that they are absolved from all allegiance to the British Crown, and that all political connection between them and the State of Great Britain is, and ought to be, totally dissolved"
+                view_container.addView(getTextSelectView())
+                val textSelectView = findViewById<TextSelectView>(R.id.textSelectView)
+                textSelectView.text = sentence
+            }
             // endregion
             else -> {
             }
@@ -206,5 +214,8 @@ class NormalViewActivity: BaseActivity() {
 
     private fun getVerticalScrollImageView(): View {
         return layoutInflater.inflate(R.layout.view_at_vertical_scroll_image_view, null)
+    }
+    private fun getTextSelectView(): View {
+        return layoutInflater.inflate(R.layout.view_at_text_select_view, null)
     }
 }
