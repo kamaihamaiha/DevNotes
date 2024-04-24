@@ -143,6 +143,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_WORK_IMAGE_VIEW_SVG = 1009
         val ACTION_MORE_WORK_PICK_FILE = 1010
         val ACTION_MORE_WORK_BROADCAST = 1011
+        val ACTION_MORE_WORK_TEXT_SELECT = 1012
 
         // 更多：综合技术，细分
         val ACTION_MORE_ZONGHE_NESTEDSCROLLVIEW = 1271

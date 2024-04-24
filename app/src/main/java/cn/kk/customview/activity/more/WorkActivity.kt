@@ -50,6 +50,7 @@ class WorkActivity: NormalCardListActivity() {
             add(ItemSimpleCard("ImageView svg 锯齿", true).apply { item_action = BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG })
             add(ItemSimpleCard("文件选择器", true).apply { item_action = BaseItem.ACTION_MORE_WORK_PICK_FILE })
             add(ItemSimpleCard("测试广播", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BROADCAST })
+            add(ItemSimpleCard("文本选择", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXT_SELECT })
         }
     }
 
@@ -66,6 +67,7 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_IMAGE_VIEW_SVG -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_image_view_svg)
             BaseItem.ACTION_MORE_WORK_PICK_FILE -> openNextUI(PickFileActivity::class.java, item.title)
             BaseItem.ACTION_MORE_WORK_BROADCAST -> openNextUI(BroadcastDemoActivity::class.java, item.title)
+            BaseItem.ACTION_MORE_WORK_TEXT_SELECT -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
         }
     }
 
