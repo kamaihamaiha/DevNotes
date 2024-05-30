@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.utils.PermissionsHelper
+import cn.kk.base.utils.StorageHelper
 import cn.kk.base.utils.ThreadHelper
 import cn.kk.customview.R
 import java.io.*
@@ -16,6 +17,7 @@ import java.nio.ByteBuffer
 /**
  * MediaCodec 播放 pcm：
  * https://juejin.cn/post/7002158083925360647
+ * https://juejin.cn/post/6844903929440911367
  */
 class Task7MediaCodecAAC: BaseActivity() {
     override fun getLayout(): Int {
@@ -23,10 +25,10 @@ class Task7MediaCodecAAC: BaseActivity() {
     }
 
     companion object {
-        val fileAACPath: String = Environment.getExternalStorageDirectory().toString() + "/av/task7/" + "demo.aac"
-        val fileAACFromPcmPath: String = Environment.getExternalStorageDirectory().toString() + "/av/task7/" + "demo-from-pcm.aac"
-        val filePcmPath: String = Environment.getExternalStorageDirectory().toString() + "/av/task7/" + "demo.pcm"
-        val filePcmOriginalPath: String = Environment.getExternalStorageDirectory().toString() + "/av/task7/" + "demo-original.pcm"
+        val fileAACPath: String = StorageHelper.getRecordAudioFilePath("demo.aac")
+        val fileAACFromPcmPath: String = StorageHelper.getRecordAudioFilePath("eudic-from-pcm.aac")
+        val filePcmPath: String = StorageHelper.getRecordAudioFilePath("demo.pcm")
+        val filePcmOriginalPath: String = StorageHelper.getRecordAudioFilePath("eudic_demo.pcm")
     }
 
     private lateinit var permissionsHelper: PermissionsHelper
@@ -92,7 +94,6 @@ class Task7MediaCodecAAC: BaseActivity() {
         btnRecordAAC.text = "正在录制..."
         isRecord = true
         //1.开启录音线程并准备录音
-        //1.开启录音线程并准备录音
         audioRecordThread = AudioRecordThread()
         audioRecordThread?.start()
     }
@@ -126,19 +127,23 @@ class Task7MediaCodecAAC: BaseActivity() {
     private fun aac2Pcm(){
         ThreadHelper.run { AACToPCM(fileAACPath, filePcmPath).decode() }
     }
-    private fun pcm2Aac(){
-        ThreadHelper.run { PCMToAAC(fileAACFromPcmPath, filePcmOriginalPath).apply { readInputStream(
-            File(filePcmOriginalPath), object : ResultCallback {
-                override fun onSuccess(res: String) {
-                    showToast(res)
-                }
+    private fun pcm2Aac() {
+        ThreadHelper.run {
+            PCMToAAC(fileAACFromPcmPath, filePcmOriginalPath).apply {
+                readInputStream(
+                    File(filePcmOriginalPath), object : ResultCallback {
+                        override fun onSuccess(res: String) {
+                            showToast(res)
+                        }
 
-                override fun onError(err: String) {
-                    showToast(err)
-                }
+                        override fun onError(err: String) {
+                            showToast(err)
+                        }
 
+                    }
+                )
             }
-        ) } }
+        }
     }
 
     /**

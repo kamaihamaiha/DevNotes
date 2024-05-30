@@ -167,7 +167,7 @@ public class PCMToAAC {
 
     }
 
-    public byte[] readInputStream(File file, ResultCallback callback) {
+    public void readInputStream(File file, ResultCallback callback) {
         InputStream inputStream = null;
         try {
             inputStream = new FileInputStream(file);
@@ -175,7 +175,7 @@ public class PCMToAAC {
             e.printStackTrace();
         }
         // 1.建立通道对象
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         // 2.定义存储空间
         byte[] buffer = new byte[1024];
         // 3.开始读文件
@@ -190,7 +190,7 @@ public class PCMToAAC {
                 }
             }
             // 4.关闭流
-            outputStream.close();
+//            outputStream.close();
             inputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -201,7 +201,7 @@ public class PCMToAAC {
         if (callback != null) {
             ThreadHelper.INSTANCE.runOnUIThread(() -> callback.onSuccess("转换成功：" + aacFile.getAbsolutePath()));
         }
-        return outputStream.toByteArray();
+//        return outputStream.toByteArray();
     }
 
 }
