@@ -58,7 +58,7 @@ class FileListModel {
 
         fun isPicType(): Boolean = category == FILE_CATEGORY_PIC
 
-        fun isDocumentFileType(): Boolean = category == FILE_CATEGORY_DOCUMENT
+        fun isDocType(): Boolean = category == FILE_CATEGORY_DOCUMENT
 
         fun isAppType(): Boolean = category == FILE_CATEGORY_APP
 
@@ -68,7 +68,7 @@ class FileListModel {
             if (isDirTag()) return true
             if (isVideoType()) return true
             if (isAudioType()) return true
-            if (isDocumentFileType()) return true
+            if (isDocType()) return true
             if (isPicType()) return true
             if (isAppType()) return true
             if (isOtherType()) return true
