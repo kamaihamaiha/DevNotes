@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.text.TextUtils
 import android.view.View
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.UIHelper
@@ -38,6 +39,7 @@ class BaiduPanActivity: BaseActivity() {
     var mPanUserInfo: BaiduPanUserInfo ?= null
     var dirPath = ""
 
+    lateinit var loadingBar: ProgressBar
     val mEmptyView: View by lazy {
         layoutInflater.inflate(R.layout.common_empty_layout, null)
     }
@@ -85,7 +87,7 @@ class BaiduPanActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
 
-
+        loadingBar = findViewById(R.id.loading_bar)
         // file list
         val rvList = findViewById<RecyclerView>(R.id.rv_file)
         rvList?.apply {
@@ -192,8 +194,10 @@ class BaiduPanActivity: BaseActivity() {
         updateTitle(if (isRootDir()) title else dirName)
     }
     private fun getCurPathFileList(path: String){
+        loadingBar.visibility = View.VISIBLE
         NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
+                loadingBar.visibility = View.GONE
                 val fileListModel = Gson().fromJson(data, FileListModel::class.java)
                 fileListModel.list?.forEach { // 过滤文件类型
                     mNetDiskFileList.add(it)
@@ -227,7 +231,7 @@ class BaiduPanActivity: BaseActivity() {
             if (file.isDirTag()) return R.drawable.favorite_album
             if (file.isAudioType()) return R.drawable.icon_file_audio
             if (file.isVideoType()) return R.drawable.icon_file_video
-            if (file.isDocumentFileType()) return R.drawable.icon_document
+            if (file.isDocType()) return R.drawable.icon_document
             return R.drawable.icon_file_unknown
         }
     }
