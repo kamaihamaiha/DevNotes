@@ -57,7 +57,7 @@ class BaiduPanActivity: BaseActivity() {
                 } else {
                     // todo 处理文件
                     if (fileItem.isAudioType()) {
-
+                        UIHelper.toast("音频文件, 暂不支持操作", this@BaiduPanActivity)
                     } else if (fileItem.isVideoType()) {
                         NetDiskBaiduManager.getNetDiskBaiduMediaStreamUrl(false, panAccessToken, fileItem.path, true, object: BooleanCallback {
                             override fun onResult(success: Boolean, msg: String?) {
@@ -71,6 +71,9 @@ class BaiduPanActivity: BaseActivity() {
                             }
 
                         })
+                    } else {
+                        UIHelper.toast("暂不支持操作此类型文件!", this@BaiduPanActivity)
+
                     }
 
 
