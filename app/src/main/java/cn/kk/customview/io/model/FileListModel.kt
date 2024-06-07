@@ -13,6 +13,11 @@ class FileListModel {
         val FILE_TYPE_DIR = 1
         val FILE_CATEGORY_VIDEO = 1
         val FILE_CATEGORY_AUDIO = 2
+        val FILE_CATEGORY_PIC = 3
+        val FILE_CATEGORY_DOCUMENT = 4
+        val FILE_CATEGORY_APP = 5
+        val FILE_CATEGORY_OHTER = 6
+        val FILE_CATEGORY_torrent = 7
 
         var server_filename: String? = null
         var privacy = 0
@@ -45,21 +50,22 @@ class FileListModel {
             return DateHelper.getTime(server_mtime * 1000L)
         }
 
-        fun isDirTag(): Boolean{
-            return isdir == FILE_TYPE_DIR
-        }
+        fun isDirTag(): Boolean = isdir == FILE_TYPE_DIR
 
-        fun isVideoType(): Boolean {
-            return category == FILE_CATEGORY_VIDEO
-        }
+        fun isVideoType(): Boolean = category == FILE_CATEGORY_VIDEO
 
-        fun isAudioType(): Boolean {
-            return category == FILE_CATEGORY_AUDIO
-        }
+        fun isAudioType(): Boolean = category == FILE_CATEGORY_AUDIO
+
+        fun isPicType(): Boolean = category == FILE_CATEGORY_PIC
+
+        fun isDocumentType(): Boolean = category == FILE_CATEGORY_DOCUMENT
+
+        fun isAppType(): Boolean = category == FILE_CATEGORY_APP
+
+        fun isOthterType(): Boolean = category == FILE_CATEGORY_OHTER
 
         fun supportType(): Boolean {
-
-            return isDirTag() || category == FILE_CATEGORY_VIDEO || category == FILE_CATEGORY_AUDIO
+            return isDirTag() || isVideoType() || isAudioType() || isDocumentType() || isPicType() || isAppType() || isOthterType()
         }
         fun getHumanSize(): String {
             val kb = size / 1024

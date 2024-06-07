@@ -195,7 +195,9 @@ class BaiduPanActivity: BaseActivity() {
         NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
                 val fileListModel = Gson().fromJson(data, FileListModel::class.java)
-                fileListModel.list?.filter { it.supportType() }?.forEach { // 过滤文件类型
+                fileListModel.list?.filter {
+                    it.supportType()
+                }?.forEach { // 过滤文件类型
                     mNetDiskFileList.add(it)
                 }
                 mPanFileAdapter.apply {
@@ -214,7 +216,7 @@ class BaiduPanActivity: BaseActivity() {
 
     class PanNetDiskAdapter(fileList: MutableList<FileListModel.FileInfo>): BaseQuickAdapter<FileListModel.FileInfo, BaseViewHolder>(R.layout.item_net_disk_file , fileList) {
         override fun convert(holder: BaseViewHolder, file: FileListModel.FileInfo) {
-            file?.let {
+            file.let {
                 holder.setText(R.id.tv_title, file.server_filename)
                 holder.setText(R.id.tv_file_size, if (file.isDirTag()) "" else file.getHumanSize())
                 holder.setText(R.id.tv_time, file.getServerATime())
@@ -224,9 +226,11 @@ class BaiduPanActivity: BaseActivity() {
         }
 
         private fun getFileTypeResId(file: FileListModel.FileInfo): Int{
+            if (file.isDirTag()) return R.drawable.favorite_album
             if (file.isAudioType()) return R.drawable.icon_file_audio
             if (file.isVideoType()) return R.drawable.icon_file_video
-            return R.drawable.favorite_album
+            if (file.isDocumentType()) return R.drawable.icon_document
+            return R.drawable.icon_file_unknown
         }
     }
 }
