@@ -58,14 +58,21 @@ class FileListModel {
 
         fun isPicType(): Boolean = category == FILE_CATEGORY_PIC
 
-        fun isDocumentType(): Boolean = category == FILE_CATEGORY_DOCUMENT
+        fun isDocumentFileType(): Boolean = category == FILE_CATEGORY_DOCUMENT
 
         fun isAppType(): Boolean = category == FILE_CATEGORY_APP
 
-        fun isOthterType(): Boolean = category == FILE_CATEGORY_OHTER
+        fun isOtherType(): Boolean = category == FILE_CATEGORY_OHTER
 
         fun supportType(): Boolean {
-            return isDirTag() || isVideoType() || isAudioType() || isDocumentType() || isPicType() || isAppType() || isOthterType()
+            if (isDirTag()) return true
+            if (isVideoType()) return true
+            if (isAudioType()) return true
+            if (isDocumentFileType()) return true
+            if (isPicType()) return true
+            if (isAppType()) return true
+            if (isOtherType()) return true
+            return true
         }
         fun getHumanSize(): String {
             val kb = size / 1024

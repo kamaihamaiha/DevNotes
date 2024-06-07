@@ -195,9 +195,7 @@ class BaiduPanActivity: BaseActivity() {
         NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
                 val fileListModel = Gson().fromJson(data, FileListModel::class.java)
-                fileListModel.list?.filter {
-                    it.supportType()
-                }?.forEach { // 过滤文件类型
+                fileListModel.list?.forEach { // 过滤文件类型
                     mNetDiskFileList.add(it)
                 }
                 mPanFileAdapter.apply {
@@ -221,7 +219,7 @@ class BaiduPanActivity: BaseActivity() {
                 holder.setText(R.id.tv_file_size, if (file.isDirTag()) "" else file.getHumanSize())
                 holder.setText(R.id.tv_time, file.getServerATime())
                 holder.setImageResource(R.id.iv_icon, getFileTypeResId(it))
-                holder.setGone(R.id.tv_file_size, !file.isDirTag())
+                holder.setGone(R.id.tv_file_size, file.isDirTag())
             }
         }
 
@@ -229,7 +227,7 @@ class BaiduPanActivity: BaseActivity() {
             if (file.isDirTag()) return R.drawable.favorite_album
             if (file.isAudioType()) return R.drawable.icon_file_audio
             if (file.isVideoType()) return R.drawable.icon_file_video
-            if (file.isDocumentType()) return R.drawable.icon_document
+            if (file.isDocumentFileType()) return R.drawable.icon_document
             return R.drawable.icon_file_unknown
         }
     }
