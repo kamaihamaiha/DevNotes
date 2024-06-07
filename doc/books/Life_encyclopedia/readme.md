@@ -7,3 +7,4 @@
 - [电子产品篇](./electronic.md)
 - [家居百货](./home_goods.md)
 - [通信交流篇](./communication.md)
+- [个人保险课](./insurance/readme.md)
