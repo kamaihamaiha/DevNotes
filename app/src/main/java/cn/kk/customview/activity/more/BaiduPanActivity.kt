@@ -59,8 +59,10 @@ class BaiduPanActivity: BaseActivity() {
                     if (fileItem.isAudioType()) {
                         UIHelper.toast("音频文件, 暂不支持操作", this@BaiduPanActivity)
                     } else if (fileItem.isVideoType()) {
+                        showLoading()
                         NetDiskBaiduManager.getNetDiskBaiduMediaStreamUrl(false, panAccessToken, fileItem.path, true, object: BooleanCallback {
                             override fun onResult(success: Boolean, msg: String?) {
+                                hideLoading()
                                 if (!success) {
                                     UIHelper.toast(msg?:"", this@BaiduPanActivity)
                                     return
@@ -75,9 +77,6 @@ class BaiduPanActivity: BaseActivity() {
                         UIHelper.toast("暂不支持操作此类型文件!", this@BaiduPanActivity)
 
                     }
-
-
-
 
                 }
             }
@@ -197,10 +196,10 @@ class BaiduPanActivity: BaseActivity() {
         updateTitle(if (isRootDir()) title else dirName)
     }
     private fun getCurPathFileList(path: String){
-        loadingBar.visibility = View.VISIBLE
+        showLoading()
         NetOkHttpHelper.getInstance().getBaiduPanCurPathFileListInfo(panAccessToken, path, object : HttpBaseCallback(){
             override fun onResponse(data: String) {
-                loadingBar.visibility = View.GONE
+                hideLoading()
                 val fileListModel = Gson().fromJson(data, FileListModel::class.java)
                 fileListModel.list?.forEach { // 过滤文件类型
                     mNetDiskFileList.add(it)
@@ -216,6 +215,14 @@ class BaiduPanActivity: BaseActivity() {
             }
 
         })
+    }
+
+    private fun showLoading(){
+        loadingBar.visibility = View.VISIBLE
+    }
+
+    private fun hideLoading(){
+        loadingBar.visibility = View.GONE
     }
 
 
