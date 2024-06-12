@@ -143,7 +143,7 @@ class PickFileActivity: BaseActivity() {
             setMediaItem(mediaItem)
             prepare()
         }
-        val playView = findViewById<PlayerView>(cn.kk.base.R.id.player_view)
+        val playView = findViewById<PlayerView>(R.id.player_view)
         playView.player = myExoPlayer
         myExoPlayer.play()
     }

@@ -1,5 +1,7 @@
 package cn.kk.base.media
 
+import android.view.SurfaceHolder
+import android.view.SurfaceView
 import android.view.View
 import androidx.core.view.OnApplyWindowInsetsListener
 import androidx.core.view.ViewCompat
@@ -20,6 +22,7 @@ class MyPlayerActivity: BaseActivity() {
 
     private val dataSourceFactory: DataSource.Factory = DefaultHttpDataSource.Factory()
 
+    lateinit var videoSurface: SurfaceView
     val myExoPlayer by lazy {
         ExoPlayer.Builder(this).build()
     }
@@ -43,6 +46,21 @@ class MyPlayerActivity: BaseActivity() {
                 return WindowInsetsCompat.CONSUMED
             }
         })
+
+        videoSurface = findViewById(R.id.video_surface)
+        videoSurface.holder.addCallback(object : SurfaceHolder.Callback {
+            override fun surfaceCreated(holder: SurfaceHolder) {
+                myExoPlayer.setVideoSurfaceHolder(holder)
+            }
+
+            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+            }
+
+            override fun surfaceDestroyed(holder: SurfaceHolder) {
+                myExoPlayer.clearVideoSurface()
+            }
+        })
+
         initPlayer()
 
     }
@@ -70,8 +88,8 @@ class MyPlayerActivity: BaseActivity() {
                 prepare()
 //                addListener(playerListener)
             }
-        val playView = findViewById<PlayerView>(R.id.player_view)
-        playView.player = myExoPlayer
+//        val playView = findViewById<PlayerView>(R.id.player_view)
+//        playView.player = myExoPlayer
         myExoPlayer.play()
     }
 

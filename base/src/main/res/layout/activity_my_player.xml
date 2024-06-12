@@ -5,11 +5,12 @@
     android:id="@+id/rootView"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.media3.ui.PlayerView
+    <!--<androidx.media3.ui.PlayerView
         android:id="@+id/player_view"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp"/>-->
 
+    <include layout="@layout/video_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
