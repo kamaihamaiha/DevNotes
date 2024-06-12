@@ -20,3 +20,36 @@
 - [官方文档](https://developer.android.com/media/media3/exoplayer/hello-world?hl=zh-cn)
 
 
+
+### 网盘页面
+
+- 支持显示非媒体文件 // ✅
+- 支持下载文件
+- 支持显示文件大小 // ✅
+- 支持下拉刷新
+- 支持 loading ✅
+- 改成协程
+- 
+
+### 播放页面
+
+- 自定义播放器UI
+- 支持系统通知栏 
+- 支持 MediaSession
+
+
+#### play controller ui
+
+- play/pause
+- seekbar
+- current time
+- total time
+- fullscreen
+- volume
+- brightness
+- speed
+- subtitle
+- quality
+
+
+
