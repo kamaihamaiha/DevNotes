@@ -4,5 +4,5 @@ ext {
 
     appCompileSdkVersion = 34
     appMinSdkVersion = 23
-    appTargetSdkVersion = 30 // 28: Android 9
+    appTargetSdkVersion = 34 // 34: Android 14
 }

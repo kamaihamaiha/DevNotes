@@ -24,6 +24,7 @@
 
         <receiver
             android:name=".appwidget.KKAppWidgetNight"
+            android:exported="true"
             android:label="@string/appwidget_night">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -35,6 +36,7 @@
         </receiver>
         <receiver
             android:name=".appwidget.KKAppWidget"
+            android:exported="true"
             android:label="@string/appwidget_day">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -51,7 +53,9 @@
             android:name="MTA_CHANNEL"
             android:value="${MTA_CHANNEL_VALUE}"/>
         -->
-        <activity android:name=".activity.HomeTabActivity">
+        <activity android:name=".activity.HomeTabActivity"
+            android:exported="true"
+            >
             <tools:validation testUrl="https://dict.eudic.net/webting/play" />
             <tools:validation testUrl="https://dict.eudic.net/webting/play?id=05e200d9-d8f3-11ec-80d1-00505686c5e6" />
 
@@ -74,6 +78,7 @@
         </activity>
         <activity-alias
             android:name=".VipLauncherActivity"
+            android:exported="true"
             android:targetActivity=".activity.HomeTabActivity"
             android:icon="@drawable/icon_cat_v2"
             android:label="@string/app_name"
