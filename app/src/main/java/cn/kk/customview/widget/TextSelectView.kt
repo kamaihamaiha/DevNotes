@@ -36,7 +36,7 @@ class TextSelectView(context: Context, attributeSet: AttributeSet?): AppCompatTe
         return false
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
+    override fun onTouchEvent(event: MotionEvent): Boolean {
         gestureDetector.onTouchEvent(event)
         return super.onTouchEvent(event)
         /*if (event?.actionMasked == MotionEvent.ACTION_DOWN && isTextSelectable) {
