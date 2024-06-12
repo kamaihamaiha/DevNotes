@@ -8,7 +8,6 @@ import androidx.core.animation.addListener
 import androidx.core.animation.doOnEnd
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.activity_animator_set_path_sample.*
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -48,7 +47,7 @@ class AnimatorSetPathSampleActivity: BaseActivity() {
 
 
 
-        btn_menu.setOnClickListener {
+        findViewById<Button>(R.id.btn_menu).setOnClickListener {
             if (btnItemIsOPen){
                 closeMenu()
             } else {

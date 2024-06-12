@@ -14,7 +14,7 @@ import com.example.hencoder.px
  * 3. onDraw()
  * 4. canvas.drawLine()
  * 5. canvas.drawCircle()
- * 6. canvas?.drawPath()
+ * 6. canvas.drawPath()
  *      1. path 对象需要初始化，在 view 尺寸变化时候操作：重写 onSizeChanged() 方法
  * 7. path
  *      1. addCircle()
@@ -63,18 +63,18 @@ class SimpleView(context: Context?, attrs: AttributeSet?): View(context) {
         pathMeasure = PathMeasure(path, false)
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
 
         // region 绘制 line
-        canvas?.drawLine(100f, 100f, 500f, 100f, paint)
+        canvas.drawLine(100f, 100f, 500f, 100f, paint)
         // endregion
 
         // region 绘制圆
-//        canvas?.drawCircle(width / 2f, height / 2f , RADIIUS, paint)
+//        canvas.drawCircle(width / 2f, height / 2f , RADIIUS, paint)
         // endregion
 
         // region 绘制圆，用 drawPath()
-        canvas?.drawPath(path, paintForPath)
+        canvas.drawPath(path, paintForPath)
         // endregion
 
     }

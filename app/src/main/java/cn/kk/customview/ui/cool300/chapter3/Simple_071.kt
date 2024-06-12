@@ -3,11 +3,11 @@ package cn.kk.customview.ui.cool300.chapter3
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.PopupWindow
 import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.simple_071.*
 
 /**
  * 弹出底部菜单，主窗口立刻变暗
@@ -19,11 +19,11 @@ class Simple_071: BaseActivity() {
     override fun getLayout(): Int {
         return R.layout.simple_071
     }
-
+    lateinit var iv_bg: ImageView
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-
+        iv_bg = findViewById<ImageView>(R.id.iv_bg)
         iv_bg.setOnClickListener {
             myPopup = showPopupFromBottom()
         }

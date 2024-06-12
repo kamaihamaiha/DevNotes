@@ -78,6 +78,7 @@ class MoreFragment: BaseFragment() {
                     BaseItem.ACTION_MORE_MIX_DEV -> startNextUI(MixDevActivity::class.java, title)
                     BaseItem.ACTION_MORE_REGEX -> startNextUI(NormalWebViewActivity::class.java, title, BaseTabActivity.TabType.SystemUI.RECYCLER_VIEW_TYPE, data[position].web_url)
                     BaseItem.ACTION_MORE_android_debug -> openNextUIWithMarkdown(NormalMarkDownViewActivity::class.java, title, data[position].markdown_url, data[position].markdownLocalFlag)
+                    BaseItem.ACTION_MORE_BAIDU_PAN -> startNextUI(BaiduPanActivity::class.java, title, -1, )
                     else -> {
                     }
                 }
@@ -127,6 +128,7 @@ class MoreFragment: BaseFragment() {
                 item_action = BaseItem.ACTION_MORE_android_debug
                 markdown_url = "https://gitee.com/kamaihamaiha/Android_Debug/blob/main/README.md"
             })
+            add(ItemSimpleCard("百度网盘", true).apply { item_action = BaseItem.ACTION_MORE_BAIDU_PAN })
         }
     }
 

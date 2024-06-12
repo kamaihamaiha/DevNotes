@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import cn.kk.base.UIHelper
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_status_bar.*
 
 /**
  * 1. 隐藏状态栏/显示状态栏
@@ -36,6 +36,11 @@ class StatusBarActivity: AppCompatActivity() {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
         }
 
+        val btn_hide_status_bar_icons = findViewById<Button>(R.id.btn_hide_status_bar_icons)
+        val btn_status_bar_trans = findViewById<Button>(R.id.btn_status_bar_trans)
+        val btn_status_bar_color_change = findViewById<Button>(R.id.btn_status_bar_color_change)
+        val btn_extent_img_status_bar = findViewById<Button>(R.id.btn_extent_img_status_bar)
+        val btn_status_bar_text_color_change = findViewById<Button>(R.id.btn_status_bar_text_color_change)
         // 隐藏状态栏部分图标
         btn_hide_status_bar_icons.setOnClickListener { window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE }
 
@@ -66,7 +71,7 @@ class StatusBarActivity: AppCompatActivity() {
             window.statusBarColor = Color.TRANSPARENT
 
             // 动态设置根布局 padding top 值
-            rootView.setPadding(0, 44 * 3, 0, 0)
+            findViewById<LinearLayout>(R.id.rootView).setPadding(0, 44 * 3, 0, 0)
         }
 
         // 6.

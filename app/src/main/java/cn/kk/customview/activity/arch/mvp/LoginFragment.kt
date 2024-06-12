@@ -7,7 +7,6 @@ import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
 import cn.kk.customview.activity.arch.mvp.model.LoginInfoModel
 import cn.kk.customview.io.URLApi
-import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment: BaseFragment(), LoginContract.View {
 
@@ -42,7 +41,7 @@ class LoginFragment: BaseFragment(), LoginContract.View {
     }
 
     override fun setLoginInfo(loginInfoModel: LoginInfoModel) {
-       btn_login.text = loginInfoModel.info
+       view?.findViewById<Button>(R.id.btn_login)?.text = loginInfoModel.info
     }
 
     override fun setPresenter(presenter: LoginContract.Presenter) {

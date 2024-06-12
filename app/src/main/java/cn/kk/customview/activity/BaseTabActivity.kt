@@ -1,12 +1,12 @@
 package cn.kk.customview.activity
 
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import cn.kk.elementary.anim.adapter.BaseFragmentAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_normal_tab.*
 
 abstract class BaseTabActivity: BaseActivity() {
 
@@ -46,6 +46,8 @@ abstract class BaseTabActivity: BaseActivity() {
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
         tabType = intent.getIntExtra(INTENT_TYPE_KEY, -1)
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        val tabs = findViewById<TabLayout>(R.id.tabs)
         viewPager.adapter = BaseFragmentAdapter(this, mutableListOf<Fragment>().apply {
             addFragments()
         })

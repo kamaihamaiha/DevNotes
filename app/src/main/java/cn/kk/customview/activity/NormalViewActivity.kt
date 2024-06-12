@@ -4,6 +4,7 @@ import android.graphics.BitmapFactory
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,6 +15,7 @@ import cn.kk.customview.R
 import cn.kk.customview.widget.GradientImageView
 import cn.kk.customview.widget.TextSelectView
 import cn.kk.customview.widget.VocabularyLevelBar
+import cn.kk.customview.widget.WordInputViewNew
 import cn.kk.customview.widget.work.ChannelTabView
 import cn.kk.customview.widget.work.CheckInWeekView
 import com.bumptech.glide.Glide
@@ -21,10 +23,6 @@ import com.example.hencoder.AvatarView
 import com.example.hencoder.CameraView
 import com.example.hencoder.MultilineTextView
 import com.example.hencoder.draw.SimpleDrawable
-import kotlinx.android.synthetic.main.activity_normal_view.*
-import kotlinx.android.synthetic.main.view_at_channel_tab_view.*
-import kotlinx.android.synthetic.main.view_at_input_word_view.*
-import kotlinx.android.synthetic.main.view_at_vertical_scroll_image_view.*
 
 /**
  * 用来显示单纯的 View(各种自定义的 View) 页面
@@ -68,6 +66,9 @@ class NormalViewActivity: BaseActivity() {
         return R.layout.activity_normal_view
     }
 
+    val view_container by lazy {
+        findViewById<FrameLayout>(R.id.view_container)
+    }
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
@@ -120,6 +121,7 @@ class NormalViewActivity: BaseActivity() {
             VIEW_TYPE_DATE_TEXT_VIEW -> view_container.addView(getTextViewWithDate())
             VIEW_TYPE_CHANNEL_TAB_VIEW -> {
                 view_container.addView(getChannelTabView())
+                val channel_tab_view = findViewById<ChannelTabView>(R.id.channel_tab_view)
                 channel_tab_view.createTabViews()
                 channel_tab_view.mTabItemSelectedChangeListener = object : ChannelTabView.TabItemSelectedChangeListener {
                     override fun onSelectedChange(selectedIndex: Int) {
@@ -128,6 +130,8 @@ class NormalViewActivity: BaseActivity() {
 
                 }
                 channelVisibleWidth = UIHelper.getScreenWidth(this@NormalViewActivity)
+                val tv_width = findViewById<TextView>(R.id.tv_width)
+                val btn_change_size_add = findViewById<Button>(R.id.btn_change_size_add)
                 tv_width.text = String.format("width: %d", channelVisibleWidth)
                 btn_change_size_add.setOnClickListener {
                     channelVisibleWidth += UIHelper.dp2px(20f).toInt()
@@ -135,6 +139,7 @@ class NormalViewActivity: BaseActivity() {
                     tv_width.text = String.format("channel visible width: %d", channelVisibleWidth)
                 }
 
+                val btn_change_size_minus = findViewById<Button>(R.id.btn_change_size_minus)
                 btn_change_size_minus.setOnClickListener {
                     channelVisibleWidth -= UIHelper.dp2px(20f).toInt()
                     channel_tab_view.changeWidth(channelVisibleWidth)
@@ -143,6 +148,7 @@ class NormalViewActivity: BaseActivity() {
             }
             VIEW_TYPE_WORD_INPUT_VIEW -> {
                 view_container.addView(getInputWordView())
+                val word_input_view = findViewById<WordInputViewNew>(R.id.word_input_view)
                 val sentence = "That these United Colonies are, and of right ought to be, free and <span class=\"key\">independent</span> States, that they are absolved from all allegiance to the British Crown, and that all political connection between them and the State of Great Britain is, and ought to be, totally dissolved"
                 word_input_view.inflateSentence(sentence)
             }
@@ -151,10 +157,11 @@ class NormalViewActivity: BaseActivity() {
                 val imgRes = intent.getIntExtra(INTENT_IMG_RES_KEY, -1)
                 val bitmap = BitmapFactory.decodeResource(resources, imgRes)
                 val ivPicHeight = UIHelper.getScreenWidth(this) * (bitmap.height * 1.0f / bitmap.width)
-                iv_pic.layoutParams.apply { // 动态改变 ImageView 高度
+                val iv_pc = findViewById<ImageView>(R.id.iv_pic)
+                iv_pc.layoutParams.apply { // 动态改变 ImageView 高度
                     height = ivPicHeight.toInt()
                 }
-                Glide.with(this@NormalViewActivity).load(ContextCompat.getDrawable(this, imgRes)).into(iv_pic)
+                Glide.with(this@NormalViewActivity).load(ContextCompat.getDrawable(this, imgRes)).into(iv_pc)
             }
             VIEW_TYPE_TEXT_SELECT -> {
                 val sentence = "That these United Colonies are, and of right ought to be, free and <span class=\"key\">independent</span> States, that they are absolved from all allegiance to the British Crown, and that all political connection between them and the State of Great Britain is, and ought to be, totally dissolved"

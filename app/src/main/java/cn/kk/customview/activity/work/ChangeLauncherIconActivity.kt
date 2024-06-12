@@ -2,9 +2,10 @@ package cn.kk.customview.activity.work
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
+import android.widget.Button
+import android.widget.ImageView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_change_launcher_icon.*
 
 /**
  * 改变app icon
@@ -29,6 +30,7 @@ class ChangeLauncherIconActivity: BaseActivity() {
         mPackageManager = applicationContext.packageManager
         val fromActivity = intent.getStringExtra("activity")?:""
         updateAppIconGuide(fromActivity == vipComponentName)
+        val btn_change_app_icon = findViewById<Button>(R.id.btn_change_app_icon)
         btn_change_app_icon.setOnClickListener {
             if (fromActivity == vipComponentName) {
                 enableComponent(ComponentName(baseContext, defaultComponentName))
@@ -56,6 +58,8 @@ class ChangeLauncherIconActivity: BaseActivity() {
     }
 
     private fun updateAppIconGuide(vip: Boolean){
+        val iv_app_launcher_cur = findViewById<ImageView>(R.id.iv_app_launcher_cur)
+        val iv_app_launcher_next = findViewById<ImageView>(R.id.iv_app_launcher_next)
         iv_app_launcher_cur.setImageDrawable(getDrawable(if (vip) R.drawable.icon_cat_v2 else R.drawable.icon_cat))
         iv_app_launcher_next.setImageDrawable(getDrawable(if (vip) R.drawable.icon_cat else R.drawable.icon_cat_v2))
     }

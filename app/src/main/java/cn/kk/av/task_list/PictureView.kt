@@ -24,8 +24,8 @@ class PictureView(context: Context, attributes: AttributeSet?): View(context, at
         bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.cat)
     }
 
-    override fun draw(canvas: Canvas?) {
+    override fun draw(canvas: Canvas) {
         super.draw(canvas)
-        canvas?.drawBitmap(bitmap, 0f, 0f, paint)
+        canvas.drawBitmap(bitmap, 0f, 0f, paint)
     }
 }

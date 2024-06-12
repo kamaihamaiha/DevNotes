@@ -125,6 +125,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_MIX_DEV = 132 // 混合开发
         val ACTION_MORE_REGEX = 133 // 正则表达式
         val ACTION_MORE_android_debug = 134 // Android Debug
+        val ACTION_MORE_BAIDU_PAN = 135 // 百度网盘
 
 
         // 更多：工作中总结，细分
@@ -224,6 +225,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_MIX_DEV_WEBVIEW = 1321
 
         // region Android 编程权威指南
+        val ACTION_BOOK_ANDROID_PROGRAMMING_APP_GeoQuiz = 2052
         val ACTION_BOOK_ANDROID_PROGRAMMING_APP_BEATBOX = 2053
 
         // region cool-300

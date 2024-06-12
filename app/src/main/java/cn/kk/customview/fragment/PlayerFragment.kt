@@ -8,12 +8,16 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
+import android.widget.Button
+import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.ProgressBar
 import android.widget.SeekBar
+import android.widget.TextView
 import cn.kk.base.UIHelper
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.base.utils.TimeHelper
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.fragment_player.*
 
 /**
  * 播放器页面
@@ -37,6 +41,11 @@ class PlayerFragment: BaseFragment(), SurfaceHolder.Callback {
     override fun getLayoutId(): Int {
        return R.layout.fragment_player
     }
+    lateinit var videoContainer: FrameLayout
+    lateinit var seekbar: SeekBar
+    lateinit var btn_control_play: ImageButton
+    lateinit var tv_cur_duration: TextView
+    lateinit var loading: ProgressBar
     // endregion
 
     // region media about fields
@@ -105,6 +114,12 @@ class PlayerFragment: BaseFragment(), SurfaceHolder.Callback {
     // region life circle funs
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        videoContainer = view.findViewById(R.id.videoContainer)
+        seekbar = view.findViewById(R.id.seekbar)
+        btn_control_play = view.findViewById(R.id.btn_control_play)
+        tv_cur_duration = view.findViewById(R.id.tv_cur_duration)
+        loading = view.findViewById(R.id.loading)
 
         // region step2: status bar 设置为黑色
         UIHelper.setStatusBarDark(activity!!)

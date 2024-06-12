@@ -153,7 +153,7 @@ open class ExpandView : ViewGroup {
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         explainState = textView.lineCount <= textView.maxLines
 

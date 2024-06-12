@@ -1,5 +1,5 @@
 {
-  "bookImgRes": 2131230840,
+  "bookImgRes": -1,
   "chapterModelList": [
     {
       "bookType": 0,
@@ -994,7 +994,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 2052,
       "section_action": 0
     },
     {
@@ -1010,7 +1010,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 0,
       "section_action": 0
     },
     {
@@ -1018,7 +1018,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 0,
       "section_action": 0
     },
     {
@@ -1026,7 +1026,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 0,
       "section_action": 0
     },
     {
@@ -1034,7 +1034,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 0,
       "section_action": 0
     },
     {
@@ -1042,7 +1042,7 @@
       "url": "",
       "chapter_action": 0,
       "finishTag": false,
-      "item_action": 2053,
+      "item_action": 0,
       "section_action": 0
     }
   ],

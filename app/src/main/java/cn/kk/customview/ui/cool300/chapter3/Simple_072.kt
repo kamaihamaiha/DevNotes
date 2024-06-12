@@ -2,12 +2,12 @@ package cn.kk.customview.ui.cool300.chapter3
 
 import android.view.*
 import android.view.Menu
+import android.widget.ImageView
 import android.widget.PopupWindow
 import android.widget.TextView
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.simple_071.*
 
 /**
  * 长时间按住控件时弹出上下文菜单
@@ -21,7 +21,7 @@ class Simple_072: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-
+        val iv_bg = findViewById<ImageView>(R.id.iv_bg)
         registerForContextMenu(iv_bg)
     }
 

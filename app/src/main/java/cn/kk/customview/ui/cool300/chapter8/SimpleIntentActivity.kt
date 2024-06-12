@@ -7,11 +7,12 @@ import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build
 import android.text.TextUtils
+import android.widget.Button
+import android.widget.EditText
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_simple_intent.*
 import java.io.File
 
 /**
@@ -31,9 +32,12 @@ class SimpleIntentActivity: BaseActivity() {
         return R.layout.activity_simple_intent
     }
 
+    lateinit var et_input: EditText
+
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-
+        val btn_share = findViewById<Button>(R.id.btn_share)
+        et_input = findViewById<EditText>(R.id.et_input)
         if (isTypeOpenPDF()) {
             btn_share.text = "Share PDF"
             et_input.hint = "请输入 PDF 文件路径!"
@@ -150,6 +154,9 @@ class SimpleIntentActivity: BaseActivity() {
                 YINXIANG_PKG_NAME,
                 "com.evernote.note.composer.NewNoteAloneActivity"
             )
+            else -> {
+                return null
+            }
         }
         return null
     }

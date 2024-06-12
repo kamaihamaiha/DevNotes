@@ -16,7 +16,7 @@ import android.view.View
  * 3. 在 Canvas 涂层与屏幕合成时，超出屏幕范围的图像是不会显示出来的。
  */
 class CanvasAndScreen(context: Context?) : View(context) {
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         // 声明 2 个画笔
         val paintRed = Paint().apply {
@@ -34,10 +34,10 @@ class CanvasAndScreen(context: Context?) : View(context) {
         val rect = Rect(80, 80, 400, 400)
 
         // 用红色画笔绘制矩形
-        canvas?.drawRect(rect, paintRed)
+        canvas.drawRect(rect, paintRed)
 
         // 平移画布，然后再用绿色画笔绘制矩形
-        canvas?.translate(100f, 50f)
-        canvas?.drawRect(rect, paintGreen)
+        canvas.translate(100f, 50f)
+        canvas.drawRect(rect, paintGreen)
     }
 }

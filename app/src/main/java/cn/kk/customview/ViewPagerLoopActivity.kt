@@ -5,9 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import cn.kk.customview.adapter.ViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_scrollbar.*
-
-
+import cn.kk.customview.widget.CountIndicatorView
 
 
 /**
@@ -36,9 +34,12 @@ class ViewPagerLoopActivity: AppCompatActivity() {
         val simpleAdapter = ViewPagerAdapter(tempList)
 
         val defaultIndex = 2
+
+        val indicatorView = findViewById<CountIndicatorView>(R.id.indicatorView)
         indicatorView.numberSelected = 0
         indicatorView.numberOfItems = fakeSize - 2
 
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         viewPager.apply {
             adapter = simpleAdapter
             orientation = ViewPager2.ORIENTATION_HORIZONTAL

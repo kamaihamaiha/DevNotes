@@ -2,9 +2,9 @@ package cn.kk.elementary.drawview.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.fragment_hardware_accelerate.*
 
 class HardwareAccelerateFragment: BaseFragment() {
     val intros_1 = "GPU 是图形处理器，与 CPU 不同，GPU 是专门为处理图形任务而产生的芯片。\n\t对于 Android 来讲，API 11 之前没有 GPU 概念；" +
@@ -16,7 +16,7 @@ class HardwareAccelerateFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tv_content.text = intros_1
-        tv_diff.text = intros_2
+        view.findViewById<TextView>(R.id.tv_content).text = intros_1
+        view.findViewById<TextView>(R.id.tv_content).text = intros_2
     }
 }

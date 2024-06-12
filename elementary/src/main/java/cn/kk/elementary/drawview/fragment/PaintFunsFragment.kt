@@ -3,13 +3,11 @@ package cn.kk.elementary.drawview.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.adapter.ListAdapter
 import cn.kk.base.bean.ListItemAction
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.elementary.R
-import kotlinx.android.synthetic.main.fragment_hardware_accelerate.*
-import kotlinx.android.synthetic.main.fragment_hardware_accelerate.tv_content
-import kotlinx.android.synthetic.main.fragment_paint_funs.*
 
 /**
  * Paint 常用函数
@@ -28,7 +26,8 @@ class PaintFunsFragment: BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        rv_funs.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rv_funs.adapter = ListAdapter(funsArray)
+        val rv_funs = view?.findViewById<RecyclerView>(R.id.rv_funs)
+        rv_funs?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        rv_funs?.adapter = ListAdapter(funsArray)
     }
 }

@@ -1,8 +1,10 @@
 package cn.kk.customview
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_weekview.*
+import cn.kk.customview.widget.WeekView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         var weekViewLayout = R.layout.activity_weekview
         setContentView(weekViewLayout)
 
-        btn_checkin.setOnClickListener {
-            weekView.playAnim(1,iv_flag_out)
+        findViewById<Button>(R.id.btn_checkin).setOnClickListener {
+            findViewById<WeekView>(R.id.weekView).playAnim(1,findViewById<ImageView>(R.id.iv_flag_out))
         }
     }
 }

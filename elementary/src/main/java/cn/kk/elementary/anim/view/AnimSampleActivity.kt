@@ -2,10 +2,10 @@ package cn.kk.elementary.anim.view
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
 import cn.kk.elementary.anim.adapter.AnimFragmentAdapter
-import kotlinx.android.synthetic.main.activity_anim_samples.*
 
 /**
  * 动画示例：
@@ -20,6 +20,6 @@ class AnimSampleActivity: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-        anim_sample_viewpager?.adapter = AnimFragmentAdapter(this)
+        findViewById<ViewPager2>(R.id.anim_sample_viewpager)?.adapter = AnimFragmentAdapter(this)
     }
 }

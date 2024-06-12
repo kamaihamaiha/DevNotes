@@ -1,13 +1,13 @@
 package cn.kk.customview.activity.ndk
 
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import cn.kk.ndk.bean.Animal
 import cn.kk.ndk.jni.*
-import kotlinx.android.synthetic.main.activity_ndk_home.*
 
 class NdkHomeActivity: BaseActivity() {
     override fun getLayout(): Int = R.layout.activity_ndk_home
@@ -64,7 +64,7 @@ class NdkHomeActivity: BaseActivity() {
         // JNI 创建线程
         val jniThreadDemo = JNIThreadDemo()
 
-
+        val btn_change = findViewById<Button>(R.id.btn_change)
         btn_change.setOnClickListener {
             jniAccessFieldDemo.modifyAge(animal)
             jniAccessFieldDemo.modifyName(animal)

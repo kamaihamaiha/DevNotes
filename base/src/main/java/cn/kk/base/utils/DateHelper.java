@@ -6,6 +6,7 @@ import java.util.*;
 public class DateHelper {
 
     private volatile boolean good = false;
+    private static final SimpleDateFormat sdf_ymd_hm = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.ENGLISH);
 
     /**
      * 根据地区和语言，获取本地化的日期。
@@ -78,6 +79,13 @@ public class DateHelper {
     public static String getCurrentTimezone() {
         String utc = String.valueOf(TimeZone.getDefault().getRawOffset() / 60 / 60 / 1000);
         return utc;
+    }
+
+    public static String getTime(long time) {
+        if (time <= 0) {
+            return "0000:00:00";
+        }
+        return sdf_ymd_hm.format(new Date(time));
     }
 
 

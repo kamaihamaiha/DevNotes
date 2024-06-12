@@ -6,8 +6,11 @@ import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.base.bean.BaseItem
@@ -20,7 +23,6 @@ import cn.kk.customview.bean.ItemChapterModel
 import cn.kk.customview.factory.BookModelFactory
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import kotlinx.android.synthetic.main.activity_search_book.*
 
 /**
  * 搜索所有课本信息，根据关键字搜索
@@ -49,6 +51,7 @@ class SearchAllBookActivity: BaseActivity() {
         super.doWhenOnCreate()
 
         // init search list
+        val rv_result = findViewById<RecyclerView>(R.id.rv_result)
         rv_result?.layoutManager = LinearLayoutManager(this@SearchAllBookActivity)
         rv_result?.adapter = object : BaseQuickAdapter<BaseItem, BaseViewHolder>(R.layout.item_book_search_result, mSearchKeywordResultList) {
             override fun convert(holder: BaseViewHolder, item: BaseItem) {
@@ -109,7 +112,9 @@ class SearchAllBookActivity: BaseActivity() {
                 }
             }
         }
-
+        val btn_cancel = findViewById<TextView>(R.id.btn_cancel)
+        val et_search = findViewById<EditText>(R.id.et_search)
+        val tv_result_count = findViewById<TextView>(R.id.tv_result_count)
         btn_cancel.setOnClickListener { finish() }
 
         et_search.setOnEditorActionListener(object : TextView.OnEditorActionListener {

@@ -1,5 +1,6 @@
 ## 开发笔记整理
 - [学习计划](./doc/plan/README.md)
+- [功能](./doc/function/readme.md)
 
 ### 书籍
 

@@ -7,10 +7,11 @@ import android.os.Bundle
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.LinearInterpolator
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
 import cn.kk.elementary.anim.evaluator.FallBallEvaluator
-import kotlinx.android.synthetic.main.activity_evaluator.*
 
 /**
  * 自定义 Evaluator
@@ -20,6 +21,10 @@ import kotlinx.android.synthetic.main.activity_evaluator.*
 class EvaluatorActivity: BaseActivity() {
 
     lateinit var btnPlay: Button
+
+    val circle: ImageView by lazy {
+        findViewById<ImageView>(R.id.circle)
+    }
     val initCircleY: Int by lazy {
         circle.y.toInt()
     }
@@ -36,7 +41,7 @@ class EvaluatorActivity: BaseActivity() {
             duration = 5000
             interpolator = LinearInterpolator()
             addUpdateListener {
-                tvLetter.text = animatedValue.toString()
+                findViewById<TextView>(R.id.tvLetter).text = animatedValue.toString()
             }
         }
 

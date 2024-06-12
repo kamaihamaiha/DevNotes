@@ -2,10 +2,12 @@ package cn.kk.customview.ui.system
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.*
+import androidx.viewpager.widget.ViewPager
 import cn.kk.customview.R
 import cn.kk.customview.ui.fragment.ThirdFragment
-import kotlinx.android.synthetic.main.activity_coordinator_layout.*
+import com.google.android.material.tabs.TabLayout
 
 /**
  * Toolbar:
@@ -13,11 +15,12 @@ import kotlinx.android.synthetic.main.activity_coordinator_layout.*
  *  这样 View 才会滚动出屏幕
  */
 class CoordinatorLayoutActivity: AppCompatActivity() {
-
+    lateinit var tabs: TabLayout
+    lateinit var viewPager: ViewPager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coordinator_layout)
-
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         toolbar.setNavigationOnClickListener { finish() }
@@ -28,6 +31,8 @@ class CoordinatorLayoutActivity: AppCompatActivity() {
     }
 
     private fun initViewPager() {
+        viewPager = findViewById(R.id.viewPager)
+        tabs = findViewById(R.id.tabs)
         val titles = listOf<String>("精选","体育","巴萨","购物","明星","视频","健康","励志","图文","本地")
         titles.forEach {
             tabs.addTab(tabs.newTab().setText(it))

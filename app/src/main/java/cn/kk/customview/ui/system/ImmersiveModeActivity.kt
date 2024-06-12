@@ -7,11 +7,11 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import cn.kk.base.UIHelper
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_immersive_mode.*
 
 /**
  * 沉浸式模式
@@ -26,7 +26,7 @@ class ImmersiveModeActivity: AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         // 设置系统状态栏颜色为透明
         window.statusBarColor = Color.TRANSPARENT
-
+        val view_status_bar = findViewById<View>(R.id.view_status_bar)
         view_status_bar.setOnApplyWindowInsetsListener { v, insets ->
             val barHeight = insets.systemWindowInsetTop // status bar height
             view_status_bar.layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT).apply {
@@ -38,6 +38,7 @@ class ImmersiveModeActivity: AppCompatActivity() {
             insets
         }
 
+        val iv_avatar = findViewById<ImageView>(R.id.iv_avatar)
         val anim1 = ObjectAnimator.ofFloat(iv_avatar, "rotationY", -10f, 10f)
         val anim2 = ObjectAnimator.ofFloat(iv_avatar, "rotationY", 10f, -10f)
 
@@ -47,18 +48,18 @@ class ImmersiveModeActivity: AppCompatActivity() {
         }
 
         animSet.addListener(object: Animator.AnimatorListener{
-            override fun onAnimationStart(animation: Animator?) {
+            override fun onAnimationStart(animation: Animator) {
 
             }
 
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                 animSet.start()
             }
 
-            override fun onAnimationCancel(animation: Animator?) {
+            override fun onAnimationCancel(animation: Animator) {
             }
 
-            override fun onAnimationRepeat(animation: Animator?) {
+            override fun onAnimationRepeat(animation: Animator) {
             }
 
         })

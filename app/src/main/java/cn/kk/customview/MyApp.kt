@@ -7,18 +7,23 @@ import cn.kk.io.db.BookRepository
 
 class MyApp: BaseApp() {
 
+    companion object {
+        lateinit var application: Application
+
+        fun getInstance(): MyApp {
+            return application as MyApp
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()
+
         application = this
+
         // init Net okhttp helper
         NetOkHttpHelper.init(this)
 
         // init Database
         BookRepository.init(this)
-    }
-
-    companion object {
-        lateinit var application: Application
     }
 }

@@ -8,7 +8,6 @@ import cn.kk.customview.ui.fragment.NormalTabFragment
 import cn.kk.elementary.anim.adapter.BaseFragmentAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_normal_tab.*
 
 open class NormalTabActivity: BaseTabActivity() {
 

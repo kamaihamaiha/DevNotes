@@ -22,7 +22,6 @@ import cn.kk.base.adapter.ListV2Adapter
 import cn.kk.base.bean.HtmlWikiModel
 import cn.kk.base.bean.ListItemAction
 import cn.kk.base.dialog.HtmlBottomDialog
-import kotlinx.android.synthetic.main.layout_title.*
 import java.io.Serializable
 
 /**
@@ -38,6 +37,7 @@ abstract class BaseActivity: BasicActivity() {
     protected val INTENT_MODEL_KEY = "model"
     protected val INTENT_BOOK_TYPE_KEY = "book_type"
     protected val INTENT_MODEL_DATA_SOURCE_KEY = "model_data_source" // 目前数据源仅来自于 assets 下
+    protected val INTENT_MEDIA_URL_KEY = "media_url" // 音视频播放地址
 
     protected lateinit var mSelf: BaseActivity
     protected var baseToolbar: Toolbar?= null
@@ -78,7 +78,7 @@ abstract class BaseActivity: BasicActivity() {
 
         mSelf = this
         baseToolbar = findViewById(R.id.toolBar)
-        btn_title_more?.visibility = if(showTitleMoreBtn()) View.VISIBLE else View.INVISIBLE
+        findViewById<View>(R.id.btn_title_more)?.visibility = if(showTitleMoreBtn()) View.VISIBLE else View.INVISIBLE
 
         rvList = findViewById(setListViewID())
 
@@ -168,6 +168,21 @@ abstract class BaseActivity: BasicActivity() {
        }
     }
 
+    protected open fun updateTitle(title: String){
+        val tvTitle = findViewById<TextView>(R.id.tv_page_title)
+        tvTitle?.text = title
+        tvTitle?.setOnLongClickListener {
+            showToast(TAG)
+            true
+        }
+
+        // long click toolbar
+        baseToolbar?.setOnLongClickListener {
+            showToast(TAG)
+            true
+        }
+    }
+
     protected open fun initAdapter(){
         if (rvList == null) {
             return
@@ -224,7 +239,7 @@ abstract class BaseActivity: BasicActivity() {
      * 显示标题栏 more icon
      */
     protected open fun showTitleMoreBtnIcon(){
-        btn_title_more?.visibility = View.VISIBLE
+       findViewById<View>(R.id.btn_title_more)?.visibility = View.VISIBLE
     }
 
     /**
@@ -326,7 +341,8 @@ abstract class BaseActivity: BasicActivity() {
             runOnUiThread(Runnable {
                 if (baseProgressDialog == null) {
                     val themeValue = TypedValue()
-                    theme.resolveAttribute(R.attr.alertDialogTheme, themeValue, true)
+
+                    theme.resolveAttribute(androidx.appcompat.R.attr.alertDialogTheme, themeValue, true)
                     baseProgressDialog = ProgressDialog(this@BaseActivity, themeValue.data)
                 }
                 baseProgressDialog?.apply {

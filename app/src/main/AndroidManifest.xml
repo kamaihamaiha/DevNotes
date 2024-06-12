@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="cn.kk.customview">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -86,6 +85,7 @@
             </intent-filter>
         </activity-alias>
         <activity android:name="cn.kk.base.activity.CommentActivity" />
+        <activity android:name="cn.kk.base.media.MyPlayerActivity" />
         <activity android:name=".ui.LottieAnimActivity" />
         <activity android:name=".chapter.c1.DrawBasicActivity" />
         <activity android:name="cn.kk.elementary.anim.view.AnimSampleActivity" />
@@ -186,6 +186,7 @@
 
         <!--more Audio-->
         <activity android:name=".activity.more.audio.AudioBasicActivity" />
+        <activity android:name=".activity.more.BaiduPanActivity" />
 
         <!--Audio & Video-->
         <activity android:name="cn.kk.av.task_list.Task1DrawPicture" />

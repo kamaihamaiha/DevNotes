@@ -2,12 +2,12 @@ package cn.kk.elementary.anim.property.`object`
 
 import android.animation.ObjectAnimator
 import android.graphics.Point
+import android.widget.Button
+import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.elementary.R
 import cn.kk.elementary.anim.evaluator.FallBallEvaluator
 import cn.kk.elementary.anim.property.`object`.widget.FallingBallImageView
-import kotlinx.android.synthetic.main.activity_evaluator.tvLetter
-import kotlinx.android.synthetic.main.btn_circle.*
 
 /**
  * ObjectAnimator
@@ -21,6 +21,7 @@ class ObjectAnimActivity: BaseActivity() {
         super.doWhenOnCreate()
 
         // region 1. 使用 alpha 动画
+        val tvLetter = findViewById<TextView>(R.id.tvLetter)
         val anim = ObjectAnimator.ofFloat(tvLetter, "alpha", 1f, 0f, 1f)
         anim.duration = 2000
 
@@ -33,7 +34,7 @@ class ObjectAnimActivity: BaseActivity() {
         // endregion
 
         // region 播放动画
-        btn_play.setOnClickListener {
+        findViewById<Button>(R.id.btn_play).setOnClickListener {
             anim.start()
             animFall.start()
         }

@@ -34,17 +34,17 @@ class TestView(context: Context?, attributeSet: AttributeSet?) : View(context, a
         path.addCircle(300f, 500f, RADIUS_MINI, Path.Direction.CCW)
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         //draw line
-        canvas?.drawLine(10f, 100f, 500f, 100f, paint)
+        canvas.drawLine(10f, 100f, 500f, 100f, paint)
 
         //draw circle
-        canvas?.drawCircle(300f, 300f, RADIUS, paint2)
+        canvas.drawCircle(300f, 300f, RADIUS, paint2)
 
         //draw path
-        canvas?.drawPath(path, paint2)
+        canvas.drawPath(path, paint2)
 
     }
 }

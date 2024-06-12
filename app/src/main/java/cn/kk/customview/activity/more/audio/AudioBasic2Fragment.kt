@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import cn.kk.base.fragment.BaseFragment
 import cn.kk.customview.R
+import cn.kk.customview.widget.CountIndicatorView
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import kotlinx.android.synthetic.main.fragment_audio_basic2.*
 
 /**
  * 如何量化分析语音喜好
@@ -31,6 +31,8 @@ class AudioBasic2Fragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val view_pager_imgs = view.findViewById<ViewPager2>(R.id.view_pager_imgs)
+        val indicator_view = view.findViewById<CountIndicatorView>(R.id.indicator_view)
 
         view_pager_imgs.adapter = object : BaseQuickAdapter<ImgModel, BaseViewHolder>(R.layout.item_img, imgModelList){
             override fun convert(holder: BaseViewHolder, item: ImgModel) {

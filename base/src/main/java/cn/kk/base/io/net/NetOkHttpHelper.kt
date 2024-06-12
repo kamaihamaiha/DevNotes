@@ -1,11 +1,19 @@
-package cn.kk.customview.io
+package cn.kk.base.io.net
 
 import android.content.Context
 import android.os.Handler
-import okhttp3.*
+import android.text.TextUtils
+import cn.kk.base.utils.StringHelper
+import cn.kk.customview.io.HttpBaseCallback
+import okhttp3.Cache
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.FormBody
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import java.io.IOException
 import java.util.concurrent.TimeUnit
-import kotlin.Exception
 
 /**
  * 网络帮助类
@@ -48,12 +56,40 @@ class NetOkHttpHelper(context: Context) {
         fun getInstance() = mInstance!!
     }
 
+    fun getOkhttpClient() = okHttpClient
+
     // region net request
+    //endregion
+    val BAIDU_NET_DISK_AUTH_HOST: String? = "https://openapi.baidu.com"
+    val BAIDU_NET_DISK_PAN_HOST: String? = "https://pan.baidu.com"
+    val BAIDU_NET_DISK_AUTH_URL: String = BAIDU_NET_DISK_AUTH_HOST + "/oauth/2.0/token?grant_type=authorization_code&code=%s&client_id=%s&client_secret=%s&redirect_uri=%s"
+    val BAIDU_NET_DISK_USER_INFO_URL = "$BAIDU_NET_DISK_PAN_HOST/rest/2.0/xpan/nas?method=uinfo&access_token=%s"
+    val BAIDU_NET_DISK_FILE_LIST_URL = "$BAIDU_NET_DISK_PAN_HOST/rest/2.0/xpan/file?method=list&access_token=%s"
+    val BAIDU_NET_DISK_FILE_META_URL = "$BAIDU_NET_DISK_PAN_HOST/rest/2.0/xpan/multimedia?method=filemetas&access_token=%s&fsids=%s&thumb=1"
+    val BAIDU_NET_DISK_FILE_VIDEO_INFO_URL = "$BAIDU_NET_DISK_PAN_HOST/rest/2.0/xpan/file?method=streaming&access_token=%s&path=%s&type=%s"
+    val VIDEO_FMT_TS_480 = "M3U8_AUTO_480" // 默认用这种
+
+    val VIDEO_FMT_TS_720 = "M3U8_AUTO_720"
+    val VIDEO_FMT_TS_1080 = "M3U8_AUTO_1080"
+    val VIDEO_FMT_FLV_264_480 = "M3U8_FLV_264_480" // 私有协议，需播放器额外特殊支持，或使用网盘播放器
+
+    fun getBaiduPanUserInfo(accessToken: String, callback: HttpBaseCallback){
+        val url = "https://pan.baidu.com/rest/2.0/xpan/nas?method=uinfo&access_token=${accessToken}"
+        getInstance().getAsync(url, callback)
+    }
+
+    fun getBaiduPanCurPathFileListInfo(accessToken: String, path: String, callback: HttpBaseCallback){
+        var url: String = String.format(BAIDU_NET_DISK_FILE_LIST_URL, accessToken)
+        if (!TextUtils.isEmpty(path)) {
+            url += "&dir=" + StringHelper.urlEncode(path)
+        }
+        getInstance().getAsync(url, callback)
+    }
 
     /**
      * 异步 GET 请求
      */
-    fun getAsync(url: String, callback: ResultCallback){
+    fun getAsync(url: String, callback: HttpBaseCallback){
         val request = Request.Builder().url(url).build()
         val call = okHttpClient.newCall(request)
         requestAndDealResult(call, callback)
@@ -62,7 +98,7 @@ class NetOkHttpHelper(context: Context) {
     /**
      * 异步 POST 表单请求
      */
-    fun postAsyncForm(url: String, callback: ResultCallback){
+    fun postAsyncForm(url: String, callback: HttpBaseCallback){
         val formBody = FormBody.Builder().add("tel", "15063379937").build()
         val request = Request.Builder()
             .url(url)
@@ -75,7 +111,7 @@ class NetOkHttpHelper(context: Context) {
     /**
      * 发送请求并且处理结果
      */
-    fun requestAndDealResult(call: Call, callback: ResultCallback){
+    fun requestAndDealResult(call: Call, callback: HttpBaseCallback){
         call.enqueue(object : Callback{
             override fun onFailure(call: Call, e: IOException) {
                 sendFailedCallback(call.request(), e, callback)
@@ -92,11 +128,11 @@ class NetOkHttpHelper(context: Context) {
         })
     }
 
-    fun sendFailedCallback(request: Request,e: Exception, callback: ResultCallback){
+    fun sendFailedCallback(request: Request,e: Exception, callback: HttpBaseCallback){
         handler.post { callback.onError(request, e) }
     }
 
-    fun sendSuccessCallback(data: String, callback: ResultCallback){
+    fun sendSuccessCallback(data: String, callback: HttpBaseCallback){
         handler.post { callback.onResponse(data) }
     }
 

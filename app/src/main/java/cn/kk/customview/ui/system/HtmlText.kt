@@ -4,7 +4,6 @@ import android.text.Html
 import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_html_text.*
 
 /**
  * Html 显示在 TextView 上
@@ -16,7 +15,9 @@ class HtmlText: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
-
+        val tv_html = findViewById<TextView>(R.id.tv_html)
+        val tv_html_ting = findViewById<TextView>(R.id.tv_html_ting)
+        val tv_recite = findViewById<TextView>(R.id.tv_recite)
         tv_html.setText(Html.fromHtml(getString(R.string.html_demo)))
         tv_html_ting.setText(Html.fromHtml(getString(R.string.html_ting)))
 

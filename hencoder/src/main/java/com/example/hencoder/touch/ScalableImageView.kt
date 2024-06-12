@@ -27,7 +27,7 @@ import kotlin.math.min
 private val IMAGE_SIZE = 300f.px.toInt()
 private val EXTRA_SCALA_FRACTION = 1.5f
 
-class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
+class ScalableImageView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
     private val bitmap = getAvatar(IMAGE_SIZE)
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var originalOffsetX = 0f
@@ -99,7 +99,7 @@ class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context,
         canvas.drawBitmap(bitmap, originalOffsetX, originalOffsetY, paint)
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
+    override fun onTouchEvent(event: MotionEvent): Boolean {
         // 去掉原生功能，使用自己的手势外挂功能
         scaleGestureDetector.onTouchEvent(event)
         if (!scaleGestureDetector.isInProgress) { //如果没有正在缩放，那么也支持双击
@@ -130,14 +130,13 @@ class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context,
     //整理实现的接口，统一管理
     inner class HenGestureListener : SimpleOnGestureListener() {
 
-        override fun onDown(e: MotionEvent?): Boolean {
+        override fun onDown(e: MotionEvent): Boolean {
             return true
         }
 
-
         override fun onScroll(
             downEvent: MotionEvent?,
-            currentEvent: MotionEvent?,
+            currentEvent: MotionEvent,
             distanceX: Float,
             distanceY: Float
         ): Boolean {
@@ -158,7 +157,7 @@ class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context,
 
         override fun onFling(
             downEvent: MotionEvent?,
-            currentEvent: MotionEvent?,
+            currentEvent: MotionEvent,
             velocityX: Float,
             velocityY: Float
         ): Boolean {
@@ -228,7 +227,7 @@ class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context,
             return true
         }
 
-        override fun onScaleEnd(detector: ScaleGestureDetector?) {
+        override fun onScaleEnd(detector: ScaleGestureDetector) {
 
         }
 

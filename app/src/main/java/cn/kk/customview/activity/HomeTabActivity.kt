@@ -13,7 +13,7 @@ import cn.kk.base.receiver.ScreenChangeReceiver
 import cn.kk.base.utils.IOUtils
 import cn.kk.customview.R
 import cn.kk.customview.fragment.*
-import kotlinx.android.synthetic.main.activity_home_tab.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
  * 首页
@@ -33,6 +33,8 @@ class HomeTabActivity: BaseActivity() {
         super.doWhenOnCreate()
 
         // edge to edge
+        val home_root_view = findViewById<View>(R.id.home_root_view)
+        val bottom_navi = findViewById<BottomNavigationView>(R.id.bottom_navi)
         ViewCompat.setOnApplyWindowInsetsListener(home_root_view, object : OnApplyWindowInsetsListener {
             override fun onApplyWindowInsets(
                 v: View,

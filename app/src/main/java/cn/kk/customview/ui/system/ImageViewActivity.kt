@@ -1,9 +1,10 @@
 package cn.kk.customview.ui.system
 
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_imageview.*
 
 class ImageViewActivity: BaseActivity() {
     var index = 1
@@ -13,8 +14,10 @@ class ImageViewActivity: BaseActivity() {
 
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
+        val imageView = findViewById<ImageView>(R.id.imageView)
+        val type = findViewById<TextView>(R.id.type)
 
-        btn_next.setOnClickListener {
+        findViewById<Button>(R.id.btn_next).setOnClickListener {
             when (index % 8) {
                 1 -> {
                     imageView.scaleType = ImageView.ScaleType.FIT_XY

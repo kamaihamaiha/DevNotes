@@ -2,7 +2,7 @@ package cn.kk.customview.ui
 
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
-import kotlinx.android.synthetic.main.activity_lottie_anim.*
+import com.airbnb.lottie.LottieAnimationView
 
 class LottieAnimActivity: BaseActivity() {
 
@@ -14,8 +14,11 @@ class LottieAnimActivity: BaseActivity() {
       return  R.layout.activity_lottie_anim
     }
 
+    lateinit var lav: LottieAnimationView
+
     override fun doWhenOnCreate() {
         super.doWhenOnCreate()
+        lav = findViewById(R.id.lav)
 
         lav.setAnimation(ANIM_VOICE)
         lav.progress = 0f

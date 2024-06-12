@@ -5,6 +5,10 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -147,6 +151,39 @@ public class StringHelper {
 
         return sb.toString();
     }
+
+    public static String urlEncode(String url) {
+        try {
+            return URLEncoder.encode(url, "utf-8").replace("+", "%20");
+        } catch (UnsupportedEncodingException e) {
+            return url;
+        }
+    }
+
+    public static String urlDecode(String url){
+        try {
+            return URLDecoder.decode(url, "utf-8") .replaceAll("^\"|\"$", "");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
+
+    public static String parseParamsFromUrl(String url){
+        // https://openapi.baidu.com/oauth/2.0/login_success#expires_in=2592000&access_token=123.4177eb716eec044b1278d92268391b91.Y3lc2VTqNsoWKgJ4c-8M4Sq1jqOQDt6XtqA0jfD.UjUzlw&session_secret=&session_key=&scope=basic+netdisk
+        // parse expires_in form url
+        String[] params = url.split("#");
+        if (params.length > 1) {
+            String[] params2 = params[1].split("&");
+            for (String param : params2) {
+                if (param.contains("expires_in")) {
+                    return param.split("=")[1];
+                }
+            }
+        }
+        return "";
+    }
+
     public static void main(String[] args) {
 
 

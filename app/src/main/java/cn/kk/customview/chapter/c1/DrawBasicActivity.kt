@@ -16,7 +16,6 @@ import cn.kk.elementary.chapter1.path.BasicArcView
 import cn.kk.elementary.chapter1.region.BasicRegion1View
 import cn.kk.elementary.chapter1.region.BasicRegion2View
 import cn.kk.elementary.chapter1.region.BasicRegion3View
-import kotlinx.android.synthetic.main.activity_one.*
 
 /**
  * 第一章，
@@ -49,6 +48,7 @@ class DrawBasicActivity: BaseActivity() {
         viewList.add(CanvasClipView(this))
         viewList.add(CanvasStateView(this))
 
+        val one_viewpager = findViewById<ViewPager2>(R.id.one_viewpager)
         one_viewpager.apply {
             adapter = BasicViewViewPagerAdapter(viewList)
             orientation = ViewPager2.ORIENTATION_HORIZONTAL
