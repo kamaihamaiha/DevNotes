@@ -13,6 +13,10 @@ object ThreadHelper {
         Handler(Looper.getMainLooper()).post(runnable)
     }
 
+    fun runOnUIThreadDelay(runnable: Runnable, delay: Long){
+        Handler(Looper.getMainLooper()).postDelayed(runnable, delay)
+    }
+
     /**
      * 执行轻量级大量的
      */

@@ -13,6 +13,7 @@ import cn.kk.base.UIHelper
 import cn.kk.base.activity.BaseActivity
 import cn.kk.customview.R
 import cn.kk.customview.widget.GradientImageView
+import cn.kk.customview.widget.SelectHandleRangeTextView
 import cn.kk.customview.widget.TextSelectView
 import cn.kk.customview.widget.VocabularyLevelBar
 import cn.kk.customview.widget.WordInputViewNew
@@ -166,8 +167,14 @@ class NormalViewActivity: BaseActivity() {
             VIEW_TYPE_TEXT_SELECT -> {
                 val sentence = "That these United Colonies are, and of right ought to be, free and <span class=\"key\">independent</span> States, that they are absolved from all allegiance to the British Crown, and that all political connection between them and the State of Great Britain is, and ought to be, totally dissolved"
                 view_container.addView(getTextSelectView())
-                val textSelectView = findViewById<TextSelectView>(R.id.textSelectView)
+                val textSelectView = findViewById<SelectHandleRangeTextView>(R.id.textSelectView)
                 textSelectView.text = sentence
+                textSelectView.setSelectContentCallback(object : SelectHandleRangeTextView.SelectContentCallback {
+                    override fun onSelectText(selectedText: String) {
+                        showToast(selectedText)
+                    }
+
+                })
             }
             // endregion
             else -> {
