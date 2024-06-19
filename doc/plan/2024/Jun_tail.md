@@ -12,9 +12,9 @@
 玩转Git三剑客(极客时间): 总共62讲
 - 09 探秘.git目录 ✅ 
 - 10 commit,tree,blob 三个对象之间的关系 ✅
-- 11 小练习: 数一数tree的个数
-- 12 分离头指针情况下的注意事项
-- 13 进一步理解HEAD和branch
+- 11 小练习: 数一数tree的个数 ✅
+- 12 分离头指针情况下的注意事项 ✅
+- 13 进一步理解HEAD和branch ✅
 - 14 删除不需要的分支
 - 15 修改最新的commit的message
 - 16 修改老旧的commit的message
@@ -44,7 +44,39 @@
 
 - 看书
 
-### 6-16 周日
+
+### 每天
+
+- [6-19 周三](#6-19周三)
+- [6-18 周二](#6-18周二)
+- [6-17 周一](#6-17周一)
+- [6-16 周日](#6-16周日)
+
+#### 6-19_周三
+
+- git 学习
+  - 进一步理解HEAD和branch  
+  - 学习了新命令: 
+    - `git checkout -b bugfix master`
+      - 在分支 master 的基础上，创建出一个新的分支: bugfix
+    - 比较差异:
+      - `git diff HEAD HEAD^`: 当前最新的提交和parent提交差异
+      - `git diff HEAD HEAD^^`: 当前最新的提交和parent提交的parent条差异
+      - `git diff HEAD HEAD~1`: 当前最新的提交和parent提交差异
+      - `git diff HEAD HEAD~2`: 当前最新的提交和parent提交的parent条差异
+
+#### 6-18_周二
+
+- git 学习:
+  - tree: 每个目录都会
+  - 分离头指针情况下的注意事项
+
+#### 6-17_周一
+
+- git 学习:
+  - tree
+
+#### 6-16_周日
 
 - git 学习: 晚上
   - .git 目录
