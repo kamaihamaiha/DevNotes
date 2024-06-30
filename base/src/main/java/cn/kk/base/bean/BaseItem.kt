@@ -141,6 +141,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_WORK_PICK_FILE = 1010
         val ACTION_MORE_WORK_BROADCAST = 1011
         val ACTION_MORE_WORK_TEXT_SELECT = 1012
+        val ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY = 1013
 
         // 更多：综合技术，细分
         val ACTION_MORE_ZONGHE_NESTEDSCROLLVIEW = 1271
