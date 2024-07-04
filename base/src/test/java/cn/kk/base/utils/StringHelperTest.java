@@ -4,6 +4,9 @@ package cn.kk.base.utils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class StringHelperTest {
 
     @Test
@@ -12,5 +15,24 @@ public class StringHelperTest {
 
         String params = StringHelper.parseParamsFromUrl(testUrl);
         Assert.assertEquals("2592000", params);
+    }
+
+    @Test
+    public void testNumFormat(){
+        HashMap<Integer, String> nums = new HashMap<>();
+        nums.put(1, "");
+        nums.put(9, "");
+        nums.put(10, "100+");
+        nums.put(99, "100+");
+        nums.put(100, "100+");
+        nums.put(123, "100+");
+        nums.put(1234, "1000+");
+        nums.put(12345, "10000+");
+        nums.put(123456, "12万");
+        nums.put(128456, "13万");
+
+        for (Map.Entry<Integer, String> entry : nums.entrySet()) {
+            Assert.assertEquals(entry.getValue(), StringHelper.formatNum(entry.getKey()));
+        }
     }
 }

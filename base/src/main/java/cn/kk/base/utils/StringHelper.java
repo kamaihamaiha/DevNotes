@@ -184,6 +184,24 @@ public class StringHelper {
         return "";
     }
 
+    public static String formatNum(int num){
+        if (num < 10 || num > 100_000_000) return "";
+        if (num < 100) return "100+";
+        if (num >= 100_000) {
+            int round = Math.round(num / 10000.0f);
+            return round + "万";
+        }
+        // 小于 10万的: 保留最高位，其他位都是 0
+        int highestPlaceValue = 1;
+        while (num / highestPlaceValue >= 10) {
+            highestPlaceValue *= 10;
+        }
+
+        int highestDigit = num / highestPlaceValue;
+        String numFormat = highestDigit * highestPlaceValue + "+";
+        return  numFormat;
+    }
+
     public static void main(String[] args) {
 
 
