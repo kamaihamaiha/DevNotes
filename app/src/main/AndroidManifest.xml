@@ -160,6 +160,12 @@
             android:configChanges="keyboard|keyboardHidden|screenSize" />
         <activity android:name=".activity.work.ChangeLauncherIconActivity"/>
         <activity android:name=".activity.work.BroadcastDemoActivity"/>
+        <activity android:name=".activity.work.BottomSheetDialogActivity"
+            android:theme="@style/Theme.BottomSheetDialog"
+            android:windowIsFloating="true"
+            android:windowSoftInputMode="adjustResize"
+            android:windowBackground="@android:color/transparent"
+            />
 
         <!--arch-->
         <activity android:name=".activity.arch.MvcActivity" />

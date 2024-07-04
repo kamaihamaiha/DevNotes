@@ -11,6 +11,7 @@ import cn.kk.customview.activity.NormalCardListActivity
 import cn.kk.customview.activity.NormalViewActivity
 import cn.kk.customview.activity.NormalWebViewActivity
 import cn.kk.base.bean.BaseItem
+import cn.kk.customview.activity.work.BottomSheetDialogActivity
 import cn.kk.customview.activity.work.BroadcastDemoActivity
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.bean.SimpleWikiModel
@@ -51,6 +52,7 @@ class WorkActivity: NormalCardListActivity() {
             add(ItemSimpleCard("文件选择器", true).apply { item_action = BaseItem.ACTION_MORE_WORK_PICK_FILE })
             add(ItemSimpleCard("测试广播", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BROADCAST })
             add(ItemSimpleCard("文本选择", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXT_SELECT })
+            add(ItemSimpleCard("BottomSheetDialog Style Activity", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY })
         }
     }
 
@@ -68,6 +70,7 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_PICK_FILE -> openNextUI(PickFileActivity::class.java, item.title)
             BaseItem.ACTION_MORE_WORK_BROADCAST -> openNextUI(BroadcastDemoActivity::class.java, item.title)
             BaseItem.ACTION_MORE_WORK_TEXT_SELECT -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
+            BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY -> openNextUI(BottomSheetDialogActivity::class.java, item.title, true)
         }
     }
 

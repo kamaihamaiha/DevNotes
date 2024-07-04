@@ -65,4 +65,16 @@
     <style name="Button_Corner_Primary_Alpha_60" parent="Button_Corner_Primary_Alpha">
         <item name="android:background">@drawable/bg_shape_corner_primary_alpha_60</item>
     </style>
+
+    <style name="Theme.BottomSheetDialog" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+<!--        <item name="behavior_peekHeight">wrap_content</item>-->
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

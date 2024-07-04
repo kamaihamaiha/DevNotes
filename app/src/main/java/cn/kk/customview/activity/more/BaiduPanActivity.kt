@@ -241,7 +241,7 @@ class BaiduPanActivity: BaseActivity() {
             if (file.isDirTag()) return R.drawable.favorite_album
             if (file.isAudioType()) return R.drawable.icon_file_audio
             if (file.isVideoType()) return R.drawable.icon_file_video
-            if (file.isDocType()) return R.drawable.icon_document
+            if (file.isDoc_Type()) return R.drawable.icon_document
             return R.drawable.icon_file_unknown
         }
     }

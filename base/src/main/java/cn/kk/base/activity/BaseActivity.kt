@@ -245,11 +245,13 @@ abstract class BaseActivity: BasicActivity() {
     /**
      * 打开下一个页面
      */
-    open fun <T: Activity> openNextUI(targetActivity: Class<T>, title: String){
+    open fun <T: Activity> openNextUI(targetActivity: Class<T>, title: String, noAnim: Boolean = false){
         startActivity(Intent(this, targetActivity).apply {
             putExtra(INTENT_TITLE_KEY, title)
         })
-        slideAnimEnter()
+        if (!noAnim) {
+            slideAnimEnter()
+        }
     }
 
     open fun <T: Activity> openNextUI(targetActivity: Class<T>, title: String, dataSource: String){
