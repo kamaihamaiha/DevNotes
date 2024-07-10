@@ -15,7 +15,7 @@
 - 15 修改最新的commit的message // ✅
 - 16 修改老旧的commit的message // ✅
 - 17 把连续的多个commit整理成1个 // ✅
-- 18 把间隔的几个commit整理成1个
+- 18 把间隔的几个commit整理成1个 // ✅
 - 19 比较暂存区和HEAD所含文件的差异
 - 20 比较工作区和暂存区所含文件的差异
 - 21 如何让暂存区恢复成和HEAD的一样
@@ -46,3 +46,14 @@
 - python: sorted
 - Android 训练营，学习 Gradle 模块
 
+#### 7-4
+
+- Gradle 基础知识 
+
+#### 7-10 周三
+
+- Gradle 基础知识之 Groovy语法完成
+- git: 18 把间隔的几个commit整理成1个
+  - 找到最早的要整理的 commit 的parent commit id
+    - git rebase -i [parent commit id]; 然后进入编辑界面
+    - 把间隔的commit连续排列，从上往下第一个 commit 的pick保持不变；后面的都改为 squash
