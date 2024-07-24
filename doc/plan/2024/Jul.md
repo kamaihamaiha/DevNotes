@@ -16,8 +16,8 @@
 - 16 修改老旧的commit的message // ✅
 - 17 把连续的多个commit整理成1个 // ✅
 - 18 把间隔的几个commit整理成1个 // ✅
-- 19 比较暂存区和HEAD所含文件的差异
-- 20 比较工作区和暂存区所含文件的差异
+- 19 比较暂存区和HEAD所含文件的差异 // ✅
+- 20 比较工作区和暂存区所含文件的差异 // ✅
 - 21 如何让暂存区恢复成和HEAD的一样
 - 22 如何让工作区的文件恢复和暂存区一样
 - 23 怎样取消暂存取部分文件的更改
@@ -57,3 +57,18 @@
   - 找到最早的要整理的 commit 的parent commit id
     - git rebase -i [parent commit id]; 然后进入编辑界面
     - 把间隔的commit连续排列，从上往下第一个 commit 的pick保持不变；后面的都改为 squash
+
+
+### 7-23(周二) - 7-26(五)
+
+#### 7-23
+  - 19 比较暂存区和HEAD所含文件的差异
+    - ``git diff --cached``
+  - 20 比较暂存区和HEAD所含文件的差异
+    - ``git diff``
+      - 默认是对仓库中所有的文件比较
+      - 如果想比较某个文件，可以指定文件名：``git diff -- fileName``
+        - 多个文件: ``git diff -- fileName1 fileName2`` 
+#### 7-24
+  - 21 如何让暂存区恢复成和HEAD的一样
+    - ``git reset HEAD`` 或者 ``git restore --staged fileName``
