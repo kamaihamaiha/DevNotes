@@ -13,6 +13,7 @@ import cn.kk.customview.activity.NormalWebViewActivity
 import cn.kk.base.bean.BaseItem
 import cn.kk.customview.activity.work.BottomSheetDialogActivity
 import cn.kk.customview.activity.work.BroadcastDemoActivity
+import cn.kk.customview.activity.work.mediasession.MediaSessionCompactDemoActivity
 import cn.kk.customview.activity.work.mediasession.MediaSessionDemoActivity
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.bean.SimpleWikiModel
@@ -55,6 +56,7 @@ class WorkActivity: NormalCardListActivity() {
             add(ItemSimpleCard("文本选择", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXT_SELECT })
             add(ItemSimpleCard("BottomSheetDialog Style Activity", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY })
             add(ItemSimpleCard("MediaSession", true).apply { item_action = BaseItem.ACTION_MORE_WORK_MEDIA_SESSION })
+            add(ItemSimpleCard("MediaSessionCompact", true).apply { item_action = BaseItem.ACTION_MORE_WORK_MEDIA_SESSION_COMPACT })
         }
     }
 
@@ -73,7 +75,8 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_BROADCAST -> openNextUI(BroadcastDemoActivity::class.java, item.title)
             BaseItem.ACTION_MORE_WORK_TEXT_SELECT -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
             BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY -> openNextUI(BottomSheetDialogActivity::class.java, item.title, true)
-            BaseItem.ACTION_MORE_WORK_MEDIA_SESSION -> openNextUI(MediaSessionDemoActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
+            BaseItem.ACTION_MORE_WORK_MEDIA_SESSION -> openNextUI(MediaSessionDemoActivity::class.java, item.title)
+            BaseItem.ACTION_MORE_WORK_MEDIA_SESSION_COMPACT -> openNextUI(MediaSessionCompactDemoActivity::class.java, item.title)
         }
     }
 

@@ -143,6 +143,7 @@ abstract  class BaseItem(var title: String = "", var type: Type = Type.UNKNOWN):
         val ACTION_MORE_WORK_TEXT_SELECT = 1012
         val ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY = 1013
         val ACTION_MORE_WORK_MEDIA_SESSION = 1014
+        val ACTION_MORE_WORK_MEDIA_SESSION_COMPACT = 1015
 
         // 更多：综合技术，细分
         val ACTION_MORE_ZONGHE_NESTEDSCROLLVIEW = 1271

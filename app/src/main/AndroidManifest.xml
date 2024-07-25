@@ -49,6 +49,7 @@
         </receiver>
 
         <service android:name=".activity.work.mediasession.MediaSessionDemoService"/>
+        <service android:name=".activity.work.mediasession.MediaSessionCompactDemoService"/>
         <!--
  <meta-data
             android:name="MTA_CHANNEL"
@@ -167,6 +168,7 @@
             android:windowSoftInputMode="adjustResize"
             android:windowBackground="@android:color/transparent" />
         <activity android:name=".activity.work.mediasession.MediaSessionDemoActivity"/>
+        <activity android:name=".activity.work.mediasession.MediaSessionCompactDemoActivity"/>
 
         <!--arch-->
         <activity android:name=".activity.arch.MvcActivity" />

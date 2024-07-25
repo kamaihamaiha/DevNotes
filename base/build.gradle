@@ -108,6 +108,7 @@ dependencies {
     api "androidx.media3:media3-exoplayer-dash:1.2.1"
     api "androidx.media3:media3-ui:1.2.1"
 
+    api 'androidx.media:media:1.7.0'
 
     // 引入 build gradle 为了方便查 gradle task 的源码; compileOnly 为了不让它打包进 apk
 //    compileOnly 'com.android.tools.build:gradle:7.2.0'
