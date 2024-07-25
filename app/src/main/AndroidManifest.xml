@@ -48,6 +48,7 @@
                 android:resource="@xml/k_k_app_widget_info" />
         </receiver>
 
+        <service android:name=".activity.work.mediasession.MediaSessionDemoService"/>
         <!--
  <meta-data
             android:name="MTA_CHANNEL"
@@ -164,8 +165,8 @@
             android:theme="@style/Theme.BottomSheetDialog"
             android:windowIsFloating="true"
             android:windowSoftInputMode="adjustResize"
-            android:windowBackground="@android:color/transparent"
-            />
+            android:windowBackground="@android:color/transparent" />
+        <activity android:name=".activity.work.mediasession.MediaSessionDemoActivity"/>
 
         <!--arch-->
         <activity android:name=".activity.arch.MvcActivity" />
