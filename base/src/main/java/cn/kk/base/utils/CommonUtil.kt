@@ -1,6 +1,5 @@
 package cn.kk.base.utils
 
-import android.R
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -22,9 +21,6 @@ object CommonUtil {
     const val XHS_PKG_NAME = "com.xingin.xhs"
     const val SINA_PKG_NAME = "com.sina.weibo"
 
-    const val URL_DEEPLINK_TING_EN_HOME_XHS = "xhsdiscover://user/668defbf00000000030323a4"
-    // 小红书 deeplink: https://pages.xiaohongshu.com/activity/deeplink#toc_14
-    const val URL_DEEPLINK_MY_HOME_XHS = "xhsdiscover://user/5b16a87ee8ac2b2b2bbd55f1"
 
 
     fun hasInstallXhs(ctx: Context?): Boolean { // 是否安装了小红书

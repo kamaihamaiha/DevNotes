@@ -16,6 +16,7 @@ import cn.kk.customview.activity.work.BottomSheetDialogActivity
 import cn.kk.customview.activity.work.BroadcastDemoActivity
 import cn.kk.customview.bean.ItemSimpleCard
 import cn.kk.customview.bean.SimpleWikiModel
+import cn.kk.customview.dialog.XhsListBottomDialog
 import cn.kk.customview.ui.system.HtmlText
 import cn.kk.customview.ui.work.ExpandViewTouchDemo
 import cn.kk.customview.ui.work.MenuDemoActivity
@@ -74,11 +75,7 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_TEXT_SELECT -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
             BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY -> openNextUI(BottomSheetDialogActivity::class.java, item.title, true)
             BaseItem.ACTION_MORE_WORK_OPEN_XHS -> {
-                if (CommonUtil.hasInstallXhs(this)) {
-                    CommonUtil.openSpecialApp(this, CommonUtil.URL_DEEPLINK_MY_HOME_XHS)
-                } else {
-                    CommonUtil.gotoMarketDownload(this, CommonUtil.XHS_PKG_NAME)
-                }
+                XhsListBottomDialog(this, mutableListOf()).show()
             }
         }
     }
