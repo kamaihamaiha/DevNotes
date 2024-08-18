@@ -47,7 +47,16 @@ class XhsListBottomDialog(val mActivity: BaseActivity, val modelList: MutableLis
 
     fun buildData() {
         modelList.add(XhsUserModel("5b16a87ee8ac2b2b2bbd55f1", "我的主页"))
-        modelList.add(XhsUserModel("5c34870c0000000007008eb2", "厨匠东哥"))
+        modelList.add(XhsUserModel("5916a3ba34609416f8fe5349", "神兽的主页"))
+        modelList.add(XhsUserModel("5c34870c0000000007008eb2", "厨师-厨匠东哥"))
+        modelList.add(XhsUserModel("5ff965680000000001007508", "厨师-夏叔厨房"))
+        modelList.add(XhsUserModel("60014bb50000000001003034", "厨师-段小段"))
+        modelList.add(XhsUserModel("5eed7de8000000000101c701", "厨师-大厨阿斗"))
+        modelList.add(XhsUserModel("5faf97c600000000010017f1", "数据星球"))
+        modelList.add(XhsUserModel("6504a6fd0000000016039e57", "保险经纪人-平心静气刘蒙蒙"))
+        modelList.add(XhsUserModel("5c5daefe000000001001b872", "吃货全能营养师"))
+        modelList.add(XhsUserModel("6248f42b0000000010006985", "空气炸锅美食-遇见美食记"))
+        modelList.add(XhsUserModel("5e60ee7c00000000010001de", "老梁"))
     }
 
 }
