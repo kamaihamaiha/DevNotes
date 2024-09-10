@@ -11,7 +11,8 @@ import cn.kk.customview.activity.NormalCardListActivity
 import cn.kk.customview.activity.NormalViewActivity
 import cn.kk.customview.activity.NormalWebViewActivity
 import cn.kk.base.bean.BaseItem
-import cn.kk.base.utils.CommonUtil
+import cn.kk.customview.activity.work.BluetoothHeadsetActivity
+import cn.kk.customview.activity.work.BluetoothHeadsetV2Activity
 import cn.kk.customview.activity.work.BottomSheetDialogActivity
 import cn.kk.customview.activity.work.BroadcastDemoActivity
 import cn.kk.customview.bean.ItemSimpleCard
@@ -21,7 +22,6 @@ import cn.kk.customview.ui.system.HtmlText
 import cn.kk.customview.ui.work.ExpandViewTouchDemo
 import cn.kk.customview.ui.work.MenuDemoActivity
 import cn.kk.customview.ui.work.RecyclerViewDemoActivity
-import java.util.Locale
 
 /**
  * 工作中总结
@@ -56,6 +56,8 @@ class WorkActivity: NormalCardListActivity() {
             add(ItemSimpleCard("文本选择", true).apply { item_action = BaseItem.ACTION_MORE_WORK_TEXT_SELECT })
             add(ItemSimpleCard("BottomSheetDialog Style Activity", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY })
             add(ItemSimpleCard("打开小红书", true).apply { item_action = BaseItem.ACTION_MORE_WORK_OPEN_XHS })
+            add(ItemSimpleCard("蓝牙耳机", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BLUETOOTH_HEADSET })
+            add(ItemSimpleCard("蓝牙耳机V2", true).apply { item_action = BaseItem.ACTION_MORE_WORK_BLUETOOTH_HEADSET_V2 })
         }
     }
 
@@ -74,9 +76,9 @@ class WorkActivity: NormalCardListActivity() {
             BaseItem.ACTION_MORE_WORK_BROADCAST -> openNextUI(BroadcastDemoActivity::class.java, item.title)
             BaseItem.ACTION_MORE_WORK_TEXT_SELECT -> openNextUI(NormalViewActivity::class.java, item.title, NormalViewActivity.VIEW_TYPE_TEXT_SELECT)
             BaseItem.ACTION_MORE_WORK_BOTTOM_SHEET_DIALOG_STYLE_ACTIVITY -> openNextUI(BottomSheetDialogActivity::class.java, item.title, true)
-            BaseItem.ACTION_MORE_WORK_OPEN_XHS -> {
-                XhsListBottomDialog(this, mutableListOf()).show()
-            }
+            BaseItem.ACTION_MORE_WORK_OPEN_XHS -> XhsListBottomDialog(this, mutableListOf()).show()
+            BaseItem.ACTION_MORE_WORK_BLUETOOTH_HEADSET -> openNextUI(BluetoothHeadsetActivity::class.java, item.title)
+            BaseItem.ACTION_MORE_WORK_BLUETOOTH_HEADSET_V2 -> openNextUI(BluetoothHeadsetV2Activity::class.java, item.title)
         }
     }
 
