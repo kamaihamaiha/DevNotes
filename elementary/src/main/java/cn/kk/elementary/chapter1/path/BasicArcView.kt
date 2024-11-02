@@ -41,11 +41,18 @@ class BasicArcView(context: Context?, attrs: AttributeSet?) : View(context, attr
 
 
         // region 绘制第二种
-
+        val arc2StartX = 700f
+        val arc2StartY = 200f
+        val arc2Radius = 100f
+        canvas.drawPoint(arc2StartX, arc2StartY, Paint().apply {
+            color = Color.GREEN
+            strokeWidth = 15f
+        })
         val path2 = Path()
-        val rectF2 = RectF(700f,200f,900f,400f)
+        path2.moveTo(arc2StartX,arc2StartY)
+        val rectF2 = RectF(arc2StartX,arc2StartY,arc2StartX + arc2Radius*2,arc2StartY + arc2Radius*2)
 
-        path2.moveTo(100f,600f)
+        // forceMoveTo = true，不连接 path 的起点和弧的起点
         path2.arcTo(rectF2,0f,90f,true)
 
         // 绘制 rectF 矩形区域范围，用来参考画的弧

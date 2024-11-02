@@ -180,6 +180,7 @@ class NormalListFragment: BaseFragment(), ListAdapter.ItemClickListener {
                         putExtra("title", title)
                         putExtra("activity", activity?.componentName?.className?:"")
                     })
+                    18 -> startNextUI(NormalViewActivity::class.java, title, NormalViewActivity.VIEW_TYPE_CONCAVE_CONOR_DRAWABLE)
                 }
             }
             // endregion
