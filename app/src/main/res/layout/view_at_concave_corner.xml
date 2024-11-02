@@ -7,7 +7,6 @@
     <TextView
         android:id="@+id/tv"
         android:textSize="26sp"
-        android:foreground="@drawable/bg_shape_frame_location"
         android:textColor="@color/primary_60"
         android:gravity="center"
         android:text="convert conor drawable"

@@ -20,6 +20,7 @@ class ConcaveCornerDrawable: Drawable() {
         paint.color = Color.RED
         paint.style = Paint.Style.STROKE
         paint.strokeWidth = 4f
+        paint.isAntiAlias = true
     }
 
 
@@ -32,31 +33,33 @@ class ConcaveCornerDrawable: Drawable() {
         val rConcave1 = 40f // 第一段凹形圆角半径
         val rConcave2 = 40f // 第二段凹形圆角半径
         val rConcave3 = 40f // 第三段凹形圆角半径
-        val widthOffset = rNormal * 4
-        val heightOffset = rNormal * 2
+        val widthOffset = rNormal * 4 + 30 // 缺角宽，不包含左边sub圆弧宽度
+        val heightOffset = rNormal * 2 // 缺角高
 
         // 左上角 (普通圆角)
         path.arcTo(startX, startY, startX + 2 * rNormal, startY + 2 * rNormal, 180f, 90f, true)
 
         // 顶部直线
-        path.lineTo(startX + width - rNormal, startY)
+        path.lineTo(startX + width - widthOffset - 1 * rNormal, startY)
 
         // 右上角 (普通圆角)
-        path.arcTo(startX + width - 2 * rNormal, startY, startX + width, startY + 2 * rNormal, 270f, 90f, true)
+//        path.arcTo(startX + width - 2 * rNormal, startY, startX + width, startY + 2 * rNormal, 270f, 90f, true)
         // 右上角凹形arc1
-        path.arcTo(startX + width - widthOffset - 2 * rNormal, startY, startX + width - widthOffset, startY + 2 * rNormal, 270f, 90f, true)
+        path.arcTo(startX + width - widthOffset - 2 * rNormal, startY, startX + width - widthOffset, startY + 2 * rNormal, 270f, 80f, true)
+
         // 右上角凹形arc2: 逆时针绘制
-        path.arcTo(startX + width - widthOffset, startY, startX + width - widthOffset + 2 * rNormal, startY + 2 * rNormal, 180f, -90f, true)
-        // 右上角凹形arc3
+        path.arcTo(startX + width - widthOffset, startY, startX + width - widthOffset + 2 * rNormal, startY + 2 * rNormal, 170f, -80f, false)
+        // arc2 的终点
         canvas.drawPoint(startX + width - widthOffset +  rNormal, startY + 2 * rNormal, Paint().apply {
             color = Color.GREEN
             strokeWidth = 15f
         })
+        // 右上角凹形arc3
         path.arcTo(startX + width - 2 * rNormal, startY + heightOffset, startX + width, startY + heightOffset + 2 * rNormal, 270f, 90f, false)
 
 
         // right line
-        path.moveTo(startX + width, startY + rNormal)
+        path.moveTo(startX + width, startY + heightOffset + rNormal)
         path.lineTo(startX + width, startY + height - rNormal)
 
         // 右下角 (普通圆角)
