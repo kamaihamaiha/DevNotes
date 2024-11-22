@@ -63,6 +63,7 @@ class NormalViewActivity: BaseActivity() {
         val VIEW_TYPE_VERTICAL_SCROLL_IMAGE_VIEW = 108 // 可上下滚动图片
         val VIEW_TYPE_TEXT_SELECT = 109 // 文本选择
         val VIEW_TYPE_CONCAVE_CONOR_DRAWABLE = 110 // 缺角Drawable
+        val VIEW_TYPE_DRAG_SCALE_MASK_VIEW = 1101 // 拖拽缩放遮罩
     }
 
     override fun getLayout(): Int {
@@ -183,6 +184,7 @@ class NormalViewActivity: BaseActivity() {
                 val tv = findViewById<TextView>(R.id.tv)
                 tv.background = ConcaveCornerDrawable()
             }
+            VIEW_TYPE_DRAG_SCALE_MASK_VIEW -> view_container.addView(getDragScaleMaskView())
 
             // endregion
             else -> {
@@ -243,5 +245,9 @@ class NormalViewActivity: BaseActivity() {
 
     private fun getConcaveCornerDrawableView(): View {
         return layoutInflater.inflate(R.layout.view_at_concave_corner, null)
+    }
+
+    private fun getDragScaleMaskView(): View {
+        return layoutInflater.inflate(R.layout.view_at_drag_scale_mask, null)
     }
 }

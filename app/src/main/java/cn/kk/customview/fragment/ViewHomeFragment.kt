@@ -107,7 +107,8 @@ class ViewHomeFragment: BaseFragment() {
                 addItem("打开系统通知设置", true)
                 addItem("蓝牙键盘状态", true)
                 addItem("修改 App 图标", true)
-                addItem("缺角/凹角 Drawable", false)
+                addItem("缺角/凹角 Drawable", true)
+                addItem("拖拽遮盖区域", false)
             })
             // endregion
         })
