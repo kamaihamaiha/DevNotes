@@ -9,6 +9,7 @@ import android.os.Looper
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.widget.AppCompatTextView
@@ -43,17 +44,37 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
         style = Paint.Style.FILL_AND_STROKE
         strokeWidth = 10f
     }
+    var initLayout = true
 
 
     init {
         tipContext = "遮挡区域可拖动，拖拽四个角可以调整大小"
         setPadding(padding, padding, padding, padding)
-        // set margin to center horizontal and bottom
-        
-        /*val layoutParams = layoutParams as FrameLayout.LayoutParams
-        layoutParams.width = range.first.toInt()
-        layoutParams.height = range.second.toInt()
-        setLayoutParams(layoutParams)*/
+
+    }
+
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
+        if (changed && initLayout) {
+            val parentWidth = (parent as? View)?.width ?: 0
+            val parentHeight = (parent as? View)?.height ?: 0
+
+            // 计算 TextView 的宽度和高度
+            val textViewWidth = right - left
+            val textViewHeight = bottom - top
+
+            // 计算新的位置：底部水平居中
+            val newLeft = (parentWidth - textViewWidth) / 2
+            val newTop = parentHeight - textViewHeight
+
+            // 设置 TextView 的位置
+            layout(newLeft, newTop, newLeft + textViewWidth, newTop + textViewHeight)
+            (layoutParams as FrameLayout.LayoutParams).apply {
+                leftMargin = newLeft
+                topMargin = newTop
+            }
+            initLayout = false
+        }
     }
 
     override fun onDraw(canvas: Canvas) {
