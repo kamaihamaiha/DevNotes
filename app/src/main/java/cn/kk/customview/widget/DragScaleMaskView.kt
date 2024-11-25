@@ -13,7 +13,6 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.widget.AppCompatTextView
 import cn.kk.base.UIHelper
-import kotlin.math.log
 
 /**
  * 1. edit mode: show text tips and four corner rectangles
@@ -49,6 +48,8 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
     init {
         tipContext = "遮挡区域可拖动，拖拽四个角可以调整大小"
         setPadding(padding, padding, padding, padding)
+        // set margin to center horizontal and bottom
+        
         /*val layoutParams = layoutParams as FrameLayout.LayoutParams
         layoutParams.width = range.first.toInt()
         layoutParams.height = range.second.toInt()
@@ -60,7 +61,7 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
 
         canvas.drawColor(bgColor)
 
-        if (isDragging) {
+        if (editMode) {
             drawCorner(canvas)
 //            setText(tipContext)
         } else {
@@ -72,9 +73,16 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
 
     private var lastX = 0f
     private var lastY = 0f
-    private var isDragging = false
+    private val SCALE_MODE_NONE = -1
+    private val SCALE_MODE_LT = 0
+    private val SCALE_MODE_RT = 1
+    private val SCALE_MODE_LB = 2
+    private val SCALE_MODE_RB = 3
+
+    private var scaleMode = SCALE_MODE_NONE
     private var upTimeStamp = 0L
     private val SHOW_EDIT_MODEL_DURATION = 1500L // 2s
+    private val MIN_SCALE_DISTANCE = cornerSize.first * 1.5
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         if (event == null) return super.onTouchEvent(event)
 
@@ -82,12 +90,41 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
             MotionEvent.ACTION_DOWN -> {
                 lastX = event.rawX
                 lastY = event.rawY
-                isDragging = true
+
+                // 判断是否点击到了四个角
+                val leftTopPoint = intArrayOf(0,0)
+                getLocationOnScreen(leftTopPoint)
+
+                val rightTopPoint = intArrayOf(leftTopPoint[0] + width, leftTopPoint[1])
+                val leftBottomPoint = intArrayOf(leftTopPoint[0], leftTopPoint[1] + height)
+                val rightBottomPoint = intArrayOf(leftTopPoint[0] + width, leftTopPoint[1] + height)
+
+                val distanceLT = Math.sqrt(Math.pow((lastX - leftTopPoint[0]).toDouble(), 2.0) + Math.pow((lastY - leftTopPoint[1]).toDouble(), 2.0))
+                val distanceRT = Math.sqrt(Math.pow((lastX - rightTopPoint[0]).toDouble(), 2.0) + Math.pow((lastY - rightTopPoint[1]).toDouble(), 2.0))
+                val distanceLB = Math.sqrt(Math.pow((lastX - leftBottomPoint[0]).toDouble(), 2.0) + Math.pow((lastY - leftBottomPoint[1]).toDouble(), 2.0))
+                val distanceRB = Math.sqrt(Math.pow((lastX - rightBottomPoint[0]).toDouble(), 2.0) + Math.pow((lastY - rightBottomPoint[1]).toDouble(), 2.0))
+                // find the min distance
+                if (distanceLT < MIN_SCALE_DISTANCE) {
+                    scaleMode = SCALE_MODE_LT
+                } else if (distanceRT < MIN_SCALE_DISTANCE) {
+                    scaleMode = SCALE_MODE_RT
+                } else if (distanceLB < MIN_SCALE_DISTANCE) {
+                    scaleMode = SCALE_MODE_LB
+                } else if (distanceRB < MIN_SCALE_DISTANCE) {
+                    scaleMode = SCALE_MODE_RB
+                } else {
+                    scaleMode = SCALE_MODE_NONE
+                }
+
+
+                editMode = true
+                Log.d("DragScale--", "onTouchEvent: scaleMode: $scaleMode")
+
                 setText(tipContext)
                 invalidate()
             }
             MotionEvent.ACTION_MOVE -> {
-                if (isDragging) {
+                if (editMode) {
                     val dx = event.rawX - lastX
                     val dy = event.rawY - lastY
 
@@ -98,8 +135,35 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
 
                     // 更新 View 的位置
                     val layoutParams = layoutParams as FrameLayout.LayoutParams
-                    layoutParams.leftMargin += dx.toInt()
-                    layoutParams.topMargin += dy.toInt()
+                    if (scaleMode == SCALE_MODE_NONE) {
+                        layoutParams.leftMargin += dx.toInt()
+                        layoutParams.topMargin += dy.toInt()
+                    } else {
+                        when(scaleMode) {
+                            SCALE_MODE_LT -> {
+                                layoutParams.width -= dx.toInt()
+                                layoutParams.height -= dy.toInt()
+                                layoutParams.leftMargin += dx.toInt()
+                                layoutParams.topMargin += dy.toInt()
+
+                            }
+                            SCALE_MODE_RT -> {
+                                layoutParams.width += dx.toInt()
+                                layoutParams.height -= dy.toInt()
+                                layoutParams.topMargin += dy.toInt()
+                            }
+                            SCALE_MODE_LB -> {
+                                layoutParams.width -= dx.toInt()
+                                layoutParams.height += dy.toInt()
+                                layoutParams.leftMargin += dx.toInt()
+                            }
+                            SCALE_MODE_RB -> {
+                                layoutParams.width += dx.toInt()
+                                layoutParams.height += dy.toInt()
+                            }
+                        }
+                    }
+
 
                     Log.d("DragScale--", "onTouchEvent: left: ${left}, top: ${top}, right: ${right}, bottom: ${bottom}")
                     Log.d("DragScale--", "onTouchEvent: leftMargin: ${layoutParams.leftMargin}, topMargin: ${layoutParams.topMargin}, rightMargin: ${layoutParams.rightMargin}, bottomMargin: ${layoutParams.bottomMargin}")
@@ -112,10 +176,10 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
                 }
             }
             MotionEvent.ACTION_UP -> {
-                isDragging = false
+                editMode = false
                 upTimeStamp = System.currentTimeMillis()
                 Handler(Looper.getMainLooper()).postDelayed({
-                    if (isDragging) return@postDelayed
+                    if (editMode) return@postDelayed
                     if (System.currentTimeMillis() - upTimeStamp < SHOW_EDIT_MODEL_DURATION) return@postDelayed
                     setText("")
                     invalidate()
