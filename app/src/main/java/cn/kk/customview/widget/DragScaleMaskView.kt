@@ -26,8 +26,8 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
     // start point
     val startPoint = Pair(0f, 0f)
     // range/size
-    val MIN_WIDTH = UIHelper.dp2px(80f)
-    val MIN_HEIGHT = UIHelper.dp2px(50f)
+    val MIN_WIDTH = UIHelper.dp2px(90f)
+    val MIN_HEIGHT = UIHelper.dp2px(60f)
     val padding = UIHelper.dp2px(10f).toInt()
 
     // 默认的遮挡区域大小
@@ -145,61 +145,67 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
                 invalidate()
             }
             MotionEvent.ACTION_MOVE -> {
-                if (editMode) {
-                    val dx = event.rawX - lastX
-                    val dy = event.rawY - lastY
+                var dx = event.rawX - lastX
+                var dy = event.rawY - lastY
 
-                    // range limit
-                    if (left + dx < 0) return true
-                    if (top + dy < 0) return true
-                    if (right + dx > (parent as ViewGroup).width) return true
-                    if (bottom + dy > (parent as ViewGroup).height) return true
+                // range limit
+                if (left + dx < 0 ) {
+                    dx = -left.toFloat() // 纠正变化量
+                }
+                if (top + dy < 0) {
+                    dy = -top.toFloat() // 纠正变化量
+                }
+                if (right + dx > (parent as ViewGroup).width) {
+                    dx = (parent as ViewGroup).width - right.toFloat() // 纠正变化量
+                }
+                if (bottom + dy > (parent as ViewGroup).height) {
+                    dy = (parent as ViewGroup).height - bottom.toFloat() // 纠正变化量
+                }
 
-                    // size limit
-                    if (width + dx < MIN_WIDTH) return true
-                    if (height + dy < MIN_HEIGHT) return true
+                // 更新 View 的位置
+                val layoutParams = layoutParams as FrameLayout.LayoutParams
+                if (scaleMode == SCALE_MODE_NONE) {
+                    layoutParams.leftMargin += dx.toInt()
+                    layoutParams.topMargin += dy.toInt()
+                } else {
+                    when(scaleMode) {
+                        SCALE_MODE_LT -> {
+                            layoutParams.width -= dx.toInt()
+                            layoutParams.height -= dy.toInt()
 
-                    // 更新 View 的位置
-                    val layoutParams = layoutParams as FrameLayout.LayoutParams
-                    if (scaleMode == SCALE_MODE_NONE) {
-                        layoutParams.leftMargin += dx.toInt()
-                        layoutParams.topMargin += dy.toInt()
-                    } else {
-                        when(scaleMode) {
-                            SCALE_MODE_LT -> {
-                                layoutParams.width -= dx.toInt()
-                                layoutParams.height -= dy.toInt()
-                                layoutParams.leftMargin += dx.toInt()
-                                layoutParams.topMargin += dy.toInt()
+                            layoutParams.leftMargin += dx.toInt()
+                            layoutParams.topMargin += dy.toInt()
 
-                            }
-                            SCALE_MODE_RT -> {
-                                layoutParams.width += dx.toInt()
-                                layoutParams.height -= dy.toInt()
-                                layoutParams.topMargin += dy.toInt()
-                            }
-                            SCALE_MODE_LB -> {
-                                layoutParams.width -= dx.toInt()
-                                layoutParams.height += dy.toInt()
-                                layoutParams.leftMargin += dx.toInt()
-                            }
-                            SCALE_MODE_RB -> {
-                                layoutParams.width += dx.toInt()
-                                layoutParams.height += dy.toInt()
-                            }
+                        }
+                        SCALE_MODE_RT -> {
+                            layoutParams.width += dx.toInt()
+                            layoutParams.height -= dy.toInt()
+                            layoutParams.topMargin += dy.toInt()
+                        }
+                        SCALE_MODE_LB -> {
+                            layoutParams.width -= dx.toInt()
+                            layoutParams.height += dy.toInt()
+                            layoutParams.leftMargin += dx.toInt()
+                        }
+                        SCALE_MODE_RB -> {
+                            layoutParams.width += dx.toInt()
+                            layoutParams.height += dy.toInt()
                         }
                     }
 
-
-                    Log.d("DragScale--", "onTouchEvent: left: ${left}, top: ${top}, right: ${right}, bottom: ${bottom}")
-                    Log.d("DragScale--", "onTouchEvent: leftMargin: ${layoutParams.leftMargin}, topMargin: ${layoutParams.topMargin}, rightMargin: ${layoutParams.rightMargin}, bottomMargin: ${layoutParams.bottomMargin}")
-
-                    requestLayout()
-
-                    lastX = event.rawX
-                    lastY = event.rawY
-
+                    // size limit
+                    layoutParams.width = Math.max(layoutParams.width, MIN_WIDTH.toInt())
+                    layoutParams.height = Math.max(layoutParams.height, MIN_HEIGHT.toInt())
                 }
+
+
+                Log.d("DragScale--", "onTouchEvent: left: ${left}, top: ${top}, right: ${right}, bottom: ${bottom}")
+                Log.d("DragScale--", "onTouchEvent: leftMargin: ${layoutParams.leftMargin}, topMargin: ${layoutParams.topMargin}, rightMargin: ${layoutParams.rightMargin}, bottomMargin: ${layoutParams.bottomMargin}")
+
+                requestLayout()
+
+                lastX = event.rawX
+                lastY = event.rawY
             }
             MotionEvent.ACTION_UP -> {
                 editMode = false
