@@ -149,10 +149,15 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
                     val dx = event.rawX - lastX
                     val dy = event.rawY - lastY
 
+                    // range limit
                     if (left + dx < 0) return true
                     if (top + dy < 0) return true
                     if (right + dx > (parent as ViewGroup).width) return true
                     if (bottom + dy > (parent as ViewGroup).height) return true
+
+                    // size limit
+                    if (width + dx < MIN_WIDTH) return true
+                    if (height + dy < MIN_HEIGHT) return true
 
                     // 更新 View 的位置
                     val layoutParams = layoutParams as FrameLayout.LayoutParams
