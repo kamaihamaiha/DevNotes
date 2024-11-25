@@ -92,8 +92,6 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
                     val layoutParams = layoutParams as FrameLayout.LayoutParams
                     layoutParams.leftMargin += dx.toInt()
                     layoutParams.topMargin += dy.toInt()
-                    layoutParams.rightMargin -= dx.toInt()
-                    layoutParams.bottomMargin -= dy.toInt()
 
                     requestLayout()
 
@@ -104,6 +102,7 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
             MotionEvent.ACTION_UP -> {
                 isDragging = false
                 Handler(Looper.getMainLooper()).postDelayed({
+                    if (isDragging) return@postDelayed
                     setText("")
                     invalidate()
                 }, 1000)
