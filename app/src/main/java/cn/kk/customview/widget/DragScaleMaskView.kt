@@ -7,12 +7,13 @@ import android.graphics.Paint
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
-import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.widget.AppCompatTextView
 import cn.kk.base.UIHelper
-import cn.kk.base.utils.ThreadHelper
+import kotlin.math.log
 
 /**
  * 1. edit mode: show text tips and four corner rectangles
@@ -90,15 +91,24 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
                     val dx = event.rawX - lastX
                     val dy = event.rawY - lastY
 
+                    if (left + dx < 0) return true
+                    if (top + dy < 0) return true
+                    if (right + dx > (parent as ViewGroup).width) return true
+                    if (bottom + dy > (parent as ViewGroup).height) return true
+
                     // 更新 View 的位置
                     val layoutParams = layoutParams as FrameLayout.LayoutParams
                     layoutParams.leftMargin += dx.toInt()
                     layoutParams.topMargin += dy.toInt()
 
+                    Log.d("DragScale--", "onTouchEvent: left: ${left}, top: ${top}, right: ${right}, bottom: ${bottom}")
+                    Log.d("DragScale--", "onTouchEvent: leftMargin: ${layoutParams.leftMargin}, topMargin: ${layoutParams.topMargin}, rightMargin: ${layoutParams.rightMargin}, bottomMargin: ${layoutParams.bottomMargin}")
+
                     requestLayout()
 
                     lastX = event.rawX
                     lastY = event.rawY
+
                 }
             }
             MotionEvent.ACTION_UP -> {
