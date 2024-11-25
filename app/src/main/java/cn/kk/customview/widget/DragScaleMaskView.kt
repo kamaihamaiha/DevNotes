@@ -72,6 +72,8 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
     private var lastX = 0f
     private var lastY = 0f
     private var isDragging = false
+    private var upTimeStamp = 0L
+    private val SHOW_EDIT_MODEL_DURATION = 1500L // 2s
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         if (event == null) return super.onTouchEvent(event)
 
@@ -101,11 +103,13 @@ class DragScaleMaskView(context: Context, attributeSet: AttributeSet?): AppCompa
             }
             MotionEvent.ACTION_UP -> {
                 isDragging = false
+                upTimeStamp = System.currentTimeMillis()
                 Handler(Looper.getMainLooper()).postDelayed({
                     if (isDragging) return@postDelayed
+                    if (System.currentTimeMillis() - upTimeStamp < SHOW_EDIT_MODEL_DURATION) return@postDelayed
                     setText("")
                     invalidate()
-                }, 1000)
+                }, SHOW_EDIT_MODEL_DURATION)
             }
         }
         return true
